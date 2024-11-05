@@ -23,6 +23,7 @@ namespace _scripts.NPCs.States
         public void ExitState()
         {
             Debug.Log("Salió del estado Idle");
+            
         }
     }
 }

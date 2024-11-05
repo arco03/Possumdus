@@ -12,7 +12,7 @@ namespace _scripts.NPCs.States
         {
             Debug.Log("Entró al estado de Walking"); 
             _agent = npc.GetComponent<NavMeshAgent>();
-            MoveToNextWaypoint(npc);
+            //MoveToNextWaypoint(npc)
             //Animation
         }
 
@@ -20,7 +20,9 @@ namespace _scripts.NPCs.States
         {
             if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
             {
-                npc.ChangeState(new IdleState());
+                //npc.ChangeState(new IdleState());
+                MoveToNextWaypoint(npc);
+                Debug.Log(_currentWaypoint);
             }
         }
 
