@@ -127,5 +127,11 @@ namespace _scripts.Player
                     Debug.LogWarning("Context is null, cannot interact.");
             }
         }
+
+
+        public void UnityMaricon()
+        {
+            _isHungry = false;
+        }
     }
 }
