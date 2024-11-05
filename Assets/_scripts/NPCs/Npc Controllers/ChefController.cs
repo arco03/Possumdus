@@ -7,11 +7,12 @@ namespace _scripts.NPCs.Npc_Controllers
     {
         private void Start()
         {
-            ChangeState(new WalkingState());
+            ChangeState(_walkingState);
         }
 
         public override void Interact()
         {
+            //TODO:
             // Lógica de interacción específica con el jugador
             Debug.Log("El NPC Chef está interactuando con el jugador");
             // Cambiar a otro estado si es necesario (ej. ChangeState(new TalkingState());)

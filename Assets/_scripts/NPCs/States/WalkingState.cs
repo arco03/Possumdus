@@ -20,8 +20,8 @@ namespace _scripts.NPCs.States
         {
             if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
             {
-                //npc.ChangeState(new IdleState());
                 MoveToNextWaypoint(npc);
+                npc.ChangeState(npc._idleState);
                 Debug.Log(_currentWaypoint);
             }
         }

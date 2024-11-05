@@ -4,7 +4,7 @@ namespace _scripts.NPCs.States
 {
     public class IdleState : INpcState
     {
-        private const float TimerDuration = 3f;
+        private const float TimerDuration = 10f;
         private float _timer;
         
         public void EnterState(Npc npc)
@@ -17,7 +17,7 @@ namespace _scripts.NPCs.States
         public void UpdateState(Npc npc)
         {
             _timer -= Time.deltaTime;
-            if (_timer <= 0) npc.ChangeState(new WalkingState());
+            if (_timer <= 0) npc.ChangeState(npc._walkingState);
         }
 
         public void ExitState()
