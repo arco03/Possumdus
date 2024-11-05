@@ -14,5 +14,7 @@ namespace _scripts.Task_System
     {
         public string taskName;
         public string description;
+        public int id;
+        
     }
 }

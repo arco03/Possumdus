@@ -15,7 +15,7 @@ namespace _scripts.Task_System
                 // taskInfo es una variable de tipo TaskData que son los parametros del scriptable
                 //taskData.task son las tareas que se encuentran enlistadas en el scriptable
             {
-                var task = new TaskDataModel(taskInfo.taskName, taskInfo.description); //Constructor de TaskDataModel
+                var task = new TaskDataModel(taskInfo.taskName, taskInfo.description, taskInfo.id); //Constructor de TaskDataModel
                 task.OnTaskCompleted += CheckAllTasksCompleted; //Verifica la completitud de cada tarea en el scriptable
                 _tasks.Add(task); //no se q hace esto xd
             }

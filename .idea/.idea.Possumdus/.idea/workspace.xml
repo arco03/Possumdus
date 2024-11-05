@@ -6,26 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/IInteract.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/IInteract.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/IPlayerContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/IPlayerContext.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Object.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Object.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/PlayerContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/PlayerContext.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/Task.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/Task.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskDataModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystem.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/Objects/Documents/Documents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/Player/Interact/IInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/Task System/TaskDataModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemTracker.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -95,10 +79,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21452">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="21452" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -115,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730760660148</updated>
       <workItem from="1730760664881" duration="29000" />
-      <workItem from="1730832863650" duration="7263000" />
+      <workItem from="1730832863650" duration="8724000" />
     </task>
     <servers />
   </component>
