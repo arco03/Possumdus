@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace _scripts.Player
+namespace _scripts.Player.Interact
 {
     public interface IPlayerContext
     {

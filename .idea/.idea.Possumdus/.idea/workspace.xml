@@ -1,15 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="" />
+    <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/IInteract.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/IInteract.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/IPlayerContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/IPlayerContext.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Object.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Object.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/PlayerContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/PlayerContext.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/Task.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/Task.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskListData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/Objects/Documents/Documents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/Player/Interact/IInteract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/Task System/TaskDataModel.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2oPA69XcI6VD5WsZg1LMWxswYnS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -17,15 +50,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Feature-Eduardo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\danig\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Usuario18\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Usuario18\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Usuario18\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -76,6 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730760660148</updated>
       <workItem from="1730760664881" duration="29000" />
+      <workItem from="1730832863650" duration="7263000" />
     </task>
     <servers />
   </component>

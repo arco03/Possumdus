@@ -1,13 +1,11 @@
 using UnityEngine;
 
-namespace _scripts.Player
+namespace _scripts.Player.Interact
 {
     public class PlayerContext : MonoBehaviour, IPlayerContext
     {
         [SerializeField] private Character character;
         
-      
-
         public float GetEnergy()
         {
             return character.currentEnergy;

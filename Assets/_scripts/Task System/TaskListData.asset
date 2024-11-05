@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: TaskListData
   m_EditorClassIdentifier: 
   tasks:
-  - taskName: Collect Food
-    description: You have to collect 1 food sphere along the map
+  - taskName: Food
+    description: Collect 1 food sphere in the scene
+  - taskName: Cientific Documents
+    description: Collect 1 document cube in the scene
+  - taskName: Potions
+    description: Collect 3 capsuless in the scene

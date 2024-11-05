@@ -1,4 +1,5 @@
 using System;
+using _scripts.Player.Interact;
 using UnityEngine;
 using UnityEngine.Serialization;
 
