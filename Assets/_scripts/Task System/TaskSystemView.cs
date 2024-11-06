@@ -5,7 +5,7 @@ namespace _scripts.Task_System
 {
     public class TaskSystemView : MonoBehaviour
     {
-        [SerializeField] private TaskListData taskListData; // ScriptableObject con las tareas
+        [SerializeField] private TaskList taskListData; // ScriptableObject con las tareas
         private TaskSystemController _taskSystem; //Referencia al controlador
 
         [SerializeField] private Transform taskListUI; // Contenedor UI
