@@ -3,17 +3,18 @@ using UnityEngine.UI;
 
 namespace _scripts.Task_System
 {
+    /*
     public class TaskSystemView : MonoBehaviour
     {
-        [SerializeField] private TaskList taskListData; // ScriptableObject con las tareas
-        private TaskSystemController _taskSystem; //Referencia al controlador
+       // [SerializeField] private TaskList taskListData; // ScriptableObject con las tareas
+       // private TaskSystemController _taskSystem; //Referencia al controlador
 
         [SerializeField] private Transform taskListUI; // Contenedor UI
         [SerializeField] private GameObject taskPrefab; // Prefab UI para tareas
 
         void Start()
         {
-            _taskSystem = new TaskSystemController(taskListData);
+           // _taskSystem = new TaskSystemController(taskListData);
 
             foreach (var task in _taskSystem.GetTasks())
             {
@@ -36,4 +37,5 @@ namespace _scripts.Task_System
         }
 
     }
+    */
 }

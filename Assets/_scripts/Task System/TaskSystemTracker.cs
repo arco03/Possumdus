@@ -4,22 +4,22 @@ using UnityEngine;
 
 namespace _scripts.Task_System
 {
+    /*
     public class TaskSystemTracker : MonoBehaviour
     {
-        private TaskSystemController taskSystem;
-
-        public void Initialize(TaskSystemController system)
+        private TaskModel _taskModel;
+        public void Initialize(TaskController system)
         {
-            taskSystem = system;
+            _taskModel = system;
 
-            // Suscribirse al evento OnTaskCompleted de cada tarea
-            foreach (var task in taskSystem.GetTasks())
+           
+            foreach (var task in _taskModel.GetTasks())
             {
                 task.OnTaskCompleted += OnTaskCompleted;
             }
         }
 
-        // Método para agregar un objeto a la misión de recolección
+        // Mï¿½todo para agregar un objeto a la misiï¿½n de recolecciï¿½n
         public void Collect(string taskName)
         {
             TaskModel task = taskSystem.GetTasks().Find(t => t.TaskName == taskName);
@@ -45,5 +45,5 @@ namespace _scripts.Task_System
         {
             Debug.Log("Task completed!!!");
         }
-    }
+    }*/
 }
