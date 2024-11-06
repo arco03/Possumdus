@@ -1,30 +1,29 @@
+using System;
+using _scripts.NPCs.Interfaces;
 using _scripts.NPCs.States;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace _scripts.NPCs
 {
-    public abstract class Npc : MonoBehaviour
+    [RequireComponent(typeof(NavMeshAgent))]
+    public abstract class Npc : MonoBehaviour, IInteract
     {
-        public WalkingState _walkingState;
-        public IdleState _idleState;
-        
-        private INpcState _currentState;
-        public Transform[] waypoints;
+        protected NpcStateMachine NpcStateMachine;
+        [SerializeField] protected Transform[] Waypoints;
+        protected NavMeshAgent Agent;
 
-        // Update the state
-        private void Update()
+        public virtual void Start()
         {
-            _currentState?.UpdateState(this);
-        }
-        
-        // Method for change the state
-        public void ChangeState(INpcState newState)
-        {
-            _currentState = newState;
-            _currentState.EnterState(this);
+            NpcStateMachine.StartStateMachine();
         }
 
-        // Interact with character
+        public virtual void Update()
+        {
+            NpcStateMachine.UpdateStateMachine();
+        }
+
         public abstract void Interact();
+        
     }
 }

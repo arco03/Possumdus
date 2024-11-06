@@ -1,15 +1,21 @@
+using _scripts.NPCs.Interfaces;
 using _scripts.NPCs.States;
 using UnityEngine;
+using UnityEngine.AI;
 
-namespace _scripts.NPCs.Npc_Controllers
+namespace _scripts.NPCs.NPC_Types
 {
-    public class ChefController : Npc
+    public class NpcChef : Npc
     {
-        private void Start()
+        private INpcState walkingState;
+        
+        private void Awake()
         {
-            ChangeState(_walkingState);
+            Agent = GetComponent<NavMeshAgent>();
+            walkingState = new WalkingState(Agent, Waypoints);
+            NpcStateMachine = new NpcStateMachine(walkingState);
         }
-
+        
         public override void Interact()
         {
             //TODO:

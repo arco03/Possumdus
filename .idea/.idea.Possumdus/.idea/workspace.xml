@@ -5,16 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces/IInteract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces/IInteract.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces/INpcState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Plane.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Plane.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc Controllers/ChefController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc Controllers/ChefController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/INpcState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/INpcState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces/INpcState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc Controllers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc Controllers/ChefController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcChef.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc Controllers/ChefController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcChef.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcStateMachine.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/IdleState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/IdleState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/TalkingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/TalkingState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/WalkingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/WalkingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/TimeController.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,13 +59,6 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Usuario17\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Usuario17\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Usuario17\\AppData\\Local\\Symbols\\src"
-    ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -85,10 +88,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10400">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="10400" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -107,6 +110,7 @@
       <workItem from="1730760664881" duration="29000" />
       <workItem from="1730765365053" duration="3829000" />
       <workItem from="1730833023206" duration="7528000" />
+      <workItem from="1730915192909" duration="9216000" />
     </task>
     <servers />
   </component>
@@ -121,6 +125,7 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
