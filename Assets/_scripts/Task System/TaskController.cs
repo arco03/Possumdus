@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace _scripts.Task_System
@@ -12,18 +11,16 @@ namespace _scripts.Task_System
        
         public void CompleteTask(string taskName){
            
-            TaskStruct task = _taskModel.TasksList.Find(t => t.TaskName == taskName); 
-            if (!task.IsCompleted)
-            {
-              task.IsCompleted = true;
-              OnTaskCompleted?.Invoke();
-              CheckAllTasksCompleted();
-            }
+            var task = _taskModel.tasksList.Find(t => t.taskName == taskName);
+            if (!task.isCompleted) return;
+            task.isCompleted = true;
+            OnTaskCompleted?.Invoke();
+            CheckAllTasksCompleted();
         }
         
         private void CheckAllTasksCompleted()
         {
-            if (_taskModel.TasksList.TrueForAll(t => t.IsCompleted))
+            if (_taskModel.tasksList.TrueForAll(t => t.isCompleted))
             {
                 OnAllTasksCompleted?.Invoke();
             }

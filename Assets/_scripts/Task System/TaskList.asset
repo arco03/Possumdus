@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 124ec8ca6ec159241b7f213d1e507350, type: 3}
   m_Name: TaskList
   m_EditorClassIdentifier: 
+  tasksList:
+  - taskName: piroboshptas
+    description: 
+    taskType: 0
+    isCompleted: 0
+    targetPoint: {fileID: 0}

@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _scripts.Task_System
 {     [CreateAssetMenu(fileName = "TaskList", menuName = "Task System/TaskList")]
     public class TaskModel : ScriptableObject //Objeto para crear las tareas
     {
-        public List<TaskStruct> TasksList;
+        public List<TaskStruct> tasksList;
         
     }
     public enum TaskType
@@ -17,11 +18,11 @@ namespace _scripts.Task_System
         
     [System.Serializable] public struct TaskStruct  //Parametros del scriptable object 
     {        
-        public string TaskName;
-        public string Description;
-        public TaskType TaskType;
-        public bool IsCompleted;
-        public Transform TargetPoint;   //  punto de entrega o interacción
+        public string taskName;
+        public string description;
+        public TaskType taskType;
+        public bool isCompleted;
+        public Transform targetPoint;   //  punto de entrega o interacción
         
     }
 }
