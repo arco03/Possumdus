@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces/IInteract.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces/IInteract.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces/INpcState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcHrCoordinator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/INpcState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/INpcState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Interfaces/INpcState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc Controllers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc Controllers/ChefController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcChef.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc Controllers/ChefController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcChef.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NpcStateMachine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/IdleState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/IdleState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/TalkingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/TalkingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/WalkingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/States/WalkingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +29,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.7070485",
-    "git-widget-placeholder": "Feature-Daniela",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.7070485&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Feature-Daniela&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Unity.exe" />
@@ -111,6 +93,7 @@
       <workItem from="1730765365053" duration="3829000" />
       <workItem from="1730833023206" duration="7528000" />
       <workItem from="1730915192909" duration="9216000" />
+      <workItem from="1731004695513" duration="3223000" />
     </task>
     <servers />
   </component>
