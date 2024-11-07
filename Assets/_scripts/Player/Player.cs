@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace _scripts.Player
 {
-    public class Player : MonoBehaviour
+    public class Player1 : MonoBehaviour
     {
         [Header("Control Settings")] 
         [SerializeField] private string horizontal;
