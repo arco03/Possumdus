@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskTracker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskList.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemTracker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskSystemTracker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Task System/TaskTracker.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +100,8 @@
       <workItem from="1730760664881" duration="29000" />
       <workItem from="1730832863650" duration="8724000" />
       <workItem from="1730921224442" duration="5694000" />
-      <workItem from="1730935275880" duration="3858000" />
+      <workItem from="1730935275880" duration="3996000" />
+      <workItem from="1731011545434" duration="742000" />
     </task>
     <servers />
   </component>

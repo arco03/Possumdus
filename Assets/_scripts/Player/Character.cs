@@ -129,10 +129,5 @@ namespace _scripts.Player
             }
         }
 
-
-        public void UnityMaricon()
-        {
-            _isHungry = false;
-        }
     }
 }
