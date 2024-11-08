@@ -30,10 +30,8 @@ namespace _scripts.Task_System
                 public string itemName;
                 public int amount;
                 public int itemId;
-            }
-            
+            } 
         }
-
         public TasksStruct[] tasks;
     } 
 }
