@@ -1,14 +1,24 @@
-using _scripts.Player.Interact;
+using _scripts.Player.Context;
 using UnityEngine;
 
 namespace _scripts.Objects.Documents
 {
     public class Documents : MonoBehaviour, IInteract
     {
-        public void Interact(IPlayerContext context)
+        // public void Interact(IPlayerContext context)
+        // {
+        //     Debug.Log("Interactuaste conmigo");
+        //     Destroy(gameObject);
+        // }
+
+        public void OnInteract()
         {
-            Debug.Log("Interactuaste conmigo");
-            Destroy(gameObject);
+            throw new System.NotImplementedException();
+        }
+
+        public void OnRelease()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
