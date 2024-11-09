@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Navmesh Surface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Navmesh Surface.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Navmesh Surface.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Navmesh Surface.asset.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +107,7 @@
       <workItem from="1730915192909" duration="9216000" />
       <workItem from="1731004695513" duration="3223000" />
       <workItem from="1731092556970" duration="11715000" />
-      <workItem from="1731118079552" duration="5716000" />
+      <workItem from="1731118079552" duration="9859000" />
     </task>
     <servers />
   </component>

@@ -208,7 +208,7 @@ namespace _scripts.Player
                 pikedObject = null;
                 pikedObjectRb = null;
                 interactable = null;
-                Debug.Log("Soltado el objecto");
+                Debug.Log("Solto el objeto");
             }
         }
 
