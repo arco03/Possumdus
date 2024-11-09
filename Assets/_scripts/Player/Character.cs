@@ -174,7 +174,7 @@ namespace _scripts.Player
         {
             if (pikedObjectRb != null && isObjectLevitating)
             {
-                Vector3 levitateDirection = Vector3.up * levitationForce;
+                Vector3 levitateDirection = Vector3.up * levitationForce - pikedObjectRb.velocity * 0.5f;
                 pikedObjectRb.AddForce(levitateDirection, ForceMode.Acceleration);
             }
         }
@@ -184,7 +184,13 @@ namespace _scripts.Player
             if (pikedObject != null)
             {
                 Vector3 targetPosition = _playerCamera.position + _playerCamera.forward * holdDistance;
-                pikedObject.transform.position = Vector3.Lerp(pikedObject.transform.position, targetPosition, Time.deltaTime * 10f);
+                float distance = Vector3.Distance(pikedObject.transform.position, targetPosition);
+                
+                pikedObject.transform.position = Vector3.MoveTowards(pikedObject.transform.position, targetPosition, Time.deltaTime * 5f);
+                if (distance < 0.1f)
+                {
+                    pikedObjectRb.velocity = Vector3.zero;
+                }
             }
         }
         
@@ -202,6 +208,7 @@ namespace _scripts.Player
                 pikedObject = null;
                 pikedObjectRb = null;
                 interactable = null;
+                Debug.Log("Soltado el objecto");
             }
         }
 

@@ -807,12 +807,12 @@ MonoBehaviour:
   hungerSpeed: 4
   hungerTimer: 0
   rayDistance: 20
-  holdDistance: 7
+  holdDistance: 3
   attractionForce: 20
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
-  levitationForce: 7
+  levitationForce: 3
   currentEnergy: 0
   canRun: 1
   pikedObject: {fileID: 0}

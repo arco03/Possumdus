@@ -40,7 +40,7 @@ namespace _scripts.Player
             {
                 character.ObjectPiked();
                 
-            }else if (Input.GetMouseButton(1) && character.pikedObject){
+            }else if (Input.GetMouseButtonUp(1) && character.pikedObject){
                 
                 character.ReleaseObject();
             }
