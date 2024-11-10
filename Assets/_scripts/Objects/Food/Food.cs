@@ -16,3 +16,4 @@ namespace _scripts.Objects.Food
         }
     }
 }
+
