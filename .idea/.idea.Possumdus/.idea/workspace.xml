@@ -5,20 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcHrCoordinator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Navmesh Surface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Navmesh Surface.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Navmesh Surface.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene/NavMesh-Navmesh Surface.asset.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/30adf90198bc4c4b83910c6fb1877998174000/8f/2e39e7ba/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/0f39a7d0fee5c6343ba0f9b158514c38/Assets/Object Insight Highlighter V1.1/DemoScene Assets/FPSController_Package/CrossPlatformInput/Scripts/AxisTouchButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/30adf90198bc4c4b83910c6fb1877998174000/b0/f7789898/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.9/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -41,6 +46,13 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\danig\\AppData\\Local\\Symbols\\src&quot;
+    ]
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -94,6 +106,8 @@
       <workItem from="1730833023206" duration="7528000" />
       <workItem from="1730915192909" duration="9216000" />
       <workItem from="1731004695513" duration="3223000" />
+      <workItem from="1731092556970" duration="11715000" />
+      <workItem from="1731118079552" duration="9859000" />
     </task>
     <servers />
   </component>
@@ -108,7 +122,6 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
