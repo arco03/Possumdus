@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace _scripts.Player
 {
-    public class Player1 : MonoBehaviour
+    public class Player : MonoBehaviour
     {
         [Header("Control Settings")] 
         [SerializeField] private string horizontal;
@@ -35,11 +35,25 @@ namespace _scripts.Player
             }
             else
                 character.CantSprint();
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                character.ObjectPiked();
+                
+            }else if (Input.GetMouseButtonUp(1) && character.pikedObject){
+                
+                character.ReleaseObject();
+            }
         }
     
         private void FixedUpdate()
         {
             character.Move(_x,_y);
+            if (character.isObjectLevitating && character.pikedObject != null)
+            {
+                character.LevitateObject();
+                character.FollowPlayer();
+            }
         }
     }
 }

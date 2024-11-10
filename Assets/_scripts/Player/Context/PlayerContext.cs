@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _scripts.Player.Interact
+namespace _scripts.Player.Context
 {
     public class PlayerContext : MonoBehaviour, IPlayerContext
     {
