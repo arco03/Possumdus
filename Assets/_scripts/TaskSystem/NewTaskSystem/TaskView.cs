@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class TaskView : MonoBehaviour
@@ -7,6 +8,7 @@ public class TaskView : MonoBehaviour
     public TaskController taskController; // Referencia al controlador de tareas.
     public Transform taskPanelParent; // Contenedor de los elementos de UI para cada tarea.
     public GameObject taskUIPrefab; // Prefab para mostrar cada tarea en la UI.
+    
 
     private Dictionary<int, TextMeshProUGUI> taskTextElements = new Dictionary<int, TextMeshProUGUI>();
 
