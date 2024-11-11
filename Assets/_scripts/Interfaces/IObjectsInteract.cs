@@ -1,11 +1,10 @@
-namespace _scripts.Player.Context
+namespace _scripts.Interfaces
 {
-    public interface IInteract
+    public interface IObjectsInteract
     {
         //void Interact(IPlayerContext context);
         void OnInteract();
         void OnRelease();
-        
     }
 }
 

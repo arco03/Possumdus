@@ -1,9 +1,10 @@
+using _scripts.Interfaces;
 using _scripts.Player.Context;
 using UnityEngine;
 
 namespace _scripts.Objects.Documents
 {
-    public class Documents : MonoBehaviour, IInteract
+    public class Documents : MonoBehaviour, IObjectsInteract
     {
         // public void Interact(IPlayerContext context)
         // {
