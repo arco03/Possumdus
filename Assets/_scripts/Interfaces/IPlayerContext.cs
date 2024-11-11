@@ -1,4 +1,4 @@
-namespace _scripts.Player.Context
+namespace _scripts.Interfaces
 {
     public interface IPlayerContext
     {

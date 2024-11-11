@@ -1,5 +1,5 @@
 using System;
-using _scripts.NPCs.Interfaces;
+using _scripts.Interfaces;
 using _scripts.NPCs.States;
 using UnityEngine;
 using UnityEngine.AI;
@@ -7,7 +7,7 @@ using UnityEngine.AI;
 namespace _scripts.NPCs
 {
     [RequireComponent(typeof(NavMeshAgent))]
-    public abstract class Npc : MonoBehaviour, IInteract
+    public abstract class Npc : MonoBehaviour, INpcInteract
     {
         protected NpcStateMachine NpcStateMachine;
         [SerializeField] protected Transform[] Waypoints;

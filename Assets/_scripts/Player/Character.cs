@@ -1,4 +1,5 @@
 using System;
+using _scripts.Interfaces;
 using _scripts.Player.Context;
 using UnityEngine;
 
@@ -36,7 +37,7 @@ namespace _scripts.Player
         private IPlayerContext context;
         private float _currentSpeed;
         private bool _isHungry = false;
-        private IInteract interactable;
+        private IObjectsInteract interactable;
         
 
         private void Awake()
@@ -136,7 +137,7 @@ namespace _scripts.Player
             
             if (Physics.Raycast(ray, out var hit, rayDistance, interactableLayer.value))
             {
-                interactable = hit.collider.GetComponent<IInteract>();
+                interactable = hit.collider.GetComponent<IObjectsInteract>();
 
                 if (interactable != null)
                 {
@@ -209,6 +210,19 @@ namespace _scripts.Player
                 pikedObjectRb = null;
                 interactable = null;
                 Debug.Log("Solto el objeto");
+            }
+        }
+
+        public void InteractObject()
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                IObjectsInteract objectsInteract = hit.collider.GetComponent<IObjectsInteract>();
+                if (objectsInteract != null)
+                {
+                    objectsInteract.OnInteract();
+                }
             }
         }
 

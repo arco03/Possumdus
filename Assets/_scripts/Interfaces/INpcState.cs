@@ -1,4 +1,4 @@
-namespace _scripts.NPCs.Interfaces
+namespace _scripts.Interfaces
 {
     public interface INpcState
     {

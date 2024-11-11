@@ -1,11 +1,12 @@
 using System;
+using _scripts.Interfaces;
 using UnityEngine;
 
-namespace _scripts.Player.Context
+namespace _scripts.Objects.Interactable
 {
     [Serializable]
     [RequireComponent(typeof(Rigidbody))]
-    public class InteractableObject : MonoBehaviour, IInteract
+    public class InteractableObject : MonoBehaviour, IObjectsInteract
     {
         [HideInInspector] public Rigidbody rb;
 

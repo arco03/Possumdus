@@ -1,4 +1,4 @@
-using _scripts.NPCs.Interfaces;
+using _scripts.Interfaces;
 using _scripts.NPCs.States;
 using UnityEngine;
 using UnityEngine.AI;
