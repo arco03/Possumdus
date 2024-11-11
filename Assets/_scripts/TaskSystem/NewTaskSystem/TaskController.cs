@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TaskController : MonoBehaviour
 {
-    public List<DeliveryTasks> tasks = new List<DeliveryTasks>(); // Lista de DeliveryTasks, agregados manualmente
+    public List<Tasks> tasks = new List<Tasks>(); // Lista de DeliveryTasks, agregados manualmente
     public TaskView taskView;  // Referencia al script TaskView para actualizar la UI
 
     // Este método se llama cuando se inicia el juego
@@ -24,7 +24,7 @@ public class TaskController : MonoBehaviour
         foreach (var task in tasks)
         {
             task.onReachedTask += () => OnTaskCompleted(task);
-            task.onProgressUpdate += UpdateTaskProgress;
+            
         }
     }
 
@@ -38,16 +38,9 @@ public class TaskController : MonoBehaviour
             task.onReachedTask += () => OnTaskCompleted(task); // Suscribir al evento de la tarea
         }
     }
-       
-    public void UpdateTaskProgress(int taskId, int currentAmount, int requiredAmount)
-    {
-        // Llama a UpdateTaskProgress de TaskView para actualizar la UI
-        taskView.UpdateTaskProgress(taskId, currentAmount, requiredAmount);
-    }
-    
 
     // Este método se llama cuando una tarea se completa
-    private void OnTaskCompleted(DeliveryTasks completedTask)
+    private void OnTaskCompleted(Tasks completedTask)
     {
         Debug.Log($"Task {completedTask.idTask} completed!");
 

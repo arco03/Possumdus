@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Vegetal
   - Document
+  - Fuel
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,7 @@ public class Tasks : MonoBehaviour
     public bool isReached = false;
 
     public event Action onReachedTask;
-    public event Action<int, int, int> onProgressUpdate;
+    public event Action<int, int, int,bool> onProgressUpdate;
 
     public virtual void OnTriggerEnter(Collider other)
     {
@@ -18,7 +18,7 @@ public class Tasks : MonoBehaviour
         {
             currentAmount++;
             TaskVerification();
-            onProgressUpdate?.Invoke(idTask, requiredAmount, currentAmount);
+            onProgressUpdate?.Invoke(idTask, requiredAmount, currentAmount, isReached);
             Destroy(other.gameObject);
         }
     }
