@@ -30,7 +30,7 @@ public class TaskController : MonoBehaviour
 
 
     // Este método se usa para añadir tareas manualmente en el Inspector
-    public void AddTask(DeliveryTasks task)
+    public void AddTask(Tasks task)
     {
         if (tasks != null && !tasks.Contains(task))
         {

@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using static Tasks;
 
 public class TaskView : MonoBehaviour
 {
@@ -28,50 +30,80 @@ public class TaskView : MonoBehaviour
 
         foreach (var task in taskController.tasks)
         {
-            if (task != null)
+            if (task == null)
             {
-                GameObject taskUI = Instantiate(taskUIPrefab, taskPanelParent);
-                TextMeshProUGUI taskText = taskUI.GetComponentInChildren<TextMeshProUGUI>();
+                Debug.LogWarning("Se encontró una tarea nula en la lista de tareas.");
+                continue;
+            }
+
+            if (taskTextElements.ContainsKey(task.idTask))
+            {
+                Debug.LogWarning($"La tarea con ID {task.idTask} ya está registrada en el diccionario.");
+                continue;
+            }
+
+            DeliveryTasks deliveryTask = task.GetComponent<DeliveryTasks>();
+
+            GameObject taskUI = Instantiate(taskUIPrefab, taskPanelParent);
+            TextMeshProUGUI taskText = taskUI.GetComponentInChildren<TextMeshProUGUI>();
+
+            if (deliveryTask != null)
+            {
+                Debug.Log($"La tarea con ID {deliveryTask.idTask} tiene el componente DeliveryTasks.");
+                deliveryTask.onProgressUpdate += (idTask, currentAmount, requiredAmount, isReached) => UpdateTaskText(deliveryTask.names, deliveryTask.idTask, deliveryTask.currentAmount, deliveryTask.requiredAmount, deliveryTask.isReached);
+                task.onReachedTask += () => OnDeliveryCompleted(deliveryTask);
 
                 if (taskText != null)
                 {
-                    taskText.text = $"Tarea {task.idTask}: {task.currentAmount}/{task.requiredAmount}";
+                    
                     taskTextElements.Add(task.idTask, taskText);
                     Debug.Log($"UI para tarea {task.idTask} registrada correctamente.");
+                }
+            }
+            else if (taskText != null)
+            {
+                taskText.text = $"Tarea {task.names} No ha sido completada";
+                taskTextElements.Add(task.idTask, taskText);
+                Debug.Log($"UI para tarea {task.idTask} registrada correctamente.");
 
-                    
-                    task.onReachedTask += () => OnTaskCompleted(task);
-                    task.onProgressUpdate += (idTask,currentAmount, requiredAmount, isReached) => UpdateTaskText(task.idTask, task.currentAmount, task.requiredAmount, task.isReached);
-                }
-                else
-                {
-                    Debug.LogError("El prefab taskUIPrefab no tiene un componente TextMeshProUGUI en su jerarquía.");
-                }
+                task.onReachedTask += () => OnTaskCompleted(task);
             }
             else
             {
-                Debug.LogWarning("Se encontró una tarea nula en la lista de tareas.");
+                Debug.LogError("El prefab taskUIPrefab no tiene un componente TextMeshProUGUI en su jerarquía.");
             }
         }
     }
 
-    // Actualiza el texto de una tarea específica.
-    public void UpdateTaskText(int taskId, int currentAmount, int requiredAmount, bool isReached)
+    
+    public void UpdateTaskText(string name = null, int taskId = 0, int currentAmount = 0, int requiredAmount = 0, bool isReached = false, TaskType taskType = TaskType.General)
     {
         if (taskTextElements.TryGetValue(taskId, out var taskText))
         {
-            taskText.text = isReached ? $"Tarea {taskId} completada!" : $"Tarea {taskId}: {currentAmount}/{requiredAmount}";
+            if (taskType == TaskType.Delivery)
+            {
+                taskText.text = isReached ? $"{name} completada!" : $"{name}: {currentAmount}/{requiredAmount}";
+            }
+            else if (taskType == TaskType.Interaction)
+            {
+                taskText.text = isReached ? $"{name} completada!" : $"{name}";
+            }
+
         }
         else
         {
             Debug.LogWarning($"No se encontró UI para la tarea {taskId}. Verifique que la tarea esté correctamente registrada en InitializeUI.");
         }
-    }
-
-    // Método para actualizar el texto de la tarea cuando esté completada.
+    }                                  
+   
     public void OnTaskCompleted(Tasks completedTask)
     {
-        UpdateTaskText(completedTask.idTask, completedTask.currentAmount, completedTask.requiredAmount, true);
+        UpdateTaskText(completedTask.names, completedTask.idTask,0,0,false, TaskType.Interaction);
+    }
+
+    public void OnDeliveryCompleted(DeliveryTasks deliveryTasks)
+    {
+      UpdateTaskText(deliveryTasks.names,deliveryTasks.idTask, deliveryTasks.currentAmount, deliveryTasks.requiredAmount, true, TaskType.Delivery);
     }
 }
 

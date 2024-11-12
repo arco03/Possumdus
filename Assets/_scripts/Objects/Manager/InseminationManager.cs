@@ -5,13 +5,13 @@ using UnityEngine;
 
 namespace _scripts.Objects.Manager
 {
-    public class InseminationManager : MonoBehaviour
+    public class InseminationManager : Tasks
     {
         private readonly List<string> currentCombination = new();
         private readonly List<string> correctCombination = new() {"B", "C"};
 
         [SerializeField] private List<InseminationButton> buttons = new();
-
+        
         public void SelectButton(InseminationButton button)
         {
             if (!currentCombination.Contains(button.value))
@@ -27,6 +27,7 @@ namespace _scripts.Objects.Manager
             if (currentCombination.Count == 2)
             {
                 ValidateCombination();
+                InvokeReachedEvent();
             }
         }
 
@@ -35,13 +36,14 @@ namespace _scripts.Objects.Manager
             currentCombination.Sort();
             correctCombination.Sort();
 
-            bool isValid = currentCombination.Count == correctCombination.Count &&
+           bool isValid = currentCombination.Count == correctCombination.Count &&
                            currentCombination.SequenceEqual(correctCombination);
 
             if (isValid)
             {
                 Debug.Log("Combinación correcta");
                 DisableButtonInteractions();
+                
             }
             else
             {
