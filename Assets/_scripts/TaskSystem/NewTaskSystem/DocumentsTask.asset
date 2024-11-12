@@ -15,7 +15,7 @@ MonoBehaviour:
   names: Documents
   description: Deliver 3 document spheres
   idTask: 0
-  isReached: 0
+  isReached: 1
   taskType: 1
   reachedTask: Task Completed!
   requiredAmount: 3

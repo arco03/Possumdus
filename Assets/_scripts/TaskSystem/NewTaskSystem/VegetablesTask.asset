@@ -15,9 +15,9 @@ MonoBehaviour:
   names: Vegetables
   description: Delivery 2 vegerables spheres
   idTask: 1
-  isReached: 0
+  isReached: 1
   taskType: 1
   reachedTask: Task Completed!
   requiredAmount: 2
   currentAmount: 0
-  objectTag: Vegetables
+  objectTag: Vegetal

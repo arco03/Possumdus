@@ -2126,17 +2126,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1113225091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35eeb9f0562d3754fb9ccb3c4d240f88, type: 3}
+  m_Script: {fileID: 11500000, guid: 828845ce5b0406c46be2e24c170ebba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names: FuelTask
-  description: Deliver 5 fuel barrels to the base
-  idTask: 2
-  isReached: 0
-  taskType: 1
-  requiredAmount: 5
-  currentAmount: 0
-  objectTag: Fuel
+  delTask: {fileID: 0}
 --- !u!1 &1149444870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,10 +2324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tasks:
-  - {fileID: 1471993788}
-  - {fileID: 1481009050}
-  - {fileID: 1113225096}
-  - {fileID: 1703889333}
+  - {fileID: 11400000, guid: 40d9d9162f6c30249b56eb248fa46a58, type: 2}
+  - {fileID: 11400000, guid: 2d5c74793f0fa0e4bac76f97068041b2, type: 2}
   taskView: {fileID: 1533901280}
 --- !u!1 &1471993783
 GameObject:
@@ -2451,17 +2442,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471993783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35eeb9f0562d3754fb9ccb3c4d240f88, type: 3}
+  m_Script: {fileID: 11500000, guid: 828845ce5b0406c46be2e24c170ebba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names: VegetableTask
-  description: Delivery 2 spheres to the base
-  idTask: 0
-  isReached: 0
-  taskType: 1
-  requiredAmount: 2
-  currentAmount: 0
-  objectTag: Vegetal
+  delTask: {fileID: 11400000, guid: 2d5c74793f0fa0e4bac76f97068041b2, type: 2}
 --- !u!1 &1481009049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,7 +2458,7 @@ GameObject:
   - component: {fileID: 1481009053}
   - component: {fileID: 1481009052}
   - component: {fileID: 1481009051}
-  - component: {fileID: 1481009050}
+  - component: {fileID: 1481009055}
   m_Layer: 0
   m_Name: DocumentsBase
   m_TagString: Player
@@ -2482,26 +2466,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1481009050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481009049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35eeb9f0562d3754fb9ccb3c4d240f88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  names: DocumentTask
-  description: Deliver 3 pink spheres to the base
-  idTask: 1
-  isReached: 0
-  taskType: 1
-  requiredAmount: 3
-  currentAmount: 0
-  objectTag: Document
 --- !u!65 &1481009051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2588,6 +2552,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2088604649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481009055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481009049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828845ce5b0406c46be2e24c170ebba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delTask: {fileID: 11400000, guid: 40d9d9162f6c30249b56eb248fa46a58, type: 2}
 --- !u!1 &1533901274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,18 +2940,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1703889333 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2940574805920161944, guid: 5fbafca806ba9aa4ba1eddfa7895499f,
-    type: 3}
-  m_PrefabInstance: {fileID: 170157203}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcbad3e8af844ad689dcaec9a61ba755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1785030241
 GameObject:
   m_ObjectHideFlags: 0
