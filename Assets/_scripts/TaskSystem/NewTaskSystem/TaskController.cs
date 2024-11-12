@@ -1,12 +1,13 @@
 using System.Collections.Generic;
+using _scripts.TaskSystem;
 using UnityEngine;
 
 public class TaskController : MonoBehaviour
 {
-    public List<Tasks> tasks = new List<Tasks>(); // Lista de DeliveryTasks, agregados manualmente
+    public List<Tasks> tasks;
     public TaskView taskView;  // Referencia al script TaskView para actualizar la UI
 
-    // Este método se llama cuando se inicia el juego
+    // Este mï¿½todo se llama cuando se inicia el juego
     private void Start()
     {
         UpdateUI();
@@ -14,7 +15,7 @@ public class TaskController : MonoBehaviour
 
     public void UpdateUI()
     {
-        // Buscar el TaskView en la escena si no está asignado en el Inspector
+        // Buscar el TaskView en la escena si no estï¿½ asignado en el Inspector
         if (taskView == null)
         {
             taskView = FindObjectOfType<TaskView>();
@@ -29,7 +30,7 @@ public class TaskController : MonoBehaviour
     }
 
 
-    // Este método se usa para añadir tareas manualmente en el Inspector
+    // Este mï¿½todo se usa para aï¿½adir tareas manualmente en el Inspector
     public void AddTask(Tasks task)
     {
         if (tasks != null && !tasks.Contains(task))
@@ -39,7 +40,7 @@ public class TaskController : MonoBehaviour
         }
     }
 
-    // Este método se llama cuando una tarea se completa
+    // Este mï¿½todo se llama cuando una tarea se completa
     private void OnTaskCompleted(Tasks completedTask)
     {
         Debug.Log($"Task {completedTask.idTask} completed!");
@@ -57,7 +58,7 @@ public class TaskController : MonoBehaviour
         {
             if (task != null && !task.isReached)  // Solo verifica tareas no completadas
             {
-                task.TaskVerification();  // Llama a la verificación solo si la tarea no está completada
+                task.TaskVerification();  // Llama a la verificaciï¿½n solo si la tarea no estï¿½ completada
             }
         }
     }

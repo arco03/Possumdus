@@ -1,45 +1,46 @@
 using System;
 using UnityEngine;
 
-public class Tasks : MonoBehaviour
+namespace _scripts.TaskSystem
 {
-   
-    public string names;
-    public string description;
-    public int idTask;
-    public bool isReached = false;
-    public TaskType taskType;
-
-    public event Action onReachedTask;
-
-    public virtual void TaskVerification()
+  public class Tasks : ScriptableObject
     {
-        
-        if (!isReached)
+   
+        public string names;
+        public string description;
+        public int idTask;
+        public bool isReached = false;
+        public TaskType taskType;
+        public string reachedTask = "Task Completed!";
+        public event Action onReachedTask;
+
+        public virtual void TaskVerification()
         {
-            InvokeReachedEvent();
-            isReached = true;
-            Debug.Log($"Quest {names} Completed!");
+        
+            if (!isReached)
+            {
+                InvokeReachedEvent();
+                isReached = true;
+            }
 
         }
 
-    }
+        protected void InvokeReachedEvent()
+        {
+            onReachedTask?.Invoke();
+        }
 
-    protected void InvokeReachedEvent()
-    {
-        onReachedTask?.Invoke();
-    }
-
-    [System.Serializable]
-    public enum TaskType
-    {
-        Interaction,
-        Delivery,
-        General
-    }
+        [System.Serializable]
+        public enum TaskType
+        {
+            Interaction,
+            Delivery,
+            General
+        }
 
     
 
 
 
+    }
 }

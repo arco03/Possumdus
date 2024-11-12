@@ -3,7 +3,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using static Tasks;
+using _scripts.TaskSystem;
+using _scripts.TaskSystem.NewTaskSystem;
+using Unity.VisualScripting;
+using static _scripts.TaskSystem.Tasks;
 
 public class TaskView : MonoBehaviour
 {
@@ -24,7 +27,7 @@ public class TaskView : MonoBehaviour
     {
         if (taskController == null || taskUIPrefab == null || taskPanelParent == null)
         {
-            Debug.LogError("Una o más referencias en TaskView no están asignadas.");
+            Debug.LogError("Una o mï¿½s referencias en TaskView no estï¿½n asignadas.");
             return;
         }
 
@@ -32,35 +35,23 @@ public class TaskView : MonoBehaviour
         {
             if (task == null)
             {
-                Debug.LogWarning("Se encontró una tarea nula en la lista de tareas.");
+                Debug.LogWarning("Se encontrï¿½ una tarea nula en la lista de tareas.");
                 continue;
             }
 
             if (taskTextElements.ContainsKey(task.idTask))
             {
-                Debug.LogWarning($"La tarea con ID {task.idTask} ya está registrada en el diccionario.");
+                Debug.LogWarning($"La tarea con ID {task.idTask} ya estï¿½ registrada en el diccionario.");
                 continue;
             }
 
-            DeliveryTasks deliveryTask = task.GetComponent<DeliveryTasks>();
+           
 
             GameObject taskUI = Instantiate(taskUIPrefab, taskPanelParent);
             TextMeshProUGUI taskText = taskUI.GetComponentInChildren<TextMeshProUGUI>();
 
-            if (deliveryTask != null)
-            {
-                Debug.Log($"La tarea con ID {deliveryTask.idTask} tiene el componente DeliveryTasks.");
-                deliveryTask.onProgressUpdate += (idTask, currentAmount, requiredAmount, isReached) => UpdateTaskText(deliveryTask.names, deliveryTask.idTask, deliveryTask.currentAmount, deliveryTask.requiredAmount, deliveryTask.isReached);
-                task.onReachedTask += () => OnDeliveryCompleted(deliveryTask);
-
-                if (taskText != null)
-                {
-                    
-                    taskTextElements.Add(task.idTask, taskText);
-                    Debug.Log($"UI para tarea {task.idTask} registrada correctamente.");
-                }
-            }
-            else if (taskText != null)
+           
+             if (taskText != null)
             {
                 taskText.text = $"Tarea {task.names} No ha sido completada";
                 taskTextElements.Add(task.idTask, taskText);
@@ -70,7 +61,7 @@ public class TaskView : MonoBehaviour
             }
             else
             {
-                Debug.LogError("El prefab taskUIPrefab no tiene un componente TextMeshProUGUI en su jerarquía.");
+                Debug.LogError("El prefab taskUIPrefab no tiene un componente TextMeshProUGUI en su jerarquï¿½a.");
             }
         }
     }
@@ -92,7 +83,7 @@ public class TaskView : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"No se encontró UI para la tarea {taskId}. Verifique que la tarea esté correctamente registrada en InitializeUI.");
+            Debug.LogWarning($"No se encontrï¿½ UI para la tarea {taskId}. Verifique que la tarea estï¿½ correctamente registrada en InitializeUI.");
         }
     }                                  
    

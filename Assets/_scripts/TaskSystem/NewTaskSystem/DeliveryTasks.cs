@@ -1,34 +1,27 @@
 using System;
 using UnityEngine;
 
-public class DeliveryTasks : Tasks
-{    
-    public int requiredAmount;
-    public int currentAmount = 0;
-    public string objectTag;
-    public event Action<int, int, int, bool> onProgressUpdate;
-    
+namespace _scripts.TaskSystem.NewTaskSystem
+{
+    [CreateAssetMenu(menuName = "TaskScriptable/DeliveryTask", fileName = "DeliveryTasks", order = 1)]
+    public class DeliveryTasks : Tasks
+    {    
+        public int requiredAmount;
+        public int currentAmount = 0;
+        public string objectTag;
+        public event Action<DeliveryTasks> OnProgressUpdate;
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag(objectTag))
+        public void ProgressUpdate()
         {
             currentAmount++;
-            TaskVerification();
-            onProgressUpdate?.Invoke(idTask, requiredAmount, currentAmount, isReached);
-            Destroy(other.gameObject);
+            OnProgressUpdate?.Invoke(this);
+            Debug.Log($"Verifying task: {idTask} - Progress: {currentAmount}/{requiredAmount}");
+            if (!isReached && currentAmount >= requiredAmount)
+            {
+                InvokeReachedEvent();
+                isReached = true;
+            }
         }
-    }
-
-    public override void TaskVerification()
-    {
-        Debug.Log($"Verifying task: {idTask} - Progress: {currentAmount}/{requiredAmount}");
-
-        if (!isReached && currentAmount >= requiredAmount)
-        {
-            InvokeReachedEvent();
-            isReached = true;
-           
-        }
+     
     }
 }
