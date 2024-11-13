@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class BaseMethods : MonoBehaviour
+public class DeliveryMethods : MonoBehaviour
 {
     public DeliveryTasks delTask;
     public void OnTriggerEnter(Collider other)

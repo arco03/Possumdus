@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace _scripts.Objects.Interactable
 {
-    public class InseminationButton : MonoBehaviour, IObjectsInteract
+    public class InteractionButton : MonoBehaviour, IObjectsInteract
     {
         public string value;
         private InseminationManager manager;
@@ -29,11 +29,6 @@ namespace _scripts.Objects.Interactable
         public void OnRelease()
         {
             isInteractable = false;
-        }
-
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
         }
     }
 }

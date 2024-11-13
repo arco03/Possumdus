@@ -6,39 +6,38 @@ using UnityEngine;
 
 namespace _scripts.Objects.Manager
 {
-    public class InseminationManager : Tasks
+    
+    public class InseminationManager : MonoBehaviour
     {
-        private readonly List<string> currentCombination = new();
-        private readonly List<string> correctCombination = new() {"B", "C"};
+        public InteractionTask intTask;
 
-        [SerializeField] private List<InseminationButton> buttons = new();
         
-        public void SelectButton(InseminationButton button)
+        public void SelectButton(InteractionButton button)
         {
-            if (!currentCombination.Contains(button.value))
+            if (!intTask.currentCombination.Contains(button.value))
             {
-                currentCombination.Add(button.value);
+                intTask.currentCombination.Add(button.value);
             }
 
-            if (currentCombination.Count > 2)
+            if (intTask.currentCombination.Count > 4)
             {
                 ResetCombination();
             }
 
-            if (currentCombination.Count == 2)
+            if (intTask.currentCombination.Count == 4)
             {
                 ValidateCombination();
-                InvokeReachedEvent();
+                intTask.InvokeReachedEvent();
             }
         }
 
         private bool ValidateCombination()
         {
-            currentCombination.Sort();
-            correctCombination.Sort();
+            intTask.currentCombination.Sort();
+            intTask.correctCombination.Sort();
 
-           bool isValid = currentCombination.Count == correctCombination.Count &&
-                           currentCombination.SequenceEqual(correctCombination);
+           bool isValid = intTask.currentCombination.Count == intTask.correctCombination.Count &&
+                           intTask.currentCombination.SequenceEqual(intTask.correctCombination);
 
             if (isValid)
             {
@@ -58,14 +57,14 @@ namespace _scripts.Objects.Manager
 
         private void ResetCombination()
         {
-            currentCombination.Clear();
+            intTask.currentCombination.Clear();
         }
 
         private void DisableButtonInteractions()
         {
-            foreach (var button in buttons)
+            foreach (var button in intTask.buttons)
             {
-                if (currentCombination.Contains(button.value))
+                if (intTask.currentCombination.Contains(button.value))
                 {
                     button.OnRelease();
                 }

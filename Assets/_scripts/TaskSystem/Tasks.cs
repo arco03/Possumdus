@@ -5,7 +5,7 @@ namespace _scripts.TaskSystem
 {
   public class Tasks : ScriptableObject
     {
-   
+        [Header("General Task Atributes")]
         public string names;
         public string description;
         public int idTask;
@@ -25,7 +25,7 @@ namespace _scripts.TaskSystem
 
         }
 
-        protected void InvokeReachedEvent()
+        public void InvokeReachedEvent()
         {
             onReachedTask?.Invoke();
         }
@@ -35,7 +35,7 @@ namespace _scripts.TaskSystem
         {
             Interaction,
             Delivery,
-            General
+            UITask
         }
 
     
