@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: DocumentsTask
   m_EditorClassIdentifier: 
   names: Documents
-  description: Deliver 3 document spheres
+  description: Deliver 3 pink spheres to the yellow base
   idTask: 0
-  isReached: 1
+  isReached: 0
   taskType: 1
-  reachedTask: Task Completed!
+  reachedTask: Document Task Completed!
   requiredAmount: 3
   currentAmount: 0
   objectTag: Document

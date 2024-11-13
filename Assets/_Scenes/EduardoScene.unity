@@ -350,7 +350,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2940574805920161944, guid: 5fbafca806ba9aa4ba1eddfa7895499f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2129,7 +2130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828845ce5b0406c46be2e24c170ebba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delTask: {fileID: 0}
+  delTask: {fileID: 11400000, guid: 86fbd8f815a389e43b1c3f746c49156b, type: 2}
 --- !u!1 &1149444870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,6 +2327,7 @@ MonoBehaviour:
   tasks:
   - {fileID: 11400000, guid: 40d9d9162f6c30249b56eb248fa46a58, type: 2}
   - {fileID: 11400000, guid: 2d5c74793f0fa0e4bac76f97068041b2, type: 2}
+  - {fileID: 11400000, guid: 86fbd8f815a389e43b1c3f746c49156b, type: 2}
   taskView: {fileID: 1533901280}
 --- !u!1 &1471993783
 GameObject:

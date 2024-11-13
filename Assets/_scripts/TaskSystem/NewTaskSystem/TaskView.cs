@@ -1,12 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using System;
 using _scripts.TaskSystem;
 using _scripts.TaskSystem.NewTaskSystem;
-using Unity.VisualScripting;
 using static _scripts.TaskSystem.Tasks;
+using Unity.VisualScripting;
 
 public class TaskView : MonoBehaviour
 {
@@ -43,21 +41,21 @@ public class TaskView : MonoBehaviour
             {
                 Debug.LogWarning($"La tarea con ID {task.idTask} ya est� registrada en el diccionario.");
                 continue;
-            }
-
-           
-
+            } 
+            
             GameObject taskUI = Instantiate(taskUIPrefab, taskPanelParent);
             TextMeshProUGUI taskText = taskUI.GetComponentInChildren<TextMeshProUGUI>();
 
            
              if (taskText != null)
             {
-                taskText.text = $"Tarea {task.names} No ha sido completada";
+                taskText.text = $"{task.description}";
                 taskTextElements.Add(task.idTask, taskText);
                 Debug.Log($"UI para tarea {task.idTask} registrada correctamente.");
-
                 task.onReachedTask += () => OnTaskCompleted(task);
+                Debug.Log("OnTaskCompleted se ha llamado en el initialize");
+                
+                
             }
             else
             {
@@ -67,35 +65,37 @@ public class TaskView : MonoBehaviour
     }
 
     
-    public void UpdateTaskText(string name = null, int taskId = 0, int currentAmount = 0, int requiredAmount = 0, bool isReached = false, TaskType taskType = TaskType.General)
+    public void UpdateTaskText(Tasks tasks_)
     {
-        if (taskTextElements.TryGetValue(taskId, out var taskText))
+        if (taskTextElements.TryGetValue(tasks_.idTask, out var taskText))
         {
-            if (taskType == TaskType.Delivery)
+            if (tasks_.isReached)
             {
-                taskText.text = isReached ? $"{name} completada!" : $"{name}: {currentAmount}/{requiredAmount}";
+                // Texto de victoria, utilizando la variable 'reachedTask' de cada tarea si la tarea fue completada
+                taskText.text = $"¡{tasks_.reachedTask}";
             }
-            else if (taskType == TaskType.Interaction)
+            else
             {
-                taskText.text = isReached ? $"{name} completada!" : $"{name}";
+                // Texto de progreso
+                taskText.text = $"{tasks_.description}";
             }
-
         }
         else
         {
-            Debug.LogWarning($"No se encontr� UI para la tarea {taskId}. Verifique que la tarea est� correctamente registrada en InitializeUI.");
+            Debug.LogWarning($"No se encontró UI para la tarea {tasks_.idTask}. Verifique que la tarea esté correctamente registrada en InitializeUI.");
         }
     }                                  
    
     public void OnTaskCompleted(Tasks completedTask)
     {
-        UpdateTaskText(completedTask.names, completedTask.idTask,0,0,false, TaskType.Interaction);
+        completedTask.isReached = true;
+        
+            UpdateTaskText(completedTask);
+        
+        
     }
 
-    public void OnDeliveryCompleted(DeliveryTasks deliveryTasks)
-    {
-      UpdateTaskText(deliveryTasks.names,deliveryTasks.idTask, deliveryTasks.currentAmount, deliveryTasks.requiredAmount, true, TaskType.Delivery);
-    }
+  
 }
 
 

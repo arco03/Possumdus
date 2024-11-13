@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35eeb9f0562d3754fb9ccb3c4d240f88, type: 3}
-  m_Name: VegetablesTask
+  m_Name: Fuel
   m_EditorClassIdentifier: 
-  names: Vegetables
-  description: Delivery 2 blue spheres to the purple base
-  idTask: 1
-  isReached: 1
-  reachedTask: Vegetables Task Completed!
+  names: FuelTank
+  description: Deliver 5 fuel barrels to the red base
+  idTask: 2
+  isReached: 0
   taskType: 1
-  requiredAmount: 2
-  currentAmount: 2
-  objectTag: Vegetal
+  reachedTask: Fuel Task Completed!
+  requiredAmount: 5
+  currentAmount: 0
+  objectTag: Fuel

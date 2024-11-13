@@ -10,8 +10,8 @@ namespace _scripts.TaskSystem
         public string description;
         public int idTask;
         public bool isReached = false;
+        public string reachedTask;
         public TaskType taskType;
-        public string reachedTask = "Task Completed!";
         public event Action onReachedTask;
 
         public virtual void TaskVerification()
