@@ -24,12 +24,5 @@ namespace _scripts.Objects.Interactable
         {
             rb.useGravity = true;
         }
-    
-    
-    // public void Interact(IPlayerContext context)
-    // {
-    //     Debug.Log("Interactuaste conmigo");
-    //     //Destroy(gameObject);
-    // }
     }
 }
