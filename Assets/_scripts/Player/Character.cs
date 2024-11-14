@@ -1,7 +1,9 @@
 using System;
+using _objectInteraction;
 using _scripts.Interfaces;
 using _scripts.Player.Context;
 using UnityEngine;
+using UnityEngine.UIElements.Experimental;
 
 namespace _scripts.Player
 {
@@ -23,13 +25,16 @@ namespace _scripts.Player
         [SerializeField] private float holdDistance;
         [SerializeField] private float attractionForce;
         [SerializeField] private LayerMask interactableLayer;
+        [SerializeField] private LayerMask inspectionLayer;
         [SerializeField] private float levitationForce;
+        [SerializeField] public GameObject interactionPoint;
         
         [HideInInspector] public float currentEnergy;
         [HideInInspector] public bool canRun = true;
         [HideInInspector] public GameObject pikedObject;
         [HideInInspector] public bool isObjectLevitating = false;
         [HideInInspector] public Rigidbody pikedObjectRb;
+        
         
         public float hungerDuration;
         private Transform _playerCamera;
@@ -134,8 +139,10 @@ namespace _scripts.Player
         {
             var ray = new Ray(_playerCamera.position, _playerCamera.forward);
             Debug.DrawRay(_playerCamera.position, _playerCamera.forward * rayDistance, Color.red);
+
+            int combinedLayers = interactableLayer.value | inspectionLayer.value;
             
-            if (Physics.Raycast(ray, out var hit, rayDistance, interactableLayer.value))
+            if (Physics.Raycast(ray, out var hit, rayDistance, combinedLayers))
             {
                 interactable = hit.collider.GetComponent<IObjectsInteract>();
 
@@ -167,7 +174,27 @@ namespace _scripts.Player
             }
             else
             {
-                Debug.LogWarning("El objecto no alcanzo ningun objecto interactuable");
+                var inspectable = hit.collider.GetComponent<EasterEgg>();
+                    
+                if (inspectable != null)
+                {
+                    Debug.Log("Objeto inspeccionable detectado: " + hit.collider.gameObject.name);
+                    interactionPoint.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.E)) // Cambié a GetMouseButtonDown para evitar múltiples activaciones
+                    {
+                        Debug.Log("Interacting with Easter Egg");
+                        inspectable.OpenCloseEaster(); // Ejecutamos la acción de abrir/cerrar el Easter Egg
+                    }
+                        
+                }
+                else
+                {
+                    interactionPoint.SetActive(false);
+                    Debug.LogWarning("El objeto no es ni interactuable ni coleccionable.");
+                }
+                interactionPoint.SetActive(false);
+                
+                
             }
         }
 
@@ -225,17 +252,5 @@ namespace _scripts.Player
                 }
             }
         }
-
-        // private void OnCollisionEnter(Collision other)
-        // {
-        //     if (other.gameObject.TryGetComponent(out IInteract component))
-        //     {
-        //         // if (context != null) 
-        //         //     component.Interact(context);
-        //         // else
-        //         //     Debug.LogWarning("Context is null, cannot interact.");
-        //      }
-        // }
-
     }
 }
