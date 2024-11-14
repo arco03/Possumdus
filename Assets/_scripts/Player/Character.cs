@@ -139,65 +139,43 @@ namespace _scripts.Player
         {
             var ray = new Ray(_playerCamera.position, _playerCamera.forward);
             Debug.DrawRay(_playerCamera.position, _playerCamera.forward * rayDistance, Color.red);
+                      
 
-            int combinedLayers = interactableLayer.value | inspectionLayer.value;
-            
-            if (Physics.Raycast(ray, out var hit, rayDistance, combinedLayers))
+            if (Physics.Raycast(ray, out var hit, rayDistance, interactableLayer))
             {
                 interactable = hit.collider.GetComponent<IObjectsInteract>();
 
                 if (interactable != null)
                 {
-                  pikedObject = hit.collider.gameObject;
-                  pikedObjectRb = pikedObject.GetComponent<Rigidbody>();
+                    pikedObject = hit.collider.gameObject;
+                    pikedObjectRb = pikedObject.GetComponent<Rigidbody>();
 
-                  if (pikedObjectRb != null)
-                  {
-                      pikedObjectRb.useGravity = false;
-                      pikedObjectRb.freezeRotation = true;
-                      pikedObjectRb.detectCollisions = false;
-                      
-                      interactable.OnInteract();
+                    if (pikedObjectRb != null)
+                    {
+                        pikedObjectRb.useGravity = false;
+                        pikedObjectRb.freezeRotation = true;
+                        pikedObjectRb.detectCollisions = false;
 
-                      isObjectLevitating = true;
-                      Debug.Log("objeto detectado: " + pikedObject.name);
-                  }
-                  else
-                  {
-                      Debug.Log("El objecto no tiene un rigidbody asignado");
-                  }
+                        interactable.OnInteract();
+
+                        isObjectLevitating = true;
+                        Debug.Log("objeto detectado: " + pikedObject.name);
+                    }
+                    else
+                    {
+                        Debug.Log("El objecto no tiene un rigidbody asignado");
+                    }
                 }
                 else
                 {
                     Debug.LogWarning("El objecto no implementa la interfaz");
-                }    
+                }
             }
             else
             {
-                var inspectable = hit.collider.GetComponent<EasterEgg>();
-                    
-                if (inspectable != null)
-                {
-                    Debug.Log("Objeto inspeccionable detectado: " + hit.collider.gameObject.name);
-                    interactionPoint.SetActive(true);
-                    if (Input.GetKeyDown(KeyCode.E)) // Cambié a GetMouseButtonDown para evitar múltiples activaciones
-                    {
-                        Debug.Log("Interacting with Easter Egg");
-                        inspectable.OpenCloseEaster(); // Ejecutamos la acción de abrir/cerrar el Easter Egg
-                    }
-                        
-                }
-                else
-                {
-                    interactionPoint.SetActive(false);
-                    Debug.LogWarning("El objeto no es ni interactuable ni coleccionable.");
-                }
-                interactionPoint.SetActive(false);
-                
-                
+                Debug.LogWarning("El objeto no es interactuable");
             }
         }
-
         public void LevitateObject()
         {
             if (pikedObjectRb != null && isObjectLevitating)

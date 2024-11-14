@@ -2735,6 +2735,7 @@ GameObject:
   - component: {fileID: 1570659860}
   - component: {fileID: 1570659859}
   - component: {fileID: 1570659858}
+  - component: {fileID: 1570659863}
   - component: {fileID: 1570659862}
   m_Layer: 6
   m_Name: Letter
@@ -2844,6 +2845,28 @@ MonoBehaviour:
   easterUI: {fileID: 1303591170}
   toggle: 0
   objectMesh: {fileID: 1570659859}
+  interactablePoint: {fileID: 1536998609}
+--- !u!135 &1570659863
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570659857}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.0908008
+  m_Center: {x: -2.966907e-14, y: 0, z: 1.1839745}
 --- !u!1 &1652370640
 GameObject:
   m_ObjectHideFlags: 0
