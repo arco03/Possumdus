@@ -8,11 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_objectInteraction/EasterEgg.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_objectInteraction/EasterEgg.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_objectInteraction/interactableEasterEgg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_objectInteraction/interactableEasterEgg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Interfaces/IObjectsInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Interfaces/IObjectsInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +112,7 @@
       <workItem from="1731439146840" duration="561000" />
       <workItem from="1731527008484" duration="7024000" />
       <workItem from="1731536929788" duration="4661000" />
+      <workItem from="1731611562118" duration="2543000" />
     </task>
     <servers />
   </component>
