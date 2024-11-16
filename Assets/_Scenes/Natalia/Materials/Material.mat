@@ -29,20 +29,20 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Amplitude: 50
+    - _Amplitude: 0.5
     - _Cutout: 0.064
     - _Distance: 0.5
-    - _GlowIntensity: 2
-    - _Interval: 1
+    - _GlowIntensity: 10
+    - _Interval: 0.01
     - _MaxBaseAmount: 0.5
-    - _MaxSpikeChance: 0.3
-    - _MinSpikeChance: 0.05
+    - _MaxSpikeChance: 0.1
+    - _MinSpikeChance: 0.01
     - _MiniBaseAmount: 0.05
-    - _Speed: 50
-    - _SpikeDuration: 0.5
+    - _Speed: 10
+    - _SpikeDuration: 0.1
     - _TextureScrollSpeed: 1
     - _Transparency: 0.25
     m_Colors:
-    - _GlowColor: {r: 0.254717, g: 0.051664297, b: 0.18423618, a: 1}
-    - _TinteColor: {r: 0.9528302, g: 0.085395135, b: 0.34387162, a: 1}
+    - _GlowColor: {r: 0.3675121, g: 0.990566, b: 0.2943663, a: 1}
+    - _TinteColor: {r: 0.25490198, g: 0.45490196, b: 0, a: 0}
   m_BuildTextureStacks: []
