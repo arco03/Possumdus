@@ -139,7 +139,7 @@ namespace _scripts.Player
         {
             var ray = new Ray(_playerCamera.position, _playerCamera.forward);
             Debug.DrawRay(_playerCamera.position, _playerCamera.forward * rayDistance, Color.red);
-                      
+                       
 
             if (Physics.Raycast(ray, out var hit, rayDistance, interactableLayer))
             {

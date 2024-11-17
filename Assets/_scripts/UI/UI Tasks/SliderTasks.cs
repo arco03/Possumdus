@@ -1,60 +1,42 @@
 using _scripts.TaskSystem;
+using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SliderTasks : MonoBehaviour
+[CreateAssetMenu(menuName = "TaskScriptable/UITask", fileName = "SliderTasks", order = 2)]
+public class SliderTasks : UITasks
 {
-   public UITasks uiTasks;
+    [Header("Task Settings")]
+    public List<Slider> sliders; // Lista de sliders en la tarea.
+    public List<float> targetValues; // Valores objetivo para los sliders.
+    public float tolerance = 0.1f; // Margen de error permitido.
+    
 
-    public Slider[] sliders; // Asigna los sliders correspondientes desde el inspector
-    public float[] targetValues; // Valores específicos que cada slider debe alcanzar
-    private bool isActivated = false;
-
-    public void InitializeTask()
+    public void CheckSliders()
     {
-        if (sliders.Length != targetValues.Length)
-        {
-            Debug.LogError("La cantidad de sliders no coincide con los valores objetivo.");
-            return;
-        }
-        // Configura el evento que escuchará la colisión con el trigger en escena.
-    }
+        if (!isActive || isCompleted) return;
 
-    private void ActivateTask()
-    {
-        isActivated = true;
-        foreach (Slider slider in sliders)
+        for (int i = 0; i < sliders.Count; i++)
         {
-            slider.onValueChanged.AddListener(CheckSliderValues); // Verifica valores al mover sliders
-        }
-    }
-
-    private void CheckSliderValues(float value)
-    {
-        if (!isActivated) return;
-
-        for (int i = 0; i < sliders.Length; i++)
-        {
-            if (Mathf.Abs(sliders[i].value - targetValues[i]) > 0.1f) // Tolerancia ajustable
+            // Verifica si los sliders están dentro del rango permitido.
+            if (Mathf.Abs(sliders[i].value - targetValues[i]) > tolerance)
             {
-                return; // Sale si algún slider no está en el valor objetivo
+                Debug.Log("Sliders are not in the correct positions.");
+                return;
             }
         }
 
-        CompleteTask(); // Completa la tarea si todos los sliders están en sus valores objetivo
+        CompleteTask();
     }
-
+       
     public void CompleteTask()
-    {
-        uiTasks.InvokeReachedEvent();
+    {        
+      base.CompleteUITask();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player")) // Cambia el tag si es necesario
-        {
-            ActivateTask(); // Activa la tarea cuando el jugador colisiona con el objeto en escena
-        }
-    }
+   
 }
+
+    
 

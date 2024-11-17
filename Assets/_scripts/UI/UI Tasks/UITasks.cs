@@ -1,28 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _scripts.TaskSystem
 {
     public class UITasks : Tasks
     {
-        public Transform UIPanel;
-        public GameObject InteractablePanel;
-        private bool isActivated = false;
+        public bool isActive = false;
+        public bool isCompleted = false;
+        
 
-        private void OnTriggerEnter(Collider other)
+#if UNITY_EDITOR
+        private void OnEnable()
         {
-            if (other.CompareTag("Player")) // Cambia el tag si es necesario
-            {
-                ActivateUITask(); // Activa la tarea cuando el jugador colisiona con el objeto en escena
-            }
+            isCompleted = false;
+            isActive = false;
+            base.isReached = false;
         }
+#endif
 
         public void ActivateUITask()
         {
-
+            isActive = true;                    
+            Debug.Log($"Task {names} activated!");
         }
-    }
+
+        public void CompleteUITask()
+        {            
+            base.InvokeReachedEvent();
+            isCompleted = true;
+            isActive = false;
+         }
+
+       
+
+     }
 }
 
 
