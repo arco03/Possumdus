@@ -9,20 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9694e09ec4e9706438203e2429a04ead, type: 3}
+  m_Script: {fileID: 11500000, guid: bb40ff07fe5a7c147bb8315f9bd2bf78, type: 3}
   m_Name: SliderTasks
   m_EditorClassIdentifier: 
-  names: SliderTask
-  description: Complete the panel task at the desktop
+  names: Slider Tasks
+  description: solve the task at the desktop
   idTask: 4
   isReached: 0
   reachedTask: Slider Task Done!
   taskType: 2
   isActive: 0
   isCompleted: 0
-  sliders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetValues: []
-  tolerance: 0.1

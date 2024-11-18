@@ -1,15 +1,15 @@
-using System;
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace _scripts.TaskSystem
 {
+
+    [CreateAssetMenu(menuName = "TaskScriptable/UITask", fileName = "UITasks", order = 2)]
     public class UITasks : Tasks
-    {
+    {       
         public bool isActive = false;
         public bool isCompleted = false;
         
-
 #if UNITY_EDITOR
         private void OnEnable()
         {
@@ -17,13 +17,9 @@ namespace _scripts.TaskSystem
             isActive = false;
             base.isReached = false;
         }
-#endif
-
-        public void ActivateUITask()
-        {
-            isActive = true;                    
-            Debug.Log($"Task {names} activated!");
-        }
+#endif           
+               
+       
 
         public void CompleteUITask()
         {            

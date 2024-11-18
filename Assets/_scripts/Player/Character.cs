@@ -25,12 +25,11 @@ namespace _scripts.Player
         [SerializeField] private float holdDistance;
         [SerializeField] private float attractionForce;
         [SerializeField] private LayerMask interactableLayer;
-        [SerializeField] private LayerMask inspectionLayer;
         [SerializeField] private float levitationForce;
-        [SerializeField] public GameObject interactionPoint;
-        
+                
         [HideInInspector] public float currentEnergy;
         [HideInInspector] public bool canRun = true;
+        [HideInInspector] public bool canLook = true;
         [HideInInspector] public GameObject pikedObject;
         [HideInInspector] public bool isObjectLevitating = false;
         [HideInInspector] public Rigidbody pikedObjectRb;
@@ -64,13 +63,29 @@ namespace _scripts.Player
     
         public void Rotation(float mouseX, float mouseY)
         {
+            if(!canLook) return;
+
             rotationX -= mouseY;
             rotationX = Mathf.Clamp(rotationX, -90f, 90f);
 
             _playerCamera.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
             transform.Rotate(Vector3.up * mouseX);
         }
-        
+
+        public void EnableInteractionMode()
+        {
+            canLook = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        public void DisableInteractionMode()
+        {
+            canLook = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
         public void Move(float horizontal, float vertical)
         {
             Vector3 movement = transform.right * horizontal + transform.forward * vertical;
