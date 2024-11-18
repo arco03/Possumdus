@@ -2,11 +2,11 @@ using _scripts.Player;
 using _scripts.TaskSystem;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class SliderMethods : MonoBehaviour
 {
+    [Header("General UI Task Settings")]
     public UITasks uiTasks;
     public Character character;
     public GameObject InteractablePanel;
@@ -51,7 +51,7 @@ public class SliderMethods : MonoBehaviour
     {
         if (isPlayerInRanges && Input.GetKeyDown(KeyCode.E))
         {
-            OpenCloseUITask();
+            OpenCloseSliderTask();
         }
     }
 
@@ -74,7 +74,7 @@ public class SliderMethods : MonoBehaviour
         }
     }
 
-    public void OpenCloseUITask()
+    public void OpenCloseSliderTask()
     {
         toggle = !toggle;
         if (toggle)

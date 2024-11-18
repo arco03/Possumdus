@@ -17,10 +17,8 @@ namespace _scripts.TaskSystem
             isActive = false;
             base.isReached = false;
         }
-#endif           
-               
-       
-
+#endif        
+                   
         public void CompleteUITask()
         {            
             base.InvokeReachedEvent();
