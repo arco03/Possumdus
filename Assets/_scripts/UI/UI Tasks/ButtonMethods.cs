@@ -81,17 +81,18 @@ public class ButtonMethods : MonoBehaviour
 
 #endregion
 
-#region TaskVerificationMethods
+    #region TaskVerificationMethods
        
     private void InitializeButtons()
     {
         for (int i = 0; i < buttons.Count; i++)
         {
-            int index = i; // Evitar problemas de closures.
+            buttons[i].targetState = targetValues[i];
             buttons[i].OnStateChanged += (button) =>
             {
                 CheckButtons();
             };
+            buttons[i].UpdateLED();
         }
     }     
 
@@ -106,7 +107,7 @@ public class ButtonMethods : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < targetValues.Count; i++)
+        for (int i = 0; i < buttons.Count; i++)
         {
             if (buttons[i].state != targetValues[i])
             {
@@ -116,6 +117,7 @@ public class ButtonMethods : MonoBehaviour
         }
 
         CompleteTask();
+        Debug.Log($"Task {uiTasks.names} completed!");
     }
 
     private void CompleteTask()
