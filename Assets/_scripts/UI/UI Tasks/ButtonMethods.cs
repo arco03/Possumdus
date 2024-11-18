@@ -17,37 +17,17 @@ public class ButtonMethods : MonoBehaviour
     public bool toggle;
 
     [Header("Button Task Settings")]
-    public List<Button> buttons;
-    public List<Image> buttonImages;
-    public List<Image> ledImages;
-    public Sprite ledOnSprite;
-    public Sprite ledOffSprite;
+    public List<ButtonLeds> buttons;
     public Sprite buttonOnSprite;
     public Sprite buttonOffSprite;
     public List<int> targetValues;
-    public List<int> currentValues;
-
-   /* private void OnEnable()
-    {
-        foreach (var button in buttons)
-        {
-            button.onClick.AddListener(delegate { ButtonChange(); });
-        }
-    }
-
-    private void OnDisable()
-    {
-        foreach (var button in buttons)
-        {
-            button.onClick.RemoveListener(delegate { ButtonChange(); });
-        }
-    }*/
-
-
+    public List<int> currentValues = new List<int>();
+         
 
     #region PlayerDetectionMethods
     private void Start()
     {
+        InitializeButtons();
         character = FindObjectOfType<Character>();
         if (character == null)
             Debug.LogError("Character script not found in the scene.");
@@ -98,67 +78,60 @@ public class ButtonMethods : MonoBehaviour
             Debug.Log($"{uiTasks.names} Task closed");
         }
     }
-    #endregion
 
-    #region TaskVerificationMethods
-   
+#endregion
 
-    public void InitializeButtonTask()
-    {        
-        // Asocia la acción de cada botón con la función que maneja su estado
+#region TaskVerificationMethods
+       
+    private void InitializeButtons()
+    {
         for (int i = 0; i < buttons.Count; i++)
         {
-            int index = i;  // Necesario para capturar el índice correctamente
-            buttons[i].onClick.AddListener(() => ToggleButtonState(index));
-            ButtonChange(i);  // Inicializa el estado del botón y LED
-        }
-    }
-    public void ButtonChange(int buttonIndex)
-    {
-        if (currentValues[buttonIndex] == 1)
-        {
-            ledImages[buttonIndex].sprite = ledOnSprite;  // Cambia al sprite de encendido
-            buttons[buttonIndex].image.sprite = buttonOnSprite; // Cambia al sprite del botón "on"
-        }
-        else
-        {
-            ledImages[buttonIndex].sprite = ledOffSprite;  // Cambia al sprite de apagado
-            buttons[buttonIndex].image.sprite = buttonOffSprite; // Cambia al sprite del botón "off"
-        }
-    }
-
-    private void ToggleButtonState(int buttonIndex)
-    {
-        // Cambia el estado del botón y el LED
-        currentValues[buttonIndex] = 1 - currentValues[buttonIndex];  // Alterna entre 0 y 1
-        ButtonChange(buttonIndex);
-
-        // Verifica si la tarea está completa
-        CheckSliders();
-    }
-
-    public void CheckSliders()
-    {        
-        for (int i = 0; i < currentValues.Count; i++)
-        {            
-            if (currentValues[i] != targetValues[i])
+            int index = i; // Evitar problemas de closures.
+            buttons[i].OnStateChanged += (button) =>
             {
-                Debug.Log("Sliders are not in the correct positions.");
+                CheckButtons();
+            };
+        }
+    }     
+
+    private void CheckButtons()
+    {
+        if (!uiTasks.isActive || uiTasks.isCompleted) return;
+
+        // Comparar el orden actual con el establecido.
+        if (currentValues.Count != targetValues.Count)
+        {
+            Debug.Log("Not all buttons are set yet.");
+            return;
+        }
+
+        for (int i = 0; i < targetValues.Count; i++)
+        {
+            if (buttons[i].state != targetValues[i])
+            {
+                Debug.Log($"Button {i} is not in the current state");
                 return;
             }
         }
 
         CompleteTask();
-        Debug.Log($"Task {uiTasks.names} completed!");
     }
 
-    
-    public void CompleteTask()
+    private void CompleteTask()
     {
         uiTasks.CompleteUITask();
     }
 
-    #endregion
-
-
 }
+
+   #endregion
+
+
+    
+    
+    
+    
+    
+    
+
