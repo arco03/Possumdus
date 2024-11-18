@@ -303,6 +303,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   levitationForce: 3
+  followSpeed: 9
   currentEnergy: 0
   canRun: 1
   pikedObject: {fileID: 0}

@@ -27,7 +27,7 @@ namespace _scripts.Player
         [SerializeField] private LayerMask interactableLayer;
         [SerializeField] private float levitationForce;
         [SerializeField] private float followSpeed;
-                
+
         [HideInInspector] public float currentEnergy;
         [HideInInspector] public bool canRun = true;
         [HideInInspector] public bool canLook = true;
@@ -43,7 +43,7 @@ namespace _scripts.Player
         private float _currentSpeed;
         private bool _isHungry = false;
         private IObjectsInteract interactable;
-        
+
 
         private void Awake()
         {
@@ -90,6 +90,7 @@ namespace _scripts.Player
         public void Move(float horizontal, float vertical)
         {
             Vector3 movement = transform.right * horizontal + transform.forward * vertical;
+            movement.Normalize();
             movement *= _currentSpeed;
             
             Vector3 newSpeed = new Vector3(movement.x, _rb.velocity.y, movement.z);
@@ -166,11 +167,12 @@ namespace _scripts.Player
                     pikedObject = hit.collider.gameObject;
                     pikedObjectRb = pikedObject.GetComponent<Rigidbody>();
 
-                    if (pikedObjectRb != null)
-                    {
-                        pikedObjectRb.useGravity = false;
-                        pikedObjectRb.constraints = RigidbodyConstraints.FreezeAll;
-                        interactable.OnInteract();
+                  if (pikedObjectRb != null)
+                  {
+                      pikedObjectRb.useGravity = false;
+                      pikedObjectRb.constraints = RigidbodyConstraints.FreezeAll;
+                      
+                      interactable.OnInteract();
 
                         isObjectLevitating = true;
                         Debug.Log("objeto detectado: " + pikedObject.name);
