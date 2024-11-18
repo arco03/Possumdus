@@ -24,6 +24,7 @@ namespace _scripts.Player
         [SerializeField] private float attractionForce;
         [SerializeField] private LayerMask interactableLayer;
         [SerializeField] private float levitationForce;
+        [SerializeField] private float followSpeed;
         
         [HideInInspector] public float currentEnergy;
         [HideInInspector] public bool canRun = true;
@@ -38,7 +39,7 @@ namespace _scripts.Player
         private float _currentSpeed;
         private bool _isHungry = false;
         private IObjectsInteract interactable;
-        
+
 
         private void Awake()
         {
@@ -69,6 +70,7 @@ namespace _scripts.Player
         public void Move(float horizontal, float vertical)
         {
             Vector3 movement = transform.right * horizontal + transform.forward * vertical;
+            movement.Normalize();
             movement *= _currentSpeed;
             
             Vector3 newSpeed = new Vector3(movement.x, _rb.velocity.y, movement.z);
@@ -147,8 +149,7 @@ namespace _scripts.Player
                   if (pikedObjectRb != null)
                   {
                       pikedObjectRb.useGravity = false;
-                      pikedObjectRb.freezeRotation = true;
-                      pikedObjectRb.detectCollisions = false;
+                      pikedObjectRb.constraints = RigidbodyConstraints.FreezeAll;
                       
                       interactable.OnInteract();
 
@@ -187,7 +188,7 @@ namespace _scripts.Player
                 Vector3 targetPosition = _playerCamera.position + _playerCamera.forward * holdDistance;
                 float distance = Vector3.Distance(pikedObject.transform.position, targetPosition);
                 
-                pikedObject.transform.position = Vector3.MoveTowards(pikedObject.transform.position, targetPosition, Time.deltaTime * 5f);
+                pikedObject.transform.position = Vector3.MoveTowards(pikedObject.transform.position, targetPosition, Time.deltaTime * followSpeed);
                 if (distance < 0.1f)
                 {
                     pikedObjectRb.velocity = Vector3.zero;
@@ -202,8 +203,7 @@ namespace _scripts.Player
                 interactable.OnRelease();
                 
                 pikedObjectRb.useGravity = true;
-                pikedObjectRb.freezeRotation = false;
-                pikedObjectRb.detectCollisions = true;
+                pikedObjectRb.constraints = RigidbodyConstraints.None;
                 
                 isObjectLevitating = false;
                 pikedObject = null;
