@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,14 +16,21 @@ public class ButtonLeds : MonoBehaviour
     public delegate void ButtonStateChanged(ButtonLeds button);
     public event ButtonStateChanged OnStateChanged;
 
+    private void Start()
+    {
+        state = ( targetState == 0) ? 1 : 0;
+                UpdateLed();
+                UpdateButton();
+    }
+
     public void ToggleState()
     {
         state = state == 0 ? 1 : 0;
-        OnStateChanged?.Invoke(this);
-        UpdateLED();
-        UpdateButton();
+                OnStateChanged?.Invoke(this);
+                UpdateLed();
+                UpdateButton();
     }
-    public void UpdateLED()
+   public void UpdateLed()
     {
     
     ledImage.sprite = (state == targetState) ? ledOnSprite : ledOffSprite;

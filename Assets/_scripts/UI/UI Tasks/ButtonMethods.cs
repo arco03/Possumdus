@@ -92,7 +92,7 @@ public class ButtonMethods : MonoBehaviour
             {
                 CheckButtons();
             };
-            buttons[i].UpdateLED();
+            buttons[i].UpdateLed();
         }
     }     
 
