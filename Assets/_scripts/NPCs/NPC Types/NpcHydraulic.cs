@@ -12,7 +12,7 @@ namespace _scripts.NPCs.NPC_Types
         private void Awake()
         {
             Agent = GetComponent<NavMeshAgent>();
-            walkingState = new WalkingState(Agent, Waypoints);
+            walkingState = new WalkingState(Agent, waypoints);
             NpcStateMachine = new NpcStateMachine(walkingState);
         }
         

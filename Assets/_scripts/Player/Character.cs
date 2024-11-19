@@ -1,5 +1,4 @@
 using System;
-using _objectInteraction;
 using _scripts.Interfaces;
 using _scripts.Player.Context;
 using UnityEngine;

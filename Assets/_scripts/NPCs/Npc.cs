@@ -1,6 +1,5 @@
-using System;
 using _scripts.Interfaces;
-using _scripts.NPCs.States;
+using DialogueEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,9 +8,10 @@ namespace _scripts.NPCs
     [RequireComponent(typeof(NavMeshAgent))]
     public abstract class Npc : MonoBehaviour, INpcInteract
     {
-        protected NpcStateMachine NpcStateMachine;
-        [SerializeField] protected Transform[] Waypoints;
+        protected internal NpcStateMachine NpcStateMachine;
+        [SerializeField] protected Transform[] waypoints;
         protected NavMeshAgent Agent;
+        [SerializeField] protected NPCConversation npcConversation;
 
         public virtual void Start()
         {
@@ -22,7 +22,7 @@ namespace _scripts.NPCs
         {
             NpcStateMachine.UpdateStateMachine();
         }
-
+        
         public abstract void Interact();
         
     }
