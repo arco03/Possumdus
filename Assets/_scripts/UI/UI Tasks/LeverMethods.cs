@@ -70,7 +70,26 @@ public class LeverMethods : MonoBehaviour
     #endregion
 
     #region VerificationTask
+    [Header("Task Settings")]
+    public Vector2 finalPosition; // La posición objetivo de la palanca en coordenadas locales.
+    public float tolerance = 5f; // Margen de error para considerar que la palanca está "abajo".
 
+    public void CheckTask()
+    {
+        if (!uiTasks.isActive || uiTasks.isCompleted) return;
+
+        // Aquí puedes verificar si la palanca está en la posición correcta desde otro script.
+        Debug.Log($"Task {uiTasks.names} checked but needs external validation.");
+    }
+
+    public void CompleteLeverTask()
+    {
+        if (uiTasks.isCompleted) return;
+
+        uiTasks.isCompleted = true;
+        Debug.Log($"Task {uiTasks.names} completed!");
+       
+    }
 
     #endregion
 }
