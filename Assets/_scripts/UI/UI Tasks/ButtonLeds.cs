@@ -1,12 +1,14 @@
 using UnityEngine;
-using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class ButtonLeds : MonoBehaviour
 {
     public Image ledImage;
+    public Image buttonImage;
     public Sprite ledOnSprite;
     public Sprite ledOffSprite;
+    public Sprite buttonOffSprite;
+    public Sprite buttonOnSprite;
     public int state;
     public int targetState;
 
@@ -18,10 +20,16 @@ public class ButtonLeds : MonoBehaviour
         state = state == 0 ? 1 : 0;
         OnStateChanged?.Invoke(this);
         UpdateLED();
+        UpdateButton();
     }
     public void UpdateLED()
     {
     
     ledImage.sprite = (state == targetState) ? ledOnSprite : ledOffSprite;
+    }
+
+    public void UpdateButton()
+    {
+        buttonImage.sprite = (state == targetState) ? buttonOnSprite : buttonOffSprite;
     }
 }
