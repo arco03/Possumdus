@@ -9,24 +9,29 @@ namespace _scripts.Objects.Interactable
     public class InteractionButton : MonoBehaviour, IObjectsInteract
     {
         public string value;
-        private InseminationManager manager;
+        private InteractionMethods _manager;
         public bool isInteractable = true;
 
         private void Start()
         {
-            manager = FindObjectOfType<InseminationManager>();
+            _manager = FindObjectOfType<InteractionMethods>();
+            _manager.intTask.buttons.Add(this);
         }
 
         public void OnInteract()
         {
             if (isInteractable)
-            { 
-                manager.SelectButton(this);
+            {
+                _manager.SelectButton(this);
                 Debug.Log($"Seleccionó el boton {value}");
             }
         }
 
         public void OnRelease()
+        {
+        }
+
+        public void DisableButton()
         {
             isInteractable = false;
         }

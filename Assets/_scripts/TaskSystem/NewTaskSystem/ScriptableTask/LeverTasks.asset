@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb40ff07fe5a7c147bb8315f9bd2bf78, type: 3}
   m_Name: LeverTasks
   m_EditorClassIdentifier: 
-  names: Lever
-  description: do the task at desktop 3
+  names: Lever Task
+  description: do the task at the third desktop
   idTask: 6
   isReached: 0
-  reachedTask: lever task done!
+  reachedTask: lever task done
   taskType: 2
   isActive: 0
-  isCompleted: 1
+  isCompleted: 0

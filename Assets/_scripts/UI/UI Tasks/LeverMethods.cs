@@ -1,161 +1,161 @@
+using System.Collections.Generic;
 using _scripts.Player;
 using _scripts.TaskSystem;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LeverMethods : MonoBehaviour
+namespace _scripts.UI.UI_Tasks
 {
-    [Header("General UI Task Settings")]
-    public UITasks uiTasks;
-    public Character character;
-    public GameObject InteractablePanel;
-    public GameObject interactableText;
-    public GameObject reticle;
-    public bool isPlayerInRanges;
-    public bool toggle;
-
-    [Header("LeverTask Settings")]
-    public List<Slider> levers; // Lista de sliders que actúan como palancas.
-    public float resetSpeed = 2f; // Velocidad de reinicio si el orden no es correcto.
-    public float resistanceFactor = 2f; // Factor de resistencia para simular pesadez.
-
-    private int currentLeverIndex = 0; // Índice del slider que debe moverse.
-    private bool isTaskFailed = false; // Flag para saber si el jugador falló el orden.
-    private bool isDragging = false;
-
-    #region PlayerDetectionMethods
-    private void Start()
+    public class LeverMethods : MonoBehaviour
     {
-        character = FindObjectOfType<Character>();
-        if (character == null)
-            Debug.LogError("Character script not found in the scene.");
-    }
+        [Header("General UI Task Settings")]
+        public UITasks uiTasks;
+        public Character character;
+        public GameObject interactablePanel;
+        public GameObject interactableText;
+        public GameObject reticle;
+        public bool isPlayerInRanges;
+        public bool toggle;
 
-    private void Update()
-    {
-        if (isPlayerInRanges && Input.GetKeyDown(KeyCode.E))
+        [Header("LeverTask Settings")]
+        public List<Slider> levers; // Lista de sliders que actï¿½an como palancas.
+        public float resetSpeed = 0f; // Velocidad de reinicio si el orden no es correcto.
+        public float resistanceFactor = 0f; // Factor de resistencia para simular pesadez.
+        private int _currentLeverIndex = 0; // ï¿½ndice del slider que debe moverse.
+        private bool _isTaskFailed = false; // Flag para saber si el jugador fallï¿½ el orden.
+        private bool _isDragging = false;
+
+        #region PlayerDetectionMethods
+        private void Start()
         {
-            OpenCloseButtonTask();
+            character = FindObjectOfType<Character>();
+            if (character == null)
+                Debug.LogError("Character script not found in the scene.");
         }
 
-        if (isTaskFailed)
+        private void Update()
         {
-            ResetLevers(); // Resetea los sliders si falló la tarea.
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player") && !uiTasks.isCompleted)
-        {
-            isPlayerInRanges = true;
-            interactableText.SetActive(true);
-            reticle.SetActive(false);
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInRanges = false;
-            interactableText.SetActive(false);
-            reticle.SetActive(true);
-        }
-    }
-
-    public void OpenCloseButtonTask()
-    {
-        toggle = !toggle;
-        if (toggle)
-        {
-            InteractablePanel.SetActive(true);
-            uiTasks.isActive = true;
-            character.EnableInteractionMode();
-            Debug.Log($"{uiTasks.names} Task opened");
-        }
-        else
-        {
-            InteractablePanel.SetActive(false);
-            uiTasks.isActive = false;
-            character.DisableInteractionMode();
-            Debug.Log($"{uiTasks.names} Task closed");
-        }
-    }
-
-    #endregion
-
-    #region VerificationTask
-    public void OnPointerDown(Slider lever)
-    {
-        if(lever == levers[currentLeverIndex])
-        {
-            isDragging = true;
-        }
-    }
-
-    public void OnPointerUp(Slider lever)
-    {
-        if (lever == levers[currentLeverIndex])
-        {
-            isDragging = false;
-
-            if (lever.value <= 0.1f)
+            if (isPlayerInRanges && Input.GetKeyDown(KeyCode.E))
             {
-                lever.value = 0;
-                currentLeverIndex++;
+                OpenCloseButtonTask();
+            }
 
-                if (currentLeverIndex >= levers.Count)
-                {
-                    CompleteTask();
-                }
+            if (_isTaskFailed)
+            {
+                ResetLevers(); 
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player") && !uiTasks.isCompleted)
+            {
+                isPlayerInRanges = true;
+                interactableText.SetActive(true);
+                reticle.SetActive(false);
+            }
+        }
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                isPlayerInRanges = false;
+                interactableText.SetActive(false);
+                reticle.SetActive(true);
+            }
+        }
+
+        public void OpenCloseButtonTask()
+        {
+            toggle = !toggle;
+            if (toggle)
+            {
+                interactablePanel.SetActive(true);
+                uiTasks.isActive = true;
+                character.EnableInteractionMode();
+                Debug.Log($"{uiTasks.names} Task opened");
+            }
+            else
+            {
+                interactablePanel.SetActive(false);
+                uiTasks.isActive = false;
+                character.DisableInteractionMode();
+                Debug.Log($"{uiTasks.names} Task closed");
+            }
+        }
+
+        #endregion
+
+        #region VerificationTask
+        public void OnPointerDown(Slider lever)
+        {
+            if(lever == levers[_currentLeverIndex])
+            {
+                _isDragging = true;
             }
             else
             {
                 FailTask();
             }
         }
-    }
 
-    public void OnDrag( Slider lever)
-    {
-        if(lever == levers[currentLeverIndex] && isDragging)
+        public void OnPointerUp(Slider lever)
         {
-            float mouseInput = Input.GetAxis("Mouse Y");
-            float resistance = Mathf.Lerp(1f, resistanceFactor, 1f - lever.value);
-            lever.value -= mouseInput / resistance * Time.deltaTime;
-        }
-        
-    }
-
-    public void ResetLevers()
-    {
-       foreach(Slider lever in levers)
-        {
-            lever.value += resetSpeed * Time.deltaTime;
-            if(lever.value >= lever.maxValue)
+            if (lever == levers[_currentLeverIndex])
             {
-                lever.value = lever.maxValue;
+                _isDragging = false;
+
+                if(lever.value >= 0.9f)
+                {
+                    lever.value = lever.maxValue;
+                    _currentLeverIndex++;
+                    if (_currentLeverIndex >= levers.Count)
+                    {
+                        CompleteTask();
+                        Debug.Log("lever task completed");
+                    }
+                }
+                else
+                {
+                    FailTask();
+                }
             }
         }
 
-        if (levers[0].value == levers[0].maxValue)
+        public void OnDrag( Slider lever)
         {
-            isTaskFailed = false;
-            currentLeverIndex = 0;
+            if(lever == levers[_currentLeverIndex] && _isDragging)
+            {
+                float mouseInput = Input.GetAxis("Mouse Y");
+                float resistance = Mathf.Lerp(1f, resistanceFactor, Mathf.Pow(lever.value, 2));
+                lever.value += mouseInput / (resistance * 2f) * Time.deltaTime;
+            }
+        
         }
-    }
-    private void CompleteTask()
-    {
-        uiTasks.CompleteUITask();
-    }
 
-    public void FailTask()
-    {
-        Debug.Log("Task Failed!");
-        isTaskFailed = true;
-    }
+        private void ResetLevers()
+        {
+            foreach(var lever in levers)
+            {
+                lever.value = Mathf.MoveTowards(lever.value, lever.minValue, resetSpeed * Time.deltaTime);
+            }
+            if (levers[0].value >= levers[0].maxValue)
+            {
+                _isTaskFailed = false;
+                _currentLeverIndex = 0;
+            }
+        }
+        private void CompleteTask()
+        {
+            uiTasks.CompleteUITask();
+        }
 
-    #endregion
+        private void FailTask()
+        {
+            Debug.Log("Task Failed!");
+            _isTaskFailed = true;
+        }
+
+        #endregion
+    }
 }
