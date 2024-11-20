@@ -1,7 +1,6 @@
 namespace _scripts.NPCs.NPC_Types
 {
-    public class NpcSystems : Npc
+    public class NpcMechanicalEngineer : Npc
     {
-        
     }
 }
