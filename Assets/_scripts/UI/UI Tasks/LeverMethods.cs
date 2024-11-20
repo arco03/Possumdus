@@ -1,6 +1,9 @@
 using _scripts.Player;
 using _scripts.TaskSystem;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LeverMethods : MonoBehaviour
 {
@@ -12,6 +15,15 @@ public class LeverMethods : MonoBehaviour
     public GameObject reticle;
     public bool isPlayerInRanges;
     public bool toggle;
+
+    [Header("LeverTask Settings")]
+    public List<Slider> levers; // Lista de sliders que actúan como palancas.
+    public float resetSpeed = 2f; // Velocidad de reinicio si el orden no es correcto.
+    public float resistanceFactor = 2f; // Factor de resistencia para simular pesadez.
+
+    private int currentLeverIndex = 0; // Índice del slider que debe moverse.
+    private bool isTaskFailed = false; // Flag para saber si el jugador falló el orden.
+    private bool isDragging = false;
 
     #region PlayerDetectionMethods
     private void Start()
@@ -26,6 +38,11 @@ public class LeverMethods : MonoBehaviour
         if (isPlayerInRanges && Input.GetKeyDown(KeyCode.E))
         {
             OpenCloseButtonTask();
+        }
+
+        if (isTaskFailed)
+        {
+            ResetLevers(); // Resetea los sliders si falló la tarea.
         }
     }
 
@@ -70,25 +87,74 @@ public class LeverMethods : MonoBehaviour
     #endregion
 
     #region VerificationTask
-    [Header("Task Settings")]
-    public Vector2 finalPosition; // La posición objetivo de la palanca en coordenadas locales.
-    public float tolerance = 5f; // Margen de error para considerar que la palanca está "abajo".
-
-    public void CheckTask()
+    public void OnPointerDown(Slider lever)
     {
-        if (!uiTasks.isActive || uiTasks.isCompleted) return;
-
-        // Aquí puedes verificar si la palanca está en la posición correcta desde otro script.
-        Debug.Log($"Task {uiTasks.names} checked but needs external validation.");
+        if(lever == levers[currentLeverIndex])
+        {
+            isDragging = true;
+        }
     }
 
-    public void CompleteLeverTask()
+    public void OnPointerUp(Slider lever)
     {
-        if (uiTasks.isCompleted) return;
+        if (lever == levers[currentLeverIndex])
+        {
+            isDragging = false;
 
-        uiTasks.isCompleted = true;
-        Debug.Log($"Task {uiTasks.names} completed!");
-       
+            if (lever.value <= 0.1f)
+            {
+                lever.value = 0;
+                currentLeverIndex++;
+
+                if (currentLeverIndex >= levers.Count)
+                {
+                    CompleteTask();
+                }
+            }
+            else
+            {
+                FailTask();
+            }
+        }
+    }
+
+    public void OnDrag( Slider lever)
+    {
+        if(lever == levers[currentLeverIndex] && isDragging)
+        {
+            float mouseInput = Input.GetAxis("Mouse Y");
+            float resistance = Mathf.Lerp(1f, resistanceFactor, 1f - lever.value);
+            lever.value -= mouseInput / resistance * Time.deltaTime;
+        }
+        
+    }
+
+    public void ResetLevers()
+    {
+       foreach(Slider lever in levers)
+        {
+            lever.value += resetSpeed * Time.deltaTime;
+            if(lever.value >= lever.maxValue)
+            {
+                lever.value = lever.maxValue;
+            }
+        }
+
+        if (levers[0].value == levers[0].maxValue)
+        {
+            isTaskFailed = false;
+            currentLeverIndex = 0;
+        }
+    }
+    private void CompleteTask()
+    {
+        uiTasks.CompleteUITask();
+    }
+
+    public void FailTask()
+    {
+        Debug.Log("Task Failed!");
+        isTaskFailed = true;
     }
 
     #endregion
