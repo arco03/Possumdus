@@ -7,12 +7,6 @@
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/EduardoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Objects/Interactable/InteractionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Interactable/InteractionButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Objects/Manager/InseminationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Manager/InteractionMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Objects/Manager/InseminationManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Manager/InteractionMethods.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/TaskSystem/NewTaskSystem/InteractionTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/TaskSystem/NewTaskSystem/InteractionTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/TaskSystem/NewTaskSystem/ScriptableTask/LeverTasks.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/TaskSystem/NewTaskSystem/ScriptableTask/LeverTasks.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/TaskSystem/NewTaskSystem/ScriptableTask/LeverTasks.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/TaskSystem/NewTaskSystem/ScriptableTask/LeverTasks.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/LeverMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/LeverMethods.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,6 +116,7 @@
       <workItem from="1731611562118" duration="4125000" />
       <workItem from="1732049047022" duration="1917000" />
       <workItem from="1732127997142" duration="8175000" />
+      <workItem from="1732217688528" duration="3811000" />
     </task>
     <servers />
   </component>

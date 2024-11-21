@@ -18,12 +18,10 @@ namespace _scripts.UI.UI_Tasks
         public bool toggle;
 
         [Header("LeverTask Settings")]
-        public List<Slider> levers; // Lista de sliders que act�an como palancas.
-        public float resetSpeed; // Velocidad de reinicio si el orden no es correcto.
-        public float resistanceFactor; // Factor de resistencia para simular pesadez.
-        private int _currentLeverIndex = 0; // �ndice del slider que debe moverse.
-        private bool _isTaskFailed = false; // Flag para saber si el jugador fall� el orden.
-        private bool _isDragging = false;
+        public List<Slider> levers; 
+        private int _currentLeverIndex = 0; 
+        private bool _isTaskFailed = false; 
+       
 
         #region PlayerDetectionMethods
         private void Start()
@@ -87,11 +85,22 @@ namespace _scripts.UI.UI_Tasks
         #endregion
 
         #region VerificationTask
-        public void OnPointerDown(Slider lever)
+
+        public void OnValueChanged(Slider lever)
         {
-            if(lever == levers[_currentLeverIndex] && !_isTaskFailed)
+            if (lever == levers[_currentLeverIndex])
             {
-                _isDragging = true;
+                if (lever.value >= lever.maxValue)
+                {
+                    lever.value = lever.maxValue;
+                    _currentLeverIndex++;
+
+                    if (_currentLeverIndex >= levers.Count)
+                    {
+                        CompleteTask();
+                        Debug.Log("lever task done");
+                    }
+                }
             }
             else
             {
@@ -99,59 +108,26 @@ namespace _scripts.UI.UI_Tasks
             }
         }
 
-        public void OnPointerUp(Slider lever)
+        public void OnPointUp(Slider lever)
         {
-            if (lever == levers[_currentLeverIndex] && !_isTaskFailed)
+            if (lever == levers[_currentLeverIndex])
             {
-                _isDragging = false;
-
-                if(lever.value >= 0.9f)
-                {
-                    lever.value = lever.maxValue;
-                    _currentLeverIndex++;
-                    if (_currentLeverIndex >= levers.Count)
-                    {
-                        CompleteTask();
-                        Debug.Log("lever task completed");
-                    }
-                }
-                else
+                if (lever.value < lever.maxValue)
                 {
                     FailTask();
                 }
             }
         }
 
-        public void OnDrag( Slider lever)
-        {
-            if(lever == levers[_currentLeverIndex] && _isDragging)
-            {
-                float mouseInput = Input.GetAxis("Mouse Y");
-                float resistance = Mathf.Lerp(1f, resistanceFactor, lever.value);
-                lever.value += (mouseInput / resistance) * Time.deltaTime;
-                lever.value = Mathf.Clamp(lever.value, lever.minValue, lever.maxValue);
-            }
-        
-        }
-
         private void ResetLevers()
         {
-            bool AllReset = true;
-
             foreach(var lever in levers)
             {
-                lever.value = Mathf.MoveTowards(lever.value, lever.minValue, resetSpeed * Time.deltaTime);
-                if (lever.value > lever.minValue)
-                {
-                    AllReset = false;
-                }
+                lever.value = lever.minValue; 
             }
-            if(AllReset)
-            {
-                _isTaskFailed = false;
-                _currentLeverIndex = 0; 
-            }
-         
+
+            _isTaskFailed = false;
+            _currentLeverIndex = 0;
         }
         private void CompleteTask()
         {
@@ -162,7 +138,6 @@ namespace _scripts.UI.UI_Tasks
         {
             Debug.Log("Task Failed!");
             _isTaskFailed = true;
-            _currentLeverIndex = 0;
         }
 
         #endregion
