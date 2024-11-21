@@ -110,6 +110,7 @@ namespace _scripts.UI.UI_Tasks
 
         public void OnPointUp(Slider lever)
         {
+            if(levers.Count >= _currentLeverIndex) return;
             if (lever == levers[_currentLeverIndex])
             {
                 if (lever.value < lever.maxValue)
