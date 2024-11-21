@@ -81,14 +81,14 @@ public class SliderMethods : MonoBehaviour
         {
             InteractablePanel.SetActive(true);
             uiTasks.isActive = true;
-            character.EnableInteractionMode();
+            //character.EnableInteractionMode();
             Debug.Log($"{uiTasks.names} Task opened");
         }
         else
         {
             InteractablePanel.SetActive(false);
             uiTasks.isActive = false;
-            character.DisableInteractionMode();
+            //character.DisableInteractionMode();
             Debug.Log($"{uiTasks.names} Task closed");
         }
     }

@@ -1,4 +1,3 @@
-using System;
 using _scripts.Interfaces;
 using _scripts.NPCs.States;
 using DialogueEditor;

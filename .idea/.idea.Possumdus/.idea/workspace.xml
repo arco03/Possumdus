@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcJanitor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcJanitor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs/EasterEggComputerConversation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs/EasterEggComputerConversation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs/EasterEggConversation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs/EasterEggConversation.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ChatImages.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ChatImages/Chef 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ChatImages/Chef 1.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/CloseConversation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/CloseConversation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcFertilizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcFertilizerSupervisor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcFertilizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcFertilizerSupervisor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcHydraulic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcHydrophonicOperator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcHydraulic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcHydrophonicOperator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcMechanic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcMechanicalEngineer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcMechanic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcMechanicalEngineer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcMinerology.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcMinerologist.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcMinerology.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcMinerologist.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcSystemEngineer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcSystems.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/NPC Types/NpcSystemEngineer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/ButtonMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/ButtonMethods.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/SliderMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/SliderMethods.cs" afterDir="false" />
     </list>
@@ -64,13 +54,6 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\danig\\AppData\\Local\\Symbols\\src&quot;
-    ]
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -134,6 +117,8 @@
       <workItem from="1731611562118" duration="4125000" />
       <workItem from="1732068582411" duration="1080000" />
       <workItem from="1732074001173" duration="750000" />
+      <workItem from="1732127875800" duration="2604000" />
+      <workItem from="1732221936283" duration="3553000" />
     </task>
     <servers />
   </component>
@@ -148,6 +133,7 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
