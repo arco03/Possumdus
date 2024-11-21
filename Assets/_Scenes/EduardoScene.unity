@@ -8411,6 +8411,46 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7389139822305712865, guid: cb632418aa5a6c8418becaeb824fe95a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389139822305712865, guid: cb632418aa5a6c8418becaeb824fe95a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389139822305712865, guid: cb632418aa5a6c8418becaeb824fe95a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 414554638}
+    - target: {fileID: 7389139822305712865, guid: cb632418aa5a6c8418becaeb824fe95a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389139822305712865, guid: cb632418aa5a6c8418becaeb824fe95a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDrag
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389139822305712865, guid: cb632418aa5a6c8418becaeb824fe95a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: _scripts.UI.UI_Tasks.LeverMethods, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389139822305712865, guid: cb632418aa5a6c8418becaeb824fe95a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 99604424}
+    - target: {fileID: 7389139822305712865, guid: cb632418aa5a6c8418becaeb824fe95a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.UI.Slider, UnityEngine.UI
+      objectReference: {fileID: 0}
     - target: {fileID: 7618687402427930627, guid: cb632418aa5a6c8418becaeb824fe95a,
         type: 3}
       propertyPath: m_AnchorMax.x

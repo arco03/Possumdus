@@ -19,8 +19,8 @@ namespace _scripts.UI.UI_Tasks
 
         [Header("LeverTask Settings")]
         public List<Slider> levers; // Lista de sliders que act�an como palancas.
-        public float resetSpeed = 0f; // Velocidad de reinicio si el orden no es correcto.
-        public float resistanceFactor = 0f; // Factor de resistencia para simular pesadez.
+        public float resetSpeed; // Velocidad de reinicio si el orden no es correcto.
+        public float resistanceFactor; // Factor de resistencia para simular pesadez.
         private int _currentLeverIndex = 0; // �ndice del slider que debe moverse.
         private bool _isTaskFailed = false; // Flag para saber si el jugador fall� el orden.
         private bool _isDragging = false;
@@ -89,7 +89,7 @@ namespace _scripts.UI.UI_Tasks
         #region VerificationTask
         public void OnPointerDown(Slider lever)
         {
-            if(lever == levers[_currentLeverIndex])
+            if(lever == levers[_currentLeverIndex] && !_isTaskFailed)
             {
                 _isDragging = true;
             }
@@ -101,7 +101,7 @@ namespace _scripts.UI.UI_Tasks
 
         public void OnPointerUp(Slider lever)
         {
-            if (lever == levers[_currentLeverIndex])
+            if (lever == levers[_currentLeverIndex] && !_isTaskFailed)
             {
                 _isDragging = false;
 
@@ -127,23 +127,31 @@ namespace _scripts.UI.UI_Tasks
             if(lever == levers[_currentLeverIndex] && _isDragging)
             {
                 float mouseInput = Input.GetAxis("Mouse Y");
-                float resistance = Mathf.Lerp(1f, resistanceFactor, Mathf.Pow(lever.value, 2));
-                lever.value += mouseInput / (resistance * 2f) * Time.deltaTime;
+                float resistance = Mathf.Lerp(1f, resistanceFactor, lever.value);
+                lever.value += (mouseInput / resistance) * Time.deltaTime;
+                lever.value = Mathf.Clamp(lever.value, lever.minValue, lever.maxValue);
             }
         
         }
 
         private void ResetLevers()
         {
+            bool AllReset = true;
+
             foreach(var lever in levers)
             {
                 lever.value = Mathf.MoveTowards(lever.value, lever.minValue, resetSpeed * Time.deltaTime);
+                if (lever.value > lever.minValue)
+                {
+                    AllReset = false;
+                }
             }
-            if (levers[0].value >= levers[0].maxValue)
+            if(AllReset)
             {
                 _isTaskFailed = false;
-                _currentLeverIndex = 0;
+                _currentLeverIndex = 0; 
             }
+         
         }
         private void CompleteTask()
         {
@@ -154,6 +162,7 @@ namespace _scripts.UI.UI_Tasks
         {
             Debug.Log("Task Failed!");
             _isTaskFailed = true;
+            _currentLeverIndex = 0;
         }
 
         #endregion
