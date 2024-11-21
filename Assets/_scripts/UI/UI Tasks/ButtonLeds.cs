@@ -32,8 +32,7 @@ public class ButtonLeds : MonoBehaviour
     }
    public void UpdateLed()
     {
-    
-    ledImage.sprite = (state == targetState) ? ledOnSprite : ledOffSprite;
+        ledImage.sprite = (state == targetState) ? ledOnSprite : ledOffSprite;
     }
 
     public void UpdateButton()
