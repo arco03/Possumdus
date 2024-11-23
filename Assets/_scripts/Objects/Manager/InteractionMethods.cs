@@ -1,17 +1,15 @@
-using System.Collections.Generic;
 using System.Linq;
 using _scripts.Objects.Interactable;
-using _scripts.TaskSystem;
+using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
 
 namespace _scripts.Objects.Manager
 {
     
-    public class InseminationManager : MonoBehaviour
+    public class InteractionMethods : MonoBehaviour
     {
         public InteractionTask intTask;
-
-        
+       
         public void SelectButton(InteractionButton button)
         {
             if (!intTask.currentCombination.Contains(button.value))
@@ -33,9 +31,7 @@ namespace _scripts.Objects.Manager
 
         private bool ValidateCombination()
         {
-            intTask.currentCombination.Sort();
-            intTask.correctCombination.Sort();
-
+          
            bool isValid = intTask.currentCombination.Count == intTask.correctCombination.Count &&
                            intTask.currentCombination.SequenceEqual(intTask.correctCombination);
 
@@ -43,7 +39,6 @@ namespace _scripts.Objects.Manager
             {
                 Debug.Log("Combinación correcta");
                 DisableButtonInteractions();
-                
             }
             else
             {
@@ -62,11 +57,11 @@ namespace _scripts.Objects.Manager
 
         private void DisableButtonInteractions()
         {
-            foreach (var button in intTask.buttons)
+            foreach (InteractionButton button in intTask.buttons)
             {
                 if (intTask.currentCombination.Contains(button.value))
                 {
-                    button.OnRelease();
+                    button.DisableButton();
                 }
             }
         }

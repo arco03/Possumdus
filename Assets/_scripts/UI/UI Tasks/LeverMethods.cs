@@ -2,25 +2,26 @@ using System.Collections.Generic;
 using _scripts.Player;
 using _scripts.TaskSystem;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _scripts.UI.UI_Tasks
 {
-    public class ButtonMethods : MonoBehaviour
+    public class LeverMethods : MonoBehaviour
     {
         [Header("General UI Task Settings")]
         public UITasks uiTasks;
         public Character character;
-        public GameObject InteractablePanel;
+        public GameObject interactablePanel;
         public GameObject interactableText;
         public GameObject reticle;
         public bool isPlayerInRanges;
         public bool toggle;
 
-        [Header("Button Task Settings")]
-        public List<ButtonLeds> buttons;
-        public List<int> targetValues;
-        public List<int> currentValues = new List<int>();
-         
+        [Header("LeverTask Settings")]
+        public List<Slider> levers; 
+        private int _currentLeverIndex = 0; 
+        private bool _isTaskFailed = false; 
+       
 
         #region PlayerDetectionMethods
         private void Start()
@@ -35,6 +36,11 @@ namespace _scripts.UI.UI_Tasks
             if (isPlayerInRanges && Input.GetKeyDown(KeyCode.E))
             {
                 OpenCloseButtonTask();
+            }
+
+            if (_isTaskFailed)
+            {
+                ResetLevers(); 
             }
         }
 
@@ -62,15 +68,14 @@ namespace _scripts.UI.UI_Tasks
             toggle = !toggle;
             if (toggle)
             {
-                InteractablePanel.SetActive(true);
+                interactablePanel.SetActive(true);
                 uiTasks.isActive = true;
                 character.EnableInteractionMode();
-                InitializeButtons();
                 Debug.Log($"{uiTasks.names} Task opened");
             }
             else
             {
-                InteractablePanel.SetActive(false);
+                interactablePanel.SetActive(false);
                 uiTasks.isActive = false;
                 character.DisableInteractionMode();
                 Debug.Log($"{uiTasks.names} Task closed");
@@ -79,64 +84,63 @@ namespace _scripts.UI.UI_Tasks
 
         #endregion
 
-        #region TaskVerificationMethods
-       
-        private void InitializeButtons()
+        #region VerificationTask
+
+        public void OnValueChanged(Slider lever)
         {
-            for (int i = 0; i < buttons.Count; i++)
+            if (lever == levers[_currentLeverIndex])
             {
-                buttons[i].targetState = currentValues[i];
-                buttons[i].UpdateButton();
-                buttons[i].UpdateLed();
-                Debug.Log(buttons[i].targetState);
-                
-                buttons[i].OnStateChanged += (button) =>
+                if (lever.value >= lever.maxValue)
                 {
-                    CheckButtons();
-                };
-            }
-        }     
+                    lever.value = lever.maxValue;
+                    _currentLeverIndex++;
 
-        private void CheckButtons()
-        {
-            if (!uiTasks.isActive || uiTasks.isCompleted) return;
-
-           if (currentValues.Count != targetValues.Count)
-            {
-                Debug.Log("Not all buttons are set yet.");
-                return;
-            }
-
-            for (int i = 0; i < buttons.Count; i++)
-            {
-                if (buttons[i].state != targetValues[i])
-                {
-                    Debug.Log($"Button {i} is not in the current state");
-                    return;
+                    if (_currentLeverIndex >= levers.Count)
+                    {
+                        CompleteTask();
+                        Debug.Log("lever task done");
+                    }
                 }
             }
-
-            CompleteTask();
-            Debug.Log($"Task {uiTasks.names} completed!");
+            else
+            {
+                FailTask();
+            }
         }
 
+        public void OnPointUp(Slider lever)
+        {
+            if(levers.Count >= _currentLeverIndex) return;
+            if (lever == levers[_currentLeverIndex])
+            {
+                if (lever.value < lever.maxValue)
+                {
+                    FailTask();
+                }
+            }
+        }
+
+        private void ResetLevers()
+        {
+            foreach(var lever in levers)
+            {
+                lever.value = lever.minValue; 
+            }
+
+            _isTaskFailed = false;
+            _currentLeverIndex = 0;
+        }
         private void CompleteTask()
         {
             uiTasks.CompleteUITask();
-            toggle = false;
         }
+
+        private void FailTask()
+        {
+            Debug.Log("Task Failed!");
+            _isTaskFailed = true;
+        }
+
         #endregion
     }
-    
 }
-
-  
-
-
-    
-    
-    
-    
-    
-    
-

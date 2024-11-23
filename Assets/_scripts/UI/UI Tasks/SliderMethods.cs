@@ -23,12 +23,14 @@ public class SliderMethods : MonoBehaviour
     public Color correctColor = Color.green;
     public Color incorrectColor = Color.red;
 
+    #region PlayerDetectionMethods
     private void OnEnable()
     {
-        foreach (var slider in sliders) {
+        foreach (var slider in sliders)
+        {
             slider.onValueChanged.AddListener(delegate { UpdateSliderColors(); });
             slider.onValueChanged.AddListener(delegate { CheckSliders(); });
-                }
+        }
     }
 
     private void OnDisable()
@@ -92,8 +94,9 @@ public class SliderMethods : MonoBehaviour
             Debug.Log($"{uiTasks.names} Task closed");
         }
     }
+    #endregion
 
-
+    #region VerificationMethods
     public void CheckSliders()
     {
         if (!uiTasks.isActive || uiTasks.isCompleted)
@@ -113,7 +116,7 @@ public class SliderMethods : MonoBehaviour
                 return;
             }
         }
-                
+
         CompleteTask();
         Debug.Log($"Task {uiTasks.names} completed!");
     }
@@ -131,7 +134,7 @@ public class SliderMethods : MonoBehaviour
     {
         uiTasks.CompleteUITask();
     }
-
+    #endregion
 }
 
 
