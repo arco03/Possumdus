@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace DialogueEditor
@@ -53,7 +52,6 @@ namespace DialogueEditor
         // Components
         public AudioSource AudioPlayer;
         // Prefabs
-        public UIConversationButton ButtonPrefab;
         // Default values
         public Sprite BlankSprite;
 
@@ -662,8 +660,8 @@ namespace DialogueEditor
                     OptionConnection connection = m_currentSpeech.Connections[i] as OptionConnection;
                     if (ConditionsMet(connection))
                     {
-                        UIConversationButton uiOption = CreateButton();
-                        uiOption.SetupButton(UIConversationButton.eButtonType.Option, connection.OptionNode);
+                        // UIConversationButton uiOption = CreateButton();
+                        // uiOption.SetupButton(UIConversationButton.eButtonType.Option, connection.OptionNode);
                     }
                 }
             }
@@ -677,25 +675,25 @@ namespace DialogueEditor
                 {
                     if (m_currentSpeech.ConnectionType == Connection.eConnectionType.Speech)
                     {
-                        UIConversationButton uiOption = CreateButton();
-                        SpeechNode next = GetValidSpeechOfNode(m_currentSpeech);
-
-                        // If there was no valid speech node (due to no conditions being met) this becomes a None button type
-                        if (next == null)
-                        {
-                            uiOption.SetupButton(UIConversationButton.eButtonType.End, null, endFont: m_conversation.EndConversationFont);
-                        }
-                        // Else, valid speech node found
-                        else
-                        {
-                            uiOption.SetupButton(UIConversationButton.eButtonType.Speech, next, continueFont: m_conversation.ContinueFont);
-                        }
+                        // UIConversationButton uiOption = CreateButton();
+                        // SpeechNode next = GetValidSpeechOfNode(m_currentSpeech);
+                        //
+                        // // If there was no valid speech node (due to no conditions being met) this becomes a None button type
+                        // if (next == null)
+                        // {
+                        //     uiOption.SetupButton(UIConversationButton.eButtonType.End, null, endFont: m_conversation.EndConversationFont);
+                        // }
+                        // // Else, valid speech node found
+                        // else
+                        // {
+                        //     uiOption.SetupButton(UIConversationButton.eButtonType.Speech, next, continueFont: m_conversation.ContinueFont);
+                        // }
                         
                     }
                     else if (m_currentSpeech.ConnectionType == Connection.eConnectionType.None)
                     {
-                        UIConversationButton uiOption = CreateButton();
-                        uiOption.SetupButton(UIConversationButton.eButtonType.End, null, endFont: m_conversation.EndConversationFont);
+                        // UIConversationButton uiOption = CreateButton();
+                        // uiOption.SetupButton(UIConversationButton.eButtonType.End, null, endFont: m_conversation.EndConversationFont);
                     }
                 }
 
@@ -750,12 +748,12 @@ namespace DialogueEditor
             m_currentSelectedIndex = -1;
         }
 
-        private UIConversationButton CreateButton()
-        {
-            UIConversationButton button = GameObject.Instantiate(ButtonPrefab, OptionsPanel);
-            m_uiOptions.Add(button);
-            return button;
-        }
+        // private UIConversationButton CreateButton()
+        // {
+        //     UIConversationButton button = GameObject.Instantiate(ButtonPrefab, OptionsPanel);
+        //     m_uiOptions.Add(button);
+        //     return button;
+        // }
 
         private bool ConditionsMet(Connection connection)
         {

@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs/EasterEggComputerConversation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs/EasterEggComputerConversation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs/EasterEggConversation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/EasterEggs/EasterEggConversation.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/ButtonLeds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/ButtonLeds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/ButtonMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/ButtonMethods.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/SliderMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/SliderMethods.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +47,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.7070485&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Feature-Eduardo&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Feature-Daniela&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Usuario18\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Usuario18\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Usuario18\\AppData\\Local\\Symbols\\src&quot;
-    ]
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -114,9 +115,10 @@
       <workItem from="1731527008484" duration="7024000" />
       <workItem from="1731536929788" duration="4661000" />
       <workItem from="1731611562118" duration="4125000" />
-      <workItem from="1732049047022" duration="1917000" />
-      <workItem from="1732127997142" duration="8175000" />
-      <workItem from="1732217688528" duration="7676000" />
+      <workItem from="1732068582411" duration="1080000" />
+      <workItem from="1732074001173" duration="750000" />
+      <workItem from="1732127875800" duration="2604000" />
+      <workItem from="1732221936283" duration="3553000" />
     </task>
     <servers />
   </component>
@@ -131,6 +133,7 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

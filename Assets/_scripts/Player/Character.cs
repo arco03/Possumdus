@@ -1,6 +1,6 @@
 using System;
-using _objectInteraction;
 using _scripts.Interfaces;
+using _scripts.Managers;
 using _scripts.Player.Context;
 using UnityEngine;
 
@@ -30,7 +30,6 @@ namespace _scripts.Player
 
         [HideInInspector] public float currentEnergy;
         [HideInInspector] public bool canRun = true;
-        [HideInInspector] public bool canLook = true;
         [HideInInspector] public GameObject pikedObject;
         [HideInInspector] public bool isObjectLevitating = false;
         [HideInInspector] public Rigidbody pikedObjectRb;
@@ -64,7 +63,7 @@ namespace _scripts.Player
     
         public void Rotation(float mouseX, float mouseY)
         {
-            if(!canLook) return;
+            if(CursorManager.Instance.CursorState == CursorState.HideCursor) return;
 
             rotationX -= mouseY;
             rotationX = Mathf.Clamp(rotationX, -90f, 90f);
@@ -73,22 +72,10 @@ namespace _scripts.Player
             transform.Rotate(Vector3.up * mouseX);
         }
 
-        public void EnableInteractionMode()
-        {
-            canLook = false;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-
-        public void DisableInteractionMode()
-        {
-            canLook = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-
         public void Move(float horizontal, float vertical)
         {
+            if(CursorManager.Instance.CursorState == CursorState.HideCursor) return;
+
             Vector3 movement = transform.right * horizontal + transform.forward * vertical;
             movement.Normalize();
             movement *= _currentSpeed;

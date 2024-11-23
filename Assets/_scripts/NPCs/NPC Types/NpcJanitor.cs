@@ -1,6 +1,7 @@
 namespace _scripts.NPCs.NPC_Types
 {
-    public class NpcChef : Npc
+    public class NpcJanitor : Npc
     {
+        
     }
 }

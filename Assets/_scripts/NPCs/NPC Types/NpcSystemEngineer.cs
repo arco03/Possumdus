@@ -1,6 +1,6 @@
 namespace _scripts.NPCs.NPC_Types
 {
-    public class NpcHrCoordinator : Npc
+    public class NpcSystemEngineer : Npc
     {
         
     }
