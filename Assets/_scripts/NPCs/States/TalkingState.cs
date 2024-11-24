@@ -16,7 +16,7 @@ namespace _scripts.NPCs.States
         public void StartState()
         {
             Debug.Log("Entró al estado de Talking");
-            CursorManager.Instance.EnableInteractionMode();
+            CursorManager.instance.EnableInteractionMode();
             ConversationManager.Instance.StartConversation(_myConversation);
         }
         
@@ -28,7 +28,7 @@ namespace _scripts.NPCs.States
         public void ExitState()
         {
             Debug.Log("Salio al estado de Talking");
-            CursorManager.Instance.DisableInteractionMode();
+            CursorManager.instance.DisableInteractionMode();
             ConversationManager.Instance.EndConversation();
         }
     }
