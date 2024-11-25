@@ -142,7 +142,6 @@ namespace _scripts.Player
 
         public void ObjectPiked()
         {
-            AudioManager.instance.PlayMusic("Efecto");
             var ray = new Ray(_playerCamera.position, _playerCamera.forward);
             Debug.DrawRay(_playerCamera.position, _playerCamera.forward * rayDistance, Color.red);
                        
