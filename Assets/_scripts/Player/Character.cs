@@ -1,4 +1,5 @@
 using System;
+using _scripts.Audio;
 using _scripts.Interfaces;
 using _scripts.Managers;
 using _scripts.Player.Context;
@@ -63,7 +64,7 @@ namespace _scripts.Player
     
         public void Rotation(float mouseX, float mouseY)
         {
-            if(CursorManager.Instance.CursorState == CursorState.HideCursor) return;
+            if(CursorManager.instance.CursorState == CursorState.HideCursor) return;
 
             rotationX -= mouseY;
             rotationX = Mathf.Clamp(rotationX, -90f, 90f);
@@ -74,7 +75,7 @@ namespace _scripts.Player
 
         public void Move(float horizontal, float vertical)
         {
-            if(CursorManager.Instance.CursorState == CursorState.HideCursor) return;
+            if(CursorManager.instance.CursorState == CursorState.HideCursor) return;
 
             Vector3 movement = transform.right * horizontal + transform.forward * vertical;
             movement.Normalize();

@@ -11,15 +11,15 @@ namespace _scripts.Managers
     }
     public class CursorManager : MonoBehaviour
     {
-        public static CursorManager Instance;
+        public static CursorManager instance;
         
         public CursorState CursorState { get; private set; }
         
         private void Awake()
         {
-            if (!Instance)
+            if (!instance)
             {
-                Instance = this;
+                instance = this;
             }
             else
             {

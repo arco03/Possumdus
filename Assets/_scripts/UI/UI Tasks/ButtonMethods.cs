@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _scripts.Managers;
 using _scripts.Player;
 using _scripts.TaskSystem;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace _scripts.UI.UI_Tasks
         [Header("General UI Task Settings")]
         public UITasks uiTasks;
         public Character character;
-        public GameObject InteractablePanel;
+        public GameObject interactablePanel;
         public GameObject interactableText;
         public GameObject reticle;
         public bool isPlayerInRanges;
@@ -18,13 +19,15 @@ namespace _scripts.UI.UI_Tasks
 
         [Header("Button Task Settings")]
         public List<ButtonLeds> buttons;
+
         public List<int> targetValues;
-        public List<int> currentValues = new List<int>();
+        public List<int> currentValues = new();
          
 
         #region PlayerDetectionMethods
         private void Start()
         {
+            InitializeButtons();
             character = FindObjectOfType<Character>();
             if (character == null)
                 Debug.LogError("Character script not found in the scene.");
@@ -57,22 +60,21 @@ namespace _scripts.UI.UI_Tasks
             }
         }
 
-        public void OpenCloseButtonTask()
+        private void OpenCloseButtonTask()
         {
             toggle = !toggle;
             if (toggle)
             {
-                InteractablePanel.SetActive(true);
+                interactablePanel.SetActive(true);
                 uiTasks.isActive = true;
-                character.EnableInteractionMode();
-                InitializeButtons();
+                CursorManager.instance.EnableInteractionMode();
                 Debug.Log($"{uiTasks.names} Task opened");
             }
             else
             {
-                InteractablePanel.SetActive(false);
+                interactablePanel.SetActive(false);
                 uiTasks.isActive = false;
-                character.DisableInteractionMode();
+                CursorManager.instance.DisableInteractionMode();
                 Debug.Log($"{uiTasks.names} Task closed");
             }
         }
@@ -85,11 +87,7 @@ namespace _scripts.UI.UI_Tasks
         {
             for (int i = 0; i < buttons.Count; i++)
             {
-                buttons[i].targetState = currentValues[i];
-                buttons[i].UpdateButton();
-                buttons[i].UpdateLed();
-                Debug.Log(buttons[i].targetState);
-                
+                int index = i; // Evitar problemas de closures.
                 buttons[i].OnStateChanged += (button) =>
                 {
                     CheckButtons();
@@ -101,13 +99,14 @@ namespace _scripts.UI.UI_Tasks
         {
             if (!uiTasks.isActive || uiTasks.isCompleted) return;
 
-           if (currentValues.Count != targetValues.Count)
+            // Comparar el orden actual con el establecido.
+            if (currentValues.Count != targetValues.Count)
             {
                 Debug.Log("Not all buttons are set yet.");
                 return;
             }
 
-            for (int i = 0; i < buttons.Count; i++)
+            for (int i = 0; i < targetValues.Count; i++)
             {
                 if (buttons[i].state != targetValues[i])
                 {
@@ -117,26 +116,12 @@ namespace _scripts.UI.UI_Tasks
             }
 
             CompleteTask();
-            Debug.Log($"Task {uiTasks.names} completed!");
         }
 
         private void CompleteTask()
         {
             uiTasks.CompleteUITask();
-            toggle = false;
         }
-        #endregion
     }
-    
 }
-
-  
-
-
-    
-    
-    
-    
-    
-    
-
+   #endregion
