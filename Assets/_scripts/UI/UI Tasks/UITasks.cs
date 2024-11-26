@@ -6,10 +6,10 @@ namespace _scripts.TaskSystem
 
     [CreateAssetMenu(menuName = "TaskScriptable/UITask", fileName = "UITasks", order = 2)]
     public class UITasks : Tasks
-    {       
+    {
         public bool isActive = false;
         public bool isCompleted = false;
-        
+
 #if UNITY_EDITOR
         private void OnEnable()
         {
@@ -17,18 +17,16 @@ namespace _scripts.TaskSystem
             isActive = false;
             base.isReached = false;
         }
-#endif        
-                   
+#endif
+
         public void CompleteUITask()
-        {            
+        {
             base.InvokeReachedEvent();
             isCompleted = true;
             isActive = false;
-         }
-
-       
-
-     }
+        }
+    }
 }
-
-
+         
+           
+   
