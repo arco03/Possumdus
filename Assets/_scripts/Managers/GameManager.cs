@@ -1,5 +1,6 @@
 using System;
 using _scripts.Objects.Oxygen;
+using _scripts.UI.GameState;
 using UnityEngine;
 
 namespace _scripts.Managers
@@ -9,24 +10,38 @@ namespace _scripts.Managers
         public enum GameState
         {
             Game, 
+            Win,
             GameOver
         }
         public GameState CurrentState { get; private set; }
+        [SerializeField] private GameStateController gameStateController;
 
         private void OnEnable()
         {
-            Oxygen.OnOxygenOver += HandleGameOver;
+            //Oxygen.OnOxygenOver += HandleGameOver;
+            TimeManager.OnTimeOver += HandleEndGameValidation;
         }
         
         private void Start()
         {
            ChangeState(GameState.Game);
+           Time.timeScale = 1;
         }
         
-        private void HandleGameOver()
+        private void HandleEndGameValidation()
         {
-            ChangeState(GameState.GameOver);
-            //llamar pantalla gameOver
+            //TODO:
+            if (true)
+            {
+                ChangeState(GameState.Win);
+                gameStateController.Win();
+            }
+            else
+            {
+                ChangeState(GameState.GameOver);
+                gameStateController.GameOver();
+                //llamar pantalla gameOver
+            }
         }
         private void ChangeState(GameState newState)
         {
@@ -36,7 +51,8 @@ namespace _scripts.Managers
         
         private void OnDisable()
         {
-            Oxygen.OnOxygenOver -= HandleGameOver;
+            //Oxygen.OnOxygenOver -= HandleGameOver;
+            TimeManager.OnTimeOver -= HandleEndGameValidation;
         }
     }
 }

@@ -5,9 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/Chip/Paredes piso 1.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/Chip/Paredes piso 1.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia_animations.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia_animations.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Managers/UIManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Managers/UIManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/UI/GameState.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/UI/GameState/GameStateController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/UI/GameState/GameStateController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/UI/GameState/GameStateView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/UI/GameState/GameStateView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/UI/Time.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/UI/Time/TimeController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/UI/Time/TimeController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Byte_animations.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Byte_animations.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Byte_animations.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Byte_animations.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Kaiji_animations.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Kaiji_animations.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Nia_animations.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Nia_animations.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Yuliet_animations.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Yuliet_animations.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Player/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Eduardo-Choco.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Eduardo-Choco.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Estefania-Nia.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Estefania-Nia.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Karen-Yuliet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Karen-Yuliet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Natalia-Nat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Natalia-Nat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Sharen-Ash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Sharen-Ash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Yaira-Kaiji.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Yaira-Kaiji.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Managers/TimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Managers/TimeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/NPCs/Npc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/TimeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/Time/TimeView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/TimeView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/Time/TimeView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/LeverMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/LeverMethods.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +161,10 @@
       <workItem from="1732398734203" duration="860000" />
       <workItem from="1732400830047" duration="10467000" />
       <workItem from="1732491826973" duration="2649000" />
+      <workItem from="1732500621109" duration="1094000" />
+      <workItem from="1732576144022" duration="6784000" />
+      <workItem from="1732592722723" duration="3135000" />
+      <workItem from="1732595954623" duration="13000" />
     </task>
     <servers />
   </component>
@@ -134,7 +173,6 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
-    <option name="hasUnityReference" value="true" />
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>

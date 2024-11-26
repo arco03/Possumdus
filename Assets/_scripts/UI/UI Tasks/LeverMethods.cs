@@ -70,14 +70,14 @@ namespace _scripts.UI.UI_Tasks
             {
                 interactablePanel.SetActive(true);
                 uiTasks.isActive = true;
-                character.EnableInteractionMode();
+                //character.EnableInteractionMode();
                 Debug.Log($"{uiTasks.names} Task opened");
             }
             else
             {
                 interactablePanel.SetActive(false);
                 uiTasks.isActive = false;
-                character.DisableInteractionMode();
+                //character.DisableInteractionMode();
                 Debug.Log($"{uiTasks.names} Task closed");
             }
         }

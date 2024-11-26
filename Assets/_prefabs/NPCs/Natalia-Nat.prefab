@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 21a1caf6795a3d14b8100f2689a5771b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -208.48
+      value: -228.69965
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21a1caf6795a3d14b8100f2689a5771b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 39
+      value: 38.738224
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21a1caf6795a3d14b8100f2689a5771b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -102.45
+      value: -85.276566
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21a1caf6795a3d14b8100f2689a5771b,
         type: 3}
@@ -31,17 +31,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 21a1caf6795a3d14b8100f2689a5771b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21a1caf6795a3d14b8100f2689a5771b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21a1caf6795a3d14b8100f2689a5771b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21a1caf6795a3d14b8100f2689a5771b,
         type: 3}
@@ -174,7 +174,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
