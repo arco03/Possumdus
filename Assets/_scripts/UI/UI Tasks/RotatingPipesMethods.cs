@@ -1,29 +1,57 @@
+using System;
+using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Serialization;
 
-public class RotatingPipesMethods : UIPlayerVerification
+namespace _scripts.UI.UI_Tasks
 {
-    [Header("Rotating Pipes Task Settings")]
-    public GameObject PipeHolder;
-    public GameObject[] Pipes;
-    [SerializeField]private int _totalPipes = 0;
+    public class RotatingPipesMethods : UIPlayerVerification
+    { 
+        [Header("Rotating Pipes Task Settings")]
+        public GameObject pipeHolder; 
+        public GameObject[] pipes;
+        [SerializeField]private int totalPipes = 0;
+        [SerializeField]private int correctPipes = 0;
+        private RotatingPipes _rotPipes;
 
-    #region TaskVerificationMethods
-    protected override void Start()
-    {
-        base.Start();
-        _totalPipes = PipeHolder.transform.childCount;
-        Pipes = new GameObject[_totalPipes];
-
-        for (int i = 0; i < Pipes.Length; i++)
+        #region TaskVerificationMethods
+        protected override void Start()
         {
-            Pipes[i] = PipeHolder.transform.GetChild(i).gameObject;
+            base.Start();
+            totalPipes = pipeHolder.transform.childCount;
+            pipes = new GameObject[totalPipes];
+            for (int i = 0; i < pipes.Length; i++)
+            {
+                pipes[i] = pipeHolder.transform.GetChild(i).gameObject;
+                _rotPipes = pipes[i].GetComponent<RotatingPipes>();
+                if (_rotPipes != null)
+                {
+                    _rotPipes.OnPipeChanged += CheckPipes;
+                }
+            }
         }
+
+        private void CheckPipes(RotatingPipes rotPipes)
+        {
+            if (rotPipes.isPlaced)
+            {
+                correctPipes++;
+                if (correctPipes == totalPipes)
+                {
+                    CompleteTask();
+                }
+            }
+            else
+            {
+                correctPipes--;
+            }
+        }
+
+        private void CompleteTask()
+        {
+            uiTasks.CompleteUITask();
+            Debug.Log("Â¡Rotating Pipes Task Completed!");
+        }
+        #endregion
     }
-    private void CompleteTask()
-    {
-      uiTasks.CompleteUITask();
-      Debug.Log("¡Rotating Pipes Task Completed!");
-    }
-    #endregion
 }

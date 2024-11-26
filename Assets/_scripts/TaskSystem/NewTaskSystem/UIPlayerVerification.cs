@@ -1,72 +1,74 @@
 using _scripts.Managers;
 using _scripts.Player;
-using _scripts.TaskSystem;
 using UnityEngine;
 
-public class UIPlayerVerification : MonoBehaviour
+namespace _scripts.TaskSystem.NewTaskSystem
 {
-    [Header("General UI Task Settings")]
-    public UITasks uiTasks;
-    public Character character;
-    public GameObject interactablePanel;
-    public GameObject interactableText;
-    public GameObject reticle;
-    public bool isPlayerInRanges;
-    public bool toggle;
-
-    #region PlayerDetectionMethods
-    protected virtual void Start()
+    public class UIPlayerVerification : MonoBehaviour
     {
-        character = FindObjectOfType<Character>();
-        if (character == null)
-            Debug.LogError("Character script not found in the scene.");
-    }
+        [Header("General UI Task Settings")]
+        public UITasks uiTasks;
+        public Character character;
+        public GameObject interactablePanel;
+        public GameObject interactableText;
+        public GameObject reticle;
+        public bool isPlayerInRanges;
+        public bool toggle;
 
-    protected virtual void Update()
-    {
-        if (isPlayerInRanges && Input.GetKeyDown(KeyCode.E))
+        #region PlayerDetectionMethods
+        protected virtual void Start()
         {
-            OpenCloseTask();
+            character = FindObjectOfType<Character>();
+            if (character == null)
+                Debug.LogError("Character script not found in the scene.");
         }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player") && !uiTasks.isCompleted)
+        protected virtual void Update()
         {
-            isPlayerInRanges = true;
-            interactableText.SetActive(true);
-            reticle.SetActive(false);
+            if (isPlayerInRanges && Input.GetKeyDown(KeyCode.E))
+            {
+                OpenCloseTask();
+            }
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInRanges = false;
-            interactableText.SetActive(false);
-            reticle.SetActive(true);
-        }
-    }
 
-    public void OpenCloseTask()
-    {
-        toggle = !toggle;
-        if (toggle)
+        private void OnTriggerEnter(Collider other)
         {
-            interactablePanel.SetActive(true);
-            uiTasks.isActive = true;
-            CursorManager.instance.EnableInteractionMode();
-            Debug.Log($"{uiTasks.names} Task opened");
+            if (other.CompareTag("Player") && !uiTasks.isCompleted)
+            {
+                isPlayerInRanges = true;
+                interactableText.SetActive(true);
+                reticle.SetActive(false);
+            }
         }
-        else
+        private void OnTriggerExit(Collider other)
         {
-            interactablePanel.SetActive(false);
-            uiTasks.isActive = false;
-            CursorManager.instance.DisableInteractionMode();
-            Debug.Log($"{uiTasks.names} Task closed");
+            if (other.CompareTag("Player"))
+            {
+                isPlayerInRanges = false;
+                interactableText.SetActive(false);
+                reticle.SetActive(true);
+            }
         }
-    }
 
-    #endregion
+        public void OpenCloseTask()
+        {
+            toggle = !toggle;
+            if (toggle)
+            {
+                interactablePanel.SetActive(true);
+                uiTasks.isActive = true;
+                CursorManager.instance.EnableInteractionMode();
+                Debug.Log($"{uiTasks.names} Task opened");
+            }
+            else
+            {
+                interactablePanel.SetActive(false);
+                uiTasks.isActive = false;
+                CursorManager.instance.DisableInteractionMode();
+                Debug.Log($"{uiTasks.names} Task closed");
+            }
+        }
+
+        #endregion
+    }
 }

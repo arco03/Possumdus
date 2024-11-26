@@ -1,33 +1,64 @@
 using UnityEngine;
 
-public class RotatingPipes : MonoBehaviour
+namespace _scripts.UI.UI_Tasks
 {
-    [Header("Pipe Settings")]
-    private float[] rotations = { 0, 90, 180, 270 };
-    public float correctRotation;
-    public bool isPlaced = false;
-
-    private void Start()
+    public class RotatingPipes : MonoBehaviour
     {
-        int rand = Random.Range(0, rotations.Length);
-        transform.eulerAngles = new Vector3(0, 0, rotations[rand]);
-        if (transform.eulerAngles.z == correctRotation && isPlaced == false)
+        [Header("Pipe Settings")]
+        private readonly float[] _rotations = { 0, 90, 180, 270 };
+        public float[] correctRotation;
+        private int _possibleRots = 1;
+        public bool isPlaced = false;
+        public delegate void PipeStateChanged(RotatingPipes rotPipes);
+        public event PipeStateChanged OnPipeChanged;
+        private void Start()
         {
-            isPlaced = true;
+            _possibleRots = correctRotation.Length;
+            int rand = Random.Range(0, _rotations.Length);
+            transform.eulerAngles = new Vector3(0, 0, _rotations[rand]);
+            if (_possibleRots > 1)
+            {
+                if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1])
+                {
+                    isPlaced = true;
+                    CorrectMove();
+                }
+            }
+            else if(transform.eulerAngles.z == correctRotation[0])
+            {
+                 isPlaced = true;
+                 CorrectMove();
+            }
+            
         }
-    }
 
-    public void MouseOn()
-    {
-        transform.Rotate(new Vector3(0, 0, 90));
-
-        if(transform.eulerAngles.z == correctRotation && isPlaced == false)
+        public void MouseOn()
         {
-            isPlaced = true;
-        }else if(isPlaced == true)
-        {
-            isPlaced = false;
+            transform.Rotate(new Vector3(0, 0, 90));
+            if (_possibleRots > 1)
+            {
+                if(transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1] && isPlaced == false)
+                {
+                    isPlaced = true;
+                    CorrectMove();
+                }else if(isPlaced == true)
+                {
+                    isPlaced = false;
+                }
+            }
+            else if(transform.eulerAngles.z == correctRotation[0] && isPlaced == false)
+            {
+                isPlaced = true;
+                CorrectMove();
+            }else if(isPlaced == true)
+            {
+                isPlaced = false;
+            }
         }
-    }
 
+        private void CorrectMove()
+        {
+            OnPipeChanged?.Invoke(this);
+        }
+    } 
 }

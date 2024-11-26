@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,28 +24,29 @@ namespace _scripts.UI.UI_Tasks
 
         public void OnValueChanged(Slider lever)
         {
-            if (lever == levers[_currentLeverIndex])
-            {
-                if (lever.value >= lever.maxValue)
-                {
-                    lever.value = lever.maxValue;
-                    _currentLeverIndex++;
+           if (lever == levers[_currentLeverIndex])
+           { 
+               if (lever.value >= lever.maxValue)
+               {
+                   lever.value = lever.maxValue;
+                   _currentLeverIndex++;
 
-                    if (_currentLeverIndex >= levers.Count)
-                    {
-                        CompleteTask();
-                        Debug.Log("lever task done");
-                    }
-                }
-            }
-            else
-            {
-                FailTask();
-            }
+                   if (_currentLeverIndex >= levers.Count)
+                   {
+                       CompleteTask();
+                       Debug.Log("lever task done");
+                   }
+               }
+           }
+           else
+           {
+               FailTask();
+           }
         }
 
         public void OnPointUp(Slider lever)
         {
+            if (levers.Count <= _currentLeverIndex) return;
             if (lever == levers[_currentLeverIndex])
             {
                 if (lever.value < lever.maxValue)
@@ -52,7 +54,7 @@ namespace _scripts.UI.UI_Tasks
                     FailTask();
                 }
             }
-            if (levers.Count >= _currentLeverIndex) return;
+            
         }
 
         private void ResetLevers()

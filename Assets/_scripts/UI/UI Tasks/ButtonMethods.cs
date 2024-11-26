@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using _scripts.Managers;
 using _scripts.Player;
 using _scripts.TaskSystem;
+using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
 
 namespace _scripts.UI.UI_Tasks
@@ -24,7 +25,7 @@ namespace _scripts.UI.UI_Tasks
         {
             for (int i = 0; i < buttons.Count; i++)
             {
-                int index = i; // Evitar problemas de closures.
+                int index = i;
                 buttons[i].OnStateChanged += (button) =>
                 {
                     CheckButtons();
@@ -35,8 +36,6 @@ namespace _scripts.UI.UI_Tasks
         private void CheckButtons()
         {
             if (!uiTasks.isActive || uiTasks.isCompleted) return;
-
-            // Comparar el orden actual con el establecido.
             if (currentValues.Count != targetValues.Count)
             {
                 Debug.Log("Not all buttons are set yet.");

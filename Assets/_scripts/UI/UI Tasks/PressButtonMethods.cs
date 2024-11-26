@@ -1,66 +1,70 @@
+using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PressButtonMethods : UIPlayerVerification
+namespace _scripts.UI.UI_Tasks
 {
-    [Header("Press Button Task Settings")]
-    public Image fillImage;
-    public float fillSpeed;
-    public float drainSpeed;
-    [SerializeField] private bool isHolding = false;
-
-    #region TaskVerificationMethods
-    protected override void Start()
+    public class PressButtonMethods : UIPlayerVerification
     {
-        base.Start();
-        fillImage = base.interactablePanel.transform.Find("FillImage").GetComponent<Image>();
+        [Header("Press Button Task Settings")]
+        public Image fillImage;
+        public float fillSpeed;
+        public float drainSpeed;
+        [SerializeField] private bool isHolding = false;
+
+        #region TaskVerificationMethods
+        protected override void Start()
+        {
+            base.Start();
+            fillImage = base.interactablePanel.transform.Find("FillImage").GetComponent<Image>();
        
-        if (fillImage == null)
-        {
-            Debug.LogError("No se encontró una imagen de relleno dentro del panel.");
-            return;
-        }
-    }
-    protected override void Update()
-    {
-        base.Update();
-        FillImages();
-    }
-
-    public void FillImages()
-    {
-        if (fillImage == null|| uiTasks.isCompleted) return;
-
-        if (isHolding)
-        {
-            fillImage.fillAmount += fillSpeed * Time.deltaTime;
-            if (fillImage.fillAmount >= 1f)
+            if (fillImage == null)
             {
-                CompleteTask();
+                Debug.LogError("No se encontrï¿½ una imagen de relleno dentro del panel.");
+                return;
             }
         }
-        else
+        protected override void Update()
         {
-            fillImage.fillAmount -= drainSpeed * Time.deltaTime;
-            fillImage.fillAmount = Mathf.Clamp(fillImage.fillAmount, 0f, 1f);
+            base.Update();
+            FillImages();
         }
-    }
 
-    public void OnHoldButtonPress()
-    {
-        isHolding = true;
-        Debug.Log("Boton Presionado");
-    }
+        public void FillImages()
+        {
+            if (fillImage == null|| uiTasks.isCompleted) return;
 
-    public void OnHoldButtonRelease()
-    {
-        isHolding = false;
-        Debug.Log("Boton Suelto");
+            if (isHolding)
+            {
+                fillImage.fillAmount += fillSpeed * Time.deltaTime;
+                if (fillImage.fillAmount >= 1f)
+                {
+                    CompleteTask();
+                }
+            }
+            else
+            {
+                fillImage.fillAmount -= drainSpeed * Time.deltaTime;
+                fillImage.fillAmount = Mathf.Clamp(fillImage.fillAmount, 0f, 1f);
+            }
+        }
+
+        public void OnHoldButtonPress()
+        {
+            isHolding = true;
+            Debug.Log("Boton Presionado");
+        }
+
+        public void OnHoldButtonRelease()
+        {
+            isHolding = false;
+            Debug.Log("Boton Suelto");
+        }
+        private void CompleteTask()
+        {
+            Debug.Log("ï¿½Button Press Task Completed!");
+            uiTasks.CompleteUITask();
+        }
+        #endregion
     }
-    private void CompleteTask()
-    {
-        Debug.Log("¡Button Press Task Completed!");
-        uiTasks.CompleteUITask();
-    }
-    #endregion
 }
