@@ -5,109 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Daniela-Byte(SystemEngineer).meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Daniela-Byte(SystemEngineer)/ByteIdle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Daniela-Byte(SystemEngineer)/ByteIdle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Daniela-Byte(SystemEngineer)/ByteWalk.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Daniela-Byte(SystemEngineer)/ByteWalk.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Daniela-Byte(SystemEngineer)/Daniela - Byte Controller.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Daniela-Byte(SystemEngineer)/Daniela - Byte Controller.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Eduardo-Choco(Janitor).meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Eduardo-Choco(Janitor)/ChocoIdle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Eduardo-Choco(Janitor)/ChocoIdle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Eduardo-Choco(Janitor)/ChocoWalk.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Eduardo-Choco(Janitor)/ChocoWalk.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Eduardo-Choco(Janitor)/Eduardo-Choco(Janitor).controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Eduardo-Choco(Janitor)/Eduardo-Choco(Janitor).controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Sharen-Ash (MechanicalEngineer).meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Sharen-Ash (MechanicalEngineer)/AshIdle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Sharen-Ash (MechanicalEngineer)/AshIdle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Sharen-Ash (MechanicalEngineer)/AshWalk.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Sharen-Ash (MechanicalEngineer)/AshWalk.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Sharen-Ash (MechanicalEngineer)/Sharen - Ash Controller.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Anim Sharen-Ash (MechanicalEngineer)/Sharen - Ash Controller.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Controlers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Controlers/Hand animation controller.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Controlers/Hand animation controller.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Down Animation 01.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Down Animation 01.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Down Animation 02.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Down Animation 02.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Middle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Middle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Left Bracelet Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Right Bracelet Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Right Bracelet Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Right Bracelet Middle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Right Bracelet Middle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Right Bracelet Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Right Bracelet Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Take 001.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Hand/Take 001.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Choco_Animations.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Choco_Animations.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Kaiji_Animations.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Kaiji_Animations.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Lacfar_Animations.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Lacfar_Animations.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Nat_Animations.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Nat_Animations.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Nia_Animations.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Nia_Animations.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Yuliet_Animations.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation/Yuliet_Animations.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Daniela - Byte.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Daniela - Byte.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Sharen - Ash.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Sharen - Ash.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Daniela-Byte(SystemEngineer).prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Daniela-Byte(SystemEngineer).prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Sharen-Ash(Mechanical Engineer).prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Sharen-Ash(Mechanical Engineer).prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Controlers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Controlers/Hand animation controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Controlers/Hand animation controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Left Bracelet Down Animation 01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Left Bracelet Down Animation 01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Left Bracelet Down.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Left Bracelet Down.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Left Bracelet Middle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Left Bracelet Middle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Left Bracelet Up.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Left Bracelet Up.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Right Bracelet Down.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Right Bracelet Down.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Right Bracelet Middle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Right Bracelet Middle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Right Bracelet Up.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Right Bracelet Up.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Take 001.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Take 001.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Bite_Animations_test.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Bite_Animations_test.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Bite_Animations_test.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Bite_Animations_test.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia Animations/NiaIdle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia Animations/NiaIdle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia Animations/NiaWalk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia Animations/NiaWalk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia Animations/Nia_animations.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia Animations/Nia_animations.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia_animations.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/NPCs/Nia_animations.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Daniela-Byte/Materials/M_Player_Tile01_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Daniela-Byte/Materials/M_Player_Tile01_BaseColor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Nave_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Nave_01.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Charactersfbx_animation.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/DanielaScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Daniela-Byte.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Daniela-Byte.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Eduardo-Choco.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Eduardo-Choco.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Sharen-Ash.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Sharen-Ash.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +134,7 @@
       <workItem from="1732592722723" duration="3135000" />
       <workItem from="1732595954623" duration="13000" />
       <workItem from="1732649198178" duration="596000" />
+      <workItem from="1732679529014" duration="1573000" />
     </task>
     <servers />
   </component>
