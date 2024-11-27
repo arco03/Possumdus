@@ -11,12 +11,15 @@ namespace _scripts.UI.UI_Tasks
         public bool isPlaced = false;
         public delegate void PipeStateChanged(RotatingPipes rotPipes);
         public event PipeStateChanged OnPipeChanged;
+
+        #region VerificationButtons
         private void Start()
         {
             _possibleRots = correctRotation.Length;
             int rand = Random.Range(0, _rotations.Length);
             transform.eulerAngles = new Vector3(0, 0, _rotations[rand]);
-            if (_possibleRots > 1)
+            CheckPipeState();
+           /* if (_possibleRots > 1)
             {
                 if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1])
                 {
@@ -28,14 +31,15 @@ namespace _scripts.UI.UI_Tasks
             {
                  isPlaced = true;
                  CorrectMove();
-            }
+            }*/
             
         }
 
         public void MouseOn()
         {
             transform.Rotate(new Vector3(0, 0, 90));
-            if (_possibleRots > 1)
+            CheckPipeState();
+           /* if (_possibleRots > 1)
             {
                 if(transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1] && isPlaced == false)
                 {
@@ -53,12 +57,33 @@ namespace _scripts.UI.UI_Tasks
             }else if(isPlaced == true)
             {
                 isPlaced = false;
+            }*/
+        }
+
+        public void CheckPipeState()
+        {
+            bool previousState = isPlaced;
+            isPlaced = false;
+            foreach (float correct in correctRotation)
+            {
+                if (Mathf.Approximately(transform.eulerAngles.z, correct))
+                {
+                    isPlaced = true;
+                    break;
+                }
+            }
+            if (previousState != isPlaced)
+            {
+                CompletePipeState();
             }
         }
 
-        private void CorrectMove()
+        public void CompletePipeState()
         {
             OnPipeChanged?.Invoke(this);
+            Debug.Log($"Tubería {gameObject.name} cambió estado a: {isPlaced}");
         }
-    } 
+
+    }
+    #endregion
 }

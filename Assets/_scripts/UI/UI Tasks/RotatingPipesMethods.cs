@@ -12,8 +12,7 @@ namespace _scripts.UI.UI_Tasks
         public GameObject[] pipes;
         [SerializeField]private int totalPipes = 0;
         [SerializeField]private int correctPipes = 0;
-        private RotatingPipes _rotPipes;
-
+      
         #region TaskVerificationMethods
         protected override void Start()
         {
@@ -23,27 +22,37 @@ namespace _scripts.UI.UI_Tasks
             for (int i = 0; i < pipes.Length; i++)
             {
                 pipes[i] = pipeHolder.transform.GetChild(i).gameObject;
-                _rotPipes = pipes[i].GetComponent<RotatingPipes>();
-                if (_rotPipes != null)
+                RotatingPipes rotPipes = pipes[i].GetComponent<RotatingPipes>();
+                if (rotPipes != null)
                 {
-                    _rotPipes.OnPipeChanged += CheckPipes;
+                    rotPipes.OnPipeChanged += CheckPipes;
+                    if(rotPipes.isPlaced)
+                    {
+                        correctPipes++;
+                    }
                 }
             }
+            Debug.Log($"Tuberias totales: {totalPipes}, Correctas Inicialmente:{correctPipes}");
         }
 
         private void CheckPipes(RotatingPipes rotPipes)
         {
-            if (rotPipes.isPlaced)
+            Debug.Log($"Revisando estado de la tubería: {rotPipes.gameObject.name}, isPlaced: {rotPipes.isPlaced}");
+            if (rotPipes.isPlaced && correctPipes < totalPipes)
             {
                 correctPipes++;
-                if (correctPipes == totalPipes)
-                {
-                    CompleteTask();
-                }
             }
-            else
+
+            else if(!rotPipes.isPlaced && correctPipes > 0)
             {
                 correctPipes--;
+            }
+
+            Debug.Log($"Tuberías correctas: {correctPipes}/{totalPipes}");
+
+            if (correctPipes == totalPipes)
+            {
+                CompleteTask();
             }
         }
 
