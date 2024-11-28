@@ -1,4 +1,4 @@
-using _scripts.UI.Time;
+using _scripts.UI.TimeManager;
 using UnityEngine;
 
 namespace _scripts.Managers

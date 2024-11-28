@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _scripts.UI.Time
+namespace _scripts.UI.TimeManager
 {
     public class TimeController : MonoBehaviour
     {

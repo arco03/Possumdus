@@ -6,14 +6,19 @@ namespace _scripts.UI.GameState
     {
         [SerializeField] private GameStateView stateView;
 
-        public void GameOver()
+        public void End1()
         {
-            stateView.ShowGameOver();
+            stateView.ShowEnd1();
         }
 
-        public void Win()
+        public void End2()
         {
-            stateView.ShowWin();
+            stateView.ShowEnd2();
+        }
+
+        public void End3()
+        {
+            stateView.ShowEnd3();
         }
     }
 }
