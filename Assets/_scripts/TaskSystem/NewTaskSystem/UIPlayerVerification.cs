@@ -1,6 +1,7 @@
 using _scripts.Managers;
 using _scripts.Player;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _scripts.TaskSystem.NewTaskSystem
 {
@@ -8,10 +9,12 @@ namespace _scripts.TaskSystem.NewTaskSystem
     {
         [Header("General UI Task Settings")]
         public UITasks uiTasks;
+        public ProgressSlider proSlider;
         public Character character;
         public GameObject interactablePanel;
         public GameObject interactableText;
         public GameObject reticle;
+        public float requiredHoldTime;
         public bool isPlayerInRanges;
         public bool toggle;
 
@@ -21,16 +24,40 @@ namespace _scripts.TaskSystem.NewTaskSystem
             character = FindObjectOfType<Character>();
             if (character == null)
                 Debug.LogError("Character script not found in the scene.");
+            proSlider.gameObject.SetActive(false);
         }
 
         protected virtual void Update()
         {
-            if (isPlayerInRanges && Input.GetKeyDown(KeyCode.E))
+            if (isPlayerInRanges)
             {
-                OpenCloseTask();
+                if (!toggle && Input.GetKey(KeyCode.E))
+                {
+                    if(!proSlider.gameObject.activeSelf)
+                    {
+                        proSlider.gameObject.SetActive(true);
+                        proSlider.InitializeSlider(requiredHoldTime);
+                        bool isComplete = proSlider.IncrementProgress(Time.deltaTime);
+                        if (isComplete)
+                        {
+                            OpenTask();
+                            proSlider.ResetProgress();
+                            proSlider.gameObject.SetActive(false);// Reinicia el Slider al completarse
+                        }
+                    }
+                }
+                else if (toggle && Input.GetKeyDown(KeyCode.E))
+                {
+                    CloseTask();
+                }
+                else if (Input.GetKeyUp(KeyCode.E))
+                {
+                    proSlider.ResetProgress(); // Reinicia el Slider si se suelta la tecla
+                }
+
             }
         }
-
+                     
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player") && !uiTasks.isCompleted)
@@ -46,29 +73,31 @@ namespace _scripts.TaskSystem.NewTaskSystem
             {
                 isPlayerInRanges = false;
                 interactableText.SetActive(false);
+                proSlider.ResetProgress();
+                proSlider.gameObject.SetActive(false);
                 reticle.SetActive(true);
             }
         }
 
-        public void OpenCloseTask()
+        public void OpenTask()
         {
-            toggle = !toggle;
-            if (toggle)
-            {
-                interactablePanel.SetActive(true);
-                uiTasks.isActive = true;
-                CursorManager.instance.EnableInteractionMode();
-                Debug.Log($"{uiTasks.names} Task opened");
-            }
-            else
-            {
-                interactablePanel.SetActive(false);
-                uiTasks.isActive = false;
-                CursorManager.instance.DisableInteractionMode();
-                Debug.Log($"{uiTasks.names} Task closed");
-            }
+            toggle = true;
+            interactablePanel.SetActive(true);
+            uiTasks.isActive = true;
+            CursorManager.instance.EnableInteractionMode();
+            Debug.Log($"{uiTasks.names} Task opened");
         }
+        public void CloseTask()
+        {
+            toggle = false;
+            interactablePanel.SetActive(false);
+            uiTasks.isActive = false;
+            CursorManager.instance.DisableInteractionMode();
+            Debug.Log($"{uiTasks.names} Task closed");
+        }
+            
 
+       
         #endregion
     }
 }

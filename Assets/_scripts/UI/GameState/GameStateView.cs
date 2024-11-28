@@ -10,19 +10,16 @@ namespace _scripts.UI.GameState
                 
         public void ShowEnd1()
         {
-            UnityEngine.Time.timeScale = 0f;
-            firstEndPanel.SetActive(true);
+           firstEndPanel.SetActive(true);
         }
 
         public void ShowEnd2()
         {
-            UnityEngine.Time.timeScale = 0f;
-            secondEndPanel.SetActive(true);
+           secondEndPanel.SetActive(true);
         }
         public void ShowEnd3()
         {
-            UnityEngine.Time.timeScale = 0f;
-            thirdEndPanel.SetActive(true);
+           thirdEndPanel.SetActive(true);
         }
     }
 }
