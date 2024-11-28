@@ -19,45 +19,12 @@ namespace _scripts.UI.UI_Tasks
             int rand = Random.Range(0, _rotations.Length);
             transform.eulerAngles = new Vector3(0, 0, _rotations[rand]);
             CheckPipeState();
-           /* if (_possibleRots > 1)
-            {
-                if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1])
-                {
-                    isPlaced = true;
-                    CorrectMove();
-                }
-            }
-            else if(transform.eulerAngles.z == correctRotation[0])
-            {
-                 isPlaced = true;
-                 CorrectMove();
-            }*/
-            
         }
 
         public void MouseOn()
         {
             transform.Rotate(new Vector3(0, 0, 90));
             CheckPipeState();
-           /* if (_possibleRots > 1)
-            {
-                if(transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1] && isPlaced == false)
-                {
-                    isPlaced = true;
-                    CorrectMove();
-                }else if(isPlaced == true)
-                {
-                    isPlaced = false;
-                }
-            }
-            else if(transform.eulerAngles.z == correctRotation[0] && isPlaced == false)
-            {
-                isPlaced = true;
-                CorrectMove();
-            }else if(isPlaced == true)
-            {
-                isPlaced = false;
-            }*/
         }
 
         public void CheckPipeState()
@@ -81,7 +48,7 @@ namespace _scripts.UI.UI_Tasks
         public void CompletePipeState()
         {
             OnPipeChanged?.Invoke(this);
-            Debug.Log($"Tubería {gameObject.name} cambió estado a: {isPlaced}");
+            Debug.Log($"Tuberï¿½a {gameObject.name} cambiï¿½ estado a: {isPlaced}");
         }
 
     }

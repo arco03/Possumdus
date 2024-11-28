@@ -5,66 +5,95 @@ namespace _scripts.TaskSystem.NewTaskSystem
 {
     public class TaskController : MonoBehaviour
     {
-        public List<Tasks> tasks;
-        public TaskView taskView;  // Referencia al script TaskView para actualizar la UI
-
-        // Este m�todo se llama cuando se inicia el juego
-        private void Start()
+        public List<Tasks> shipTask;
+        public List<Tasks> missionTask;
+        public TaskView taskView;
+        public int missionTasksCompleted;
+        public int shipTasksCompleted;
+       private void Start()
         {
-            UpdateUI();
+            UpdateUI(shipTask);
+            UpdateUI(missionTask);
+            ValidateUniqueIDs(shipTask);
+            ValidateUniqueIDs(missionTask);
         }
-
-        public void UpdateUI()
+        private void UpdateUI(List<Tasks> tasksList)
         {
-            // Buscar el TaskView en la escena si no est� asignado en el Inspector
             if (taskView == null)
             {
                 taskView = FindObjectOfType<TaskView>();
             }
-                
-            // Suscribir al evento de cada tarea para actualizar la UI cuando se complete
-            foreach (var task in tasks)
+               
+            foreach (var task in tasksList)
             {
-                task.onReachedTask += () => OnTaskCompleted(task);
-            
+                task.OnReachedTask += () => OnTaskCompleted(task);
             }
         }
 
-
-        // Este m�todo se usa para a�adir tareas manualmente en el Inspector
-        public void AddTask(Tasks task)
+        private void ValidateUniqueIDs(List<Tasks> tasksList)
         {
-            if (tasks != null && !tasks.Contains(task))
+            HashSet<int> idSet = new HashSet<int>();
+            foreach (var task in tasksList)
             {
-                tasks.Add(task);
-                task.onReachedTask += () => OnTaskCompleted(task); // Suscribir al evento de la tarea
+                if (idSet.Contains(task.idTask))
+                {
+                    Debug.LogError($"¡Colisión de ID! La tarea con ID {task.idTask} ya existe en la lista.");
+                }
+                else
+                {
+                    idSet.Add(task.idTask);
+                }
             }
         }
-
-        // Este m�todo se llama cuando una tarea se completa
         private void OnTaskCompleted(Tasks completedTask)
         {
+            if (completedTask.isReached)
+            {
+                Debug.LogWarning($"La tarea con ID {completedTask.idTask} ya estaba marcada como completada. No se procesará de nuevo.");
+                return; 
+            }
+          
+            //completedTask.isReached = true;
             Debug.Log($"Task {completedTask.idTask} completed!");
 
-            // Actualizar la vista cuando una tarea se complete
+           if (shipTask.Contains(completedTask))
+            {
+                shipTasksCompleted++;
+                Debug.Log($"Tareas de Nave Completadas: {shipTasksCompleted}/{shipTask.Count}");
+            }
+            else if (missionTask.Contains(completedTask))
+            {
+                missionTasksCompleted++;
+                Debug.Log($"Tareas de Misión Completadas: {missionTasksCompleted}/{missionTask.Count}");
+            }
             if (taskView != null)
             {
                 taskView.OnTaskCompleted(completedTask);
             }
         }
-
-        public void VerifyAllTasks()
-        {
-            foreach (var task in tasks)
-            {
-                if (task != null && !task.isReached)  // Solo verifica tareas no completadas
-                {
-                    task.TaskVerification();  // Llama a la verificaci�n solo si la tarea no est� completada
-                }
-            }
-        }
         
-    }
+        /*private void AssignNewGlobalIDs(Tasks tasks) //En caso de expandir este codigo
+      {
+          if (tasks.idTask == 0)
+          {
+              tasks.idTask = ++_globalTaskID;
+          }
+      }
+     public void AddTask(Tasks task)
+      {
+          if(task == null) return;
+          AssignNewGlobalIDs(task);
+          if (shipTask != null && !shipTask.Contains(task))
+          {
+              shipTask.Add(task);
+              task.OnReachedTask += () => OnTaskCompleted(task);
+          }else if (missionTask != null && !missionTask.Contains(task))
+          {
+              missionTask.Add(task);
+              task.OnReachedTask += () => OnTaskCompleted(task);
+          }
+      }*/
+     }
 }
 
 

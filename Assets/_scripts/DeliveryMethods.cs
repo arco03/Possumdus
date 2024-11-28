@@ -1,15 +1,18 @@
 using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
 
-public class DeliveryMethods : MonoBehaviour
+namespace _scripts
 {
-    public DeliveryTasks delTask;
-    public void OnTriggerEnter(Collider other)
+    public class DeliveryMethods : MonoBehaviour
     {
-        if (other.CompareTag(delTask.objectTag))
+        public DeliveryTasks delTask;
+        public void OnTriggerEnter(Collider other)
         {
-            delTask.ProgressUpdate();
-            Destroy(other.gameObject);
+            if (other.CompareTag(delTask.objectTag))
+            {
+                delTask.ProgressUpdate();
+                Destroy(other.gameObject);
+            }
         }
     }
 }

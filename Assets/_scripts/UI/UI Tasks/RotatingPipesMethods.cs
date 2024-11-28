@@ -1,7 +1,5 @@
-using System;
 using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace _scripts.UI.UI_Tasks
 {
