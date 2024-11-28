@@ -45,7 +45,7 @@ namespace _scripts.Player
         private IObjectsInteract interactable;
 
 
-        private void Awake()
+        private void OnEnable()
         {
             _rb = GetComponent<Rigidbody>();
             _rb.freezeRotation = true;
