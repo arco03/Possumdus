@@ -4,19 +4,22 @@ namespace _scripts.UI.GameState
 {
     public class GameStateView : MonoBehaviour
     {
-        [SerializeField] private GameObject gameOverPanel;
-        [SerializeField] private GameObject winPanel;
-
-        public void ShowGameOver()
+        [SerializeField] private GameObject firstEndPanel;
+        [SerializeField] private GameObject secondEndPanel;
+        [SerializeField] private GameObject thirdEndPanel;
+                
+        public void ShowEnd1()
         {
-            UnityEngine.Time.timeScale = 0f;
-            gameOverPanel.SetActive(true);
+           firstEndPanel.SetActive(true);
         }
 
-        public void ShowWin()
+        public void ShowEnd2()
         {
-            UnityEngine.Time.timeScale = 0f;
-            winPanel.SetActive(true);
+           secondEndPanel.SetActive(true);
+        }
+        public void ShowEnd3()
+        {
+           thirdEndPanel.SetActive(true);
         }
     }
 }
