@@ -6,7 +6,7 @@ namespace _scripts.NPCs.States
 {
     public class WalkingState : INpcState
     {
-        private int _currentWaypoint;
+        private int _currentWaypoint = 0;
         private readonly NavMeshAgent _agent;
         private readonly Transform[] _waypoints;
 
@@ -23,7 +23,7 @@ namespace _scripts.NPCs.States
 
         public void UpdateState()
         {
-            if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
+            if (_agent.remainingDistance <= 0.5f && !_agent.pathPending)
             {
                 MoveToNextWaypoint();
             }

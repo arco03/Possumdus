@@ -112,7 +112,7 @@ Material:
     - _DstBlend: 10
     - _DstBlendAlpha: 10
     - _EnvironmentReflections: 1
-    - _File: 1.63
+    - _File: 3.52
     - _Fresnel: 1.93
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -124,7 +124,7 @@ Material:
     - _QueueOffset: 5
     - _ReceiveShadows: 0
     - _RefractionSpeed: 0.01
-    - _Refraction_Scale: 1
+    - _Refraction_Scale: 0.5
     - _RefrationStreght: 8.98
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
