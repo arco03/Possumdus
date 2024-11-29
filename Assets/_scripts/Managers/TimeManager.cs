@@ -16,8 +16,13 @@ namespace _scripts.Managers
             
             if (timeElapse <= 0 )
             {
-                OnTimeOver?.Invoke();
+                InvokeEndTimeEvent();
             }
+        }
+
+        public void InvokeEndTimeEvent()
+        {
+            OnTimeOver?.Invoke();
         }
     }
 }
