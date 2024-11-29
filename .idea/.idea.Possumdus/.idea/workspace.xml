@@ -5,12 +5,151 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Art.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Glass.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Glass.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Level.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Level/Script.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Level/Script/Levitacion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Level/Script/Levitacion.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/Chip/techito.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/Chip/techito.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/SampleSceneProfile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/SampleSceneProfile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Balanced-Renderer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Balanced-Renderer.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Balanced.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Balanced.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-HighFidelity-Renderer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-HighFidelity-Renderer.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-HighFidelity.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-HighFidelity.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Performant-Renderer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Performant-Renderer.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Performant.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Performant.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Materials/Prueba piso 1 con pared central_piso.001_BaseColor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Materials/Prueba piso 1 con pared central_piso.001_BaseColor.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Piso_base.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Piso_base.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_BaseColor.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Emissive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Emissive.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Prueba piso 1 con pared central_piso.001_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Calendar.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Calendar/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Calendar/Materials/calendar.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Calendar/Materials/calendar.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Calendar/calendar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Calendar/calendar.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/Materials/geo_EnergyCapsule_M_EnergyCapsule _BaseColor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/Materials/geo_EnergyCapsule_M_EnergyCapsule _BaseColor.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/geo_EnergyCapsule_M_EnergyCapsule _BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/geo_EnergyCapsule_M_EnergyCapsule _BaseColor.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/geo_EnergyCapsule_M_EnergyCapsule _Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/geo_EnergyCapsule_M_EnergyCapsule _Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/geo_EnergyCapsule_M_EnergyCapsule _Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/geo_EnergyCapsule_M_EnergyCapsule _Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/geo_EnergyCapsule_M_EnergyCapsule _Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Energy Capsule/geo_EnergyCapsule_M_EnergyCapsule _Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/LettuceCrops/Lechuga.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/LettuceCrops/Lechuga.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/LettuceCrops/Materials/Lettuce.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/LettuceCrops/Materials/Lettuce.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/Materials/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_BaseColor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/Materials/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_BaseColor.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_BaseColor.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/MangoCultive/geo_AeroponicCultivationOfMangos_M_Props_AeroponicCultivationOfMangos_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/M_BitacoraCalendarioFotos_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/M_BitacoraCalendarioFotos_BaseColor.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/M_BitacoraCalendarioFotos_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/M_BitacoraCalendarioFotos_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/M_BitacoraCalendarioFotos_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/M_BitacoraCalendarioFotos_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/M_BitacoraCalendarioFotos_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/M_BitacoraCalendarioFotos_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/Materials/M_BitacoraCalendarioFotos_BaseColor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Portaretrato/Materials/M_BitacoraCalendarioFotos_BaseColor.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TutorialInfo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/Screen.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/Screen/Pantalla_1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/Screen/Pantalla_1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/Screen/Pantalla_2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/Screen/Pantalla_2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/Screen/Pantalla_3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/Screen/Pantalla_3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/Screen/Pantalla_4.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_prefabs/Screen/Pantalla_4.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/PressButtonMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/UI/UI Tasks/PressButtonMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Blanco.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/Blanco.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Base color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Base color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Materials/Base color.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Materials/Base color.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Piso # 1 uvs, mejorada .fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/Piso # 1 uvs, mejorada .fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/emissive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/height.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/height.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/metalic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/metalic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Floor/roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/SampleSceneProfile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/SampleSceneProfile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-Balanced-Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-Balanced-Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-Balanced.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-Balanced.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-HighFidelity-Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-HighFidelity-Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-HighFidelity.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-HighFidelity.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-Performant-Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-Performant-Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-Performant.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Settings/URP-Performant.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Natalia/Prefabs/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Natalia/Prefabs/Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Natalia/Shader/BubbleShader/UniversoShader.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Natalia/Shader/BubbleShader/UniversoShader.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Natalia/Shader/HologramShader/Pantalla_1Shader.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Natalia/Shader/HologramShader/Pantalla_1Shader.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,30 +178,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.7070485",
-    "git-widget-placeholder": "Feature-Daniela",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\danig\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\danig\\AppData\\Local\\Symbols\\src"
-    ]
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.7070485&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Feature-Daniela&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Unity.exe" />
@@ -137,6 +269,8 @@
       <workItem from="1732679529014" duration="1573000" />
       <workItem from="1732743834491" duration="1181000" />
       <workItem from="1732771016681" duration="1524000" />
+      <workItem from="1732822659230" duration="7000" />
+      <workItem from="1732842730307" duration="1471000" />
     </task>
     <servers />
   </component>
@@ -152,6 +286,7 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
