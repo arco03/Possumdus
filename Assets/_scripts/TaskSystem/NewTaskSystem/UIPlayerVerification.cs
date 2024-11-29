@@ -1,5 +1,6 @@
 using _scripts.Managers;
 using _scripts.Player;
+using _scripts.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,97 +8,116 @@ namespace _scripts.TaskSystem.NewTaskSystem
 {
     public class UIPlayerVerification : MonoBehaviour
     {
-        [Header("General UI Task Settings")]
-        public UITasks uiTasks;
+        [Header("General UI Task Settings")] public UITasks uiTasks;
         public ProgressSlider proSlider;
         public Character character;
         public GameObject interactablePanel;
         public GameObject interactableText;
         public GameObject reticle;
         public float requiredHoldTime;
+        public bool isInteracting;
         public bool isPlayerInRanges;
         public bool toggle;
 
         #region PlayerDetectionMethods
+
         protected virtual void Start()
         {
-            character = FindObjectOfType<Character>();
+             character = FindObjectOfType<Character>();
             if (character == null)
                 Debug.LogError("Character script not found in the scene.");
-            proSlider.gameObject.SetActive(false);
         }
 
         protected virtual void Update()
         {
             if (isPlayerInRanges)
             {
-                if (!toggle && Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) && !isInteracting)
                 {
-                    if(!proSlider.gameObject.activeSelf)
+                    proSlider.gameObject.SetActive(true);
+                    bool isComplete = proSlider.IncrementProgress(Time.deltaTime);
+                    if (isComplete)
                     {
-                        proSlider.gameObject.SetActive(true);
-                        proSlider.InitializeSlider(requiredHoldTime);
-                        bool isComplete = proSlider.IncrementProgress(Time.deltaTime);
-                        if (isComplete)
-                        {
-                            OpenTask();
-                            proSlider.ResetProgress();
-                            proSlider.gameObject.SetActive(false);// Reinicia el Slider al completarse
-                        }
+                        isInteracting = true;
+                       OpenTask();
+                       
                     }
-                }
-                else if (toggle && Input.GetKeyDown(KeyCode.E))
-                {
+                   
+                } 
+                else if (Input.GetKeyDown(KeyCode.E))
+                { 
                     CloseTask();
+                    
+                    isInteracting = false;
+                   proSlider.ResetProgress();
                 }
-                else if (Input.GetKeyUp(KeyCode.E))
-                {
-                    proSlider.ResetProgress(); // Reinicia el Slider si se suelta la tecla
-                }
-
+                
             }
         }
-                     
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player") && !uiTasks.isCompleted)
             {
                 isPlayerInRanges = true;
                 interactableText.SetActive(true);
+                proSlider.InitializeSlider(requiredHoldTime);
                 reticle.SetActive(false);
             }
         }
+
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Player"))
             {
                 isPlayerInRanges = false;
                 interactableText.SetActive(false);
-                proSlider.ResetProgress();
                 proSlider.gameObject.SetActive(false);
+                proSlider.ResetProgress();
                 reticle.SetActive(true);
             }
         }
 
-        public void OpenTask()
+        private void OpenTask()
         {
             toggle = true;
             interactablePanel.SetActive(true);
+            proSlider.gameObject.SetActive(false);
             uiTasks.isActive = true;
             CursorManager.instance.EnableInteractionMode();
             Debug.Log($"{uiTasks.names} Task opened");
         }
-        public void CloseTask()
+
+        private void CloseTask()
         {
             toggle = false;
             interactablePanel.SetActive(false);
+            proSlider.gameObject.SetActive(false);
             uiTasks.isActive = false;
             CursorManager.instance.DisableInteractionMode();
             Debug.Log($"{uiTasks.names} Task closed");
         }
-            
 
-       
+       /* private void OpenCloseTask()
+        {
+            toggle = !toggle;
+            if (toggle)
+            {
+                interactablePanel.SetActive(true);
+                uiTasks.isActive = true;
+                CursorManager.instance.EnableInteractionMode();
+                Debug.Log($"{uiTasks.names} Task opened");
+            }
+            else if (!toggle)
+            {
+                interactablePanel.SetActive(false);
+                uiTasks.isActive = false;
+                CursorManager.instance.DisableInteractionMode();
+                Debug.Log($"{uiTasks.names} Task closed");
+            }
+        }*/
+
         #endregion
     }
+
 }
