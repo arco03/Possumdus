@@ -3,21 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Vegetal
-  - Document
-  - Fuel
-  - letter
-  - Npc
-  - RoomTextName
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - InteractableObject
+  - 
   - Water
   - UI
-  - Letters
+  - 
   - 
   - 
   - 
