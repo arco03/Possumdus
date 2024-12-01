@@ -24,34 +24,48 @@ namespace _scripts.UI
                 {
                     InHandAnim();
                     toggle = true;
-                    isHandUp = true;
-                    if (isHandUp)
-                    {
-                        IdleHandAnim();
-                    }
-               
-                }else if (Input.GetKeyDown(KeyCode.Q) && toggle && isHandUp)
+                }
+                else if (Input.GetKeyDown(KeyCode.Q) && toggle)
                 {
                     OutHandAnim();
                     toggle = false;
-                    isHandUp = false;
                 }
             }
+// esta es la parte del script en caso de que estén las animaciones de los artistas (tres estados)
+            /* if (animator != null)
+             {
+                 if (Input.GetKeyDown(KeyCode.Q) && !toggle)
+                 {
+                     InHandAnim();
+                     toggle = true;
+                     isHandUp = true;
+                     if (isHandUp)
+                     {
+                         IdleHandAnim();
+                     }
+
+                 }else if (Input.GetKeyDown(KeyCode.Q) && toggle && isHandUp)
+                 {
+                     OutHandAnim();
+                     toggle = false;
+                     isHandUp = false;
+                 }
+             }*/
         }
 
         private void InHandAnim()
         {
-            animator.SetTrigger("inHandY");
+            animator.SetTrigger("inHand");
         }
-
-        private void IdleHandAnim()
+ //Este es el metodo para el segundo estado q es el idle
+       /* private void IdleHandAnim()
         {
             animator.SetTrigger("idleHandY");
-        }
+        }*/
 
         private void OutHandAnim()
         {
-            animator.SetTrigger("outHandY");
+            animator.SetTrigger("outHand");
         }
     }
 }
