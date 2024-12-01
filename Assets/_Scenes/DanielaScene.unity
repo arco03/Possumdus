@@ -4013,7 +4013,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1358957407 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2724133386714775068, guid: 8f8c24f9834bd394d8bd7d3e4fe6fb0b,
+  m_CorrespondingSourceObject: {fileID: 216346947098580433, guid: 8f8c24f9834bd394d8bd7d3e4fe6fb0b,
     type: 3}
   m_PrefabInstance: {fileID: 775641760929020576}
   m_PrefabAsset: {fileID: 0}
@@ -5716,10 +5716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346361ef1ea748d0891746fec5d8843e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredShipTasks: 0
-  requiredMissionTasks: 0
-  exitButton: {fileID: 0}
-  taskController: {fileID: 0}
   gameStateController: {fileID: 0}
 --- !u!4 &1830017857
 Transform:
@@ -6973,12 +6969,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerFuncional
       objectReference: {fileID: 0}
-    - target: {fileID: 8193047739998417798, guid: 8f8c24f9834bd394d8bd7d3e4fe6fb0b,
+    - target: {fileID: 6179693496624276088, guid: 8f8c24f9834bd394d8bd7d3e4fe6fb0b,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8907442795105731984, guid: 8f8c24f9834bd394d8bd7d3e4fe6fb0b,
+    - target: {fileID: 7441902414953297918, guid: 8f8c24f9834bd394d8bd7d3e4fe6fb0b,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

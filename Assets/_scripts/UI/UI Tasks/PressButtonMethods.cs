@@ -36,7 +36,7 @@ namespace _scripts.UI.UI_Tasks
 
             if (isHolding)
             {
-                fillImage.fillAmount += fillSpeed * Time.deltaTime;
+                //fillImage.fillAmount += fillSpeed * Time.deltaTime;
                 if (fillImage.fillAmount >= 1f)
                 {
                     CompleteTask();
@@ -44,7 +44,7 @@ namespace _scripts.UI.UI_Tasks
             }
             else
             {
-                fillImage.fillAmount -= drainSpeed * Time.deltaTime;
+                //fillImage.fillAmount -= drainSpeed * Time.deltaTime;
                 fillImage.fillAmount = Mathf.Clamp(fillImage.fillAmount, 0f, 1f);
             }
         }
