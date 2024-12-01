@@ -12,7 +12,10 @@ namespace _scripts.Player
         
         [Header("Other Settings")]
         [SerializeField] private float mouseSensibility;
-        [SerializeField] private Character character;
+        [SerializeField] private Character _character;
+        [SerializeField] private HungerManager _hungerManager;
+        [SerializeField] private LevitateObjects _levitateObjects;
+        [SerializeField] private PauseMenu pauseMenu;
 
         private float _x, _y;
         private float _mX, _mY;
@@ -25,39 +28,45 @@ namespace _scripts.Player
             _mX = Input.GetAxis(mouseX) * mouseSensibility;
             _mY = Input.GetAxis(mouseY) * mouseSensibility;
             
-            character.Rotation(_mX, _mY);
-            character.HungerManager();
+            _character.Rotation(_mX, _mY);
+            _hungerManager.Hunger();
 
-            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && character.canRun &&
-                character.currentEnergy > 0)
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && _hungerManager.canRun &&
+                _hungerManager.sprintDuration > 0)
             {
-                character.CanSprint();
+                _hungerManager.CanSprint();
             }
             else
-                character.CantSprint();
+                _hungerManager.CantSprint();
 
             if (Input.GetMouseButtonDown(1))
             {
-                character.ObjectPiked();
+                _levitateObjects.ObjectPiked();
                 
-            }else if (Input.GetMouseButtonUp(1) && character.pikedObject)
+            }else if (Input.GetMouseButtonUp(1) && _levitateObjects.pikedObject)
             {
-                character.ReleaseObject();
+                _levitateObjects.ReleaseObject();
             }
 
             if (Input.GetMouseButtonDown(0))
             {
-                character.InteractObject();
+                _levitateObjects.InteractObject();
+            }
+
+            if(Input.GetKey(KeyCode.P))
+            {
+                pauseMenu.OpenMenu();
+                
             }
         }
     
         private void FixedUpdate()
         {
-            character.Move(_x,_y);
-            if (character.isObjectLevitating && character.pikedObject != null)
+            _character.Move(_x,_y);
+            if (_levitateObjects.isObjectLevitating && _levitateObjects.pikedObject != null)
             {
-                character.LevitateObject();
-                character.FollowPlayer();
+                _levitateObjects.LevitateObject();
+                _levitateObjects.FollowPlayer();
             }
         }
     }

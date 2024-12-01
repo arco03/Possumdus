@@ -711,8 +711,9 @@ GameObject:
   - component: {fileID: 8901180910560733952}
   - component: {fileID: 7943252048199683018}
   - component: {fileID: 6293518487712882105}
-  - component: {fileID: 6414541836335664993}
   - component: {fileID: 1197478101220121410}
+  - component: {fileID: 6414541836335664993}
+  - component: {fileID: 8033899209190375146}
   - component: {fileID: 6936217584714378762}
   m_Layer: 0
   m_Name: PlayerFuncional
@@ -829,39 +830,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6414541836335664993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3012943150587586440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3537424123833343a86a06832208fa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalSpeed: 7
-  sprintSpeed: 10
-  sprintDuration: 2.5
-  rechargeSprintTime: 5
-  rotationX: 1
-  hungerSpeed: 4
-  hungerTimer: 0
-  rayDistance: 20
-  holdDistance: 3
-  attractionForce: 20
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  levitationForce: 3
-  followSpeed: 9
-  currentEnergy: 0
-  canRun: 1
-  pikedObject: {fileID: 0}
-  isObjectLevitating: 0
-  pikedObjectRb: {fileID: 0}
-  hungerDuration: 100
 --- !u!114 &1197478101220121410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,7 +847,47 @@ MonoBehaviour:
   mouseX: Mouse X
   mouseY: Mouse Y
   mouseSensibility: 10
-  character: {fileID: 6414541836335664993}
+  _character: {fileID: 0}
+  _hungerManager: {fileID: 0}
+  _levitateObjects: {fileID: 0}
+--- !u!114 &6414541836335664993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012943150587586440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3537424123833343a86a06832208fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSpeed: 7
+  _currentSpeed: 0
+  rotationX: 1
+  _playerCamera: {fileID: 254780940955701295}
+--- !u!114 &8033899209190375146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012943150587586440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c07791798649628428d99c040d3c1882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hungrySpeed: 0
+  _timeUntilHunger: 0
+  _sprintSpeed: 0
+  _sprintDuration: 0
+  staminaAmount: 0
+  _rechargeStaminaValue: 0
+  _currentSpeed: 0
+  sacietyDuration: 0
+  _isHungry: 0
+  canRun: 1
 --- !u!114 &6936217584714378762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed2eabdd53d58845a1629420487dac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 6414541836335664993}
+  _hungerManager: {fileID: 8033899209190375146}
 --- !u!1 &3529968777049225840
 GameObject:
   m_ObjectHideFlags: 0
