@@ -659,6 +659,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eduardo-Choco(Janitor)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e010e57f7f545e141bdb218e261a1af6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Npc
+      objectReference: {fileID: 0}
     - target: {fileID: 1527915805345850826, guid: e010e57f7f545e141bdb218e261a1af6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

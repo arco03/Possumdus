@@ -8,6 +8,7 @@ TagManager:
   - Document
   - Fuel
   - letter
+  - Npc
   layers:
   - Default
   - TransparentFX

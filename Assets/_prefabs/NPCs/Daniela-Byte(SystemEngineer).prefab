@@ -664,6 +664,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Daniela-Byte(SystemEngineer)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 04763b131f98ecf40ac1d6dde62f504c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Npc
+      objectReference: {fileID: 0}
     - target: {fileID: 1527915805345850826, guid: 04763b131f98ecf40ac1d6dde62f504c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

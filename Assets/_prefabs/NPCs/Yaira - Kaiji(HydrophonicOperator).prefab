@@ -8,11 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2478964198033536637, guid: 3055d45757074a2488e8128a6efb5b5d,
-        type: 3}
-      propertyPath: waypoints.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: -8795683004043332841, guid: 41fe5a182b9974443a7b727fc34cd3c6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -118,6 +113,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yaira - Kaiji(HydrophonicOperator)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41fe5a182b9974443a7b727fc34cd3c6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Npc
+      objectReference: {fileID: 0}
     - target: {fileID: 1987340724652312261, guid: 41fe5a182b9974443a7b727fc34cd3c6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -158,6 +158,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c4b789ebf48ea44281e392fb8640b78, type: 2}
+    - target: {fileID: 2478964198033536637, guid: 3055d45757074a2488e8128a6efb5b5d,
+        type: 3}
+      propertyPath: waypoints.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5578664269596831477, guid: 41fe5a182b9974443a7b727fc34cd3c6, type: 3}
@@ -277,7 +282,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1.8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -286,7 +291,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 1.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &2831022865266783010
