@@ -43,14 +43,15 @@ namespace _scripts.Objects.Manager
                 {
                     Debug.Log("Combinacion incorrecta, intenta de nuevo");
                     ResetCombination();
+                    IncorrectAnimation();
+                    
                 }
             }
         }
 
         private bool ValidateCombination()
         {
-            // Validar contra la combinación correcta y asegurar que no sea igual al orden predeterminado
-            if (currentCombination.SequenceEqual(intTask.correctCombination) &&
+                if (currentCombination.SequenceEqual(intTask.correctCombination) &&
                 !currentCombination.SequenceEqual(defaultCombination))
             {
                 return true;
@@ -62,7 +63,14 @@ namespace _scripts.Objects.Manager
 
         private void ResetCombination()
         {
-           currentCombination.Clear();
+            currentCombination.Clear();
+        }
+        private void IncorrectAnimation()
+        {
+            foreach (InteractionButton button in buttons)
+            {
+                button.IncorrectCombination();
+            }
         }
 
         private void DisableButtonInteractions()
