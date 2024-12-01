@@ -5,15 +5,14 @@ namespace _scripts.Objects.Food
 {
     public class Food : MonoBehaviour
     {
-        [SerializeField] private HungerManager _hungerManager;
+        [SerializeField] private Character character;
         private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                _hungerManager.Eat();
+                character.Eat();
                 Destroy(this.gameObject);
             }
         }
     }
 }
-
