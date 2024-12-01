@@ -1,7 +1,4 @@
 using System.Collections.Generic;
-using _scripts.Managers;
-using _scripts.Player;
-using _scripts.TaskSystem;
 using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
 
@@ -23,11 +20,21 @@ namespace _scripts.UI.UI_Tasks
 
         private void InitializeButtons()
         {
+            if (buttons.Count != targetValues.Count)
+            {
+                Debug.Log("El numero de botones no coincide con el numero de valores objetivo");
+                    return;
+            }
+            currentValues.Clear();
             for (int i = 0; i < buttons.Count; i++)
             {
                 int index = i;
+                buttons[i].targetState = targetValues[index];
+                buttons[i].InitializeState();
+                currentValues.Add(buttons[i].state);
                 buttons[i].OnStateChanged += (button) =>
                 {
+                    currentValues[index] = button.state;
                     CheckButtons();
                 };
             }
@@ -44,7 +51,7 @@ namespace _scripts.UI.UI_Tasks
 
             for (int i = 0; i < targetValues.Count; i++)
             {
-                if (buttons[i].state != targetValues[i])
+                if (currentValues[i] != targetValues[i])
                 {
                     Debug.Log($"Button {i} is not in the current state");
                     return;

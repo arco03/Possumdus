@@ -8,6 +8,8 @@ TagManager:
   - Document
   - Fuel
   - letter
+  - Npc
+  - RoomTextName
   layers:
   - Default
   - TransparentFX

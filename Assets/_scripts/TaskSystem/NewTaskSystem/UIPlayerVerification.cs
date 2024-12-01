@@ -1,6 +1,7 @@
 using _scripts.Managers;
 using _scripts.Player;
 using _scripts.UI;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,8 @@ namespace _scripts.TaskSystem.NewTaskSystem
 {
     public class UIPlayerVerification : MonoBehaviour
     {
-        [Header("General UI Task Settings")] public UITasks uiTasks;
+        [Header("General UI Task Settings")] 
+        public UITasks uiTasks;
         public ProgressSlider proSlider;
         public Character character;
         public GameObject interactablePanel;
@@ -38,6 +40,7 @@ namespace _scripts.TaskSystem.NewTaskSystem
                     bool isComplete = proSlider.IncrementProgress(Time.deltaTime);
                     if (isComplete)
                     {
+                        StartCoroutine(DisableProSlider());
                         isInteracting = true;
                        OpenTask();
                        
@@ -98,6 +101,12 @@ namespace _scripts.TaskSystem.NewTaskSystem
             Debug.Log($"{uiTasks.names} Task closed");
         }
 
+        private IEnumerator DisableProSlider()
+        {
+            yield return new WaitForSecondsRealtime(3);
+            proSlider.gameObject.SetActive(false);
+
+        }
        /* private void OpenCloseTask()
         {
             toggle = !toggle;

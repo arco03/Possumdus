@@ -26,7 +26,10 @@ namespace _scripts.TaskSystem.NewTaskSystem
                
             foreach (var task in tasksList)
             {
+                Debug.Log($"Instancia de tarea ID={task.idTask}: {task.GetHashCode()}");
                 task.OnReachedTask += () => OnTaskCompleted(task);
+                Debug.Log($"Evento conectado para la tarea ID={task.idTask}");
+               
             }
         }
 
@@ -47,13 +50,18 @@ namespace _scripts.TaskSystem.NewTaskSystem
         }
         private void OnTaskCompleted(Tasks completedTask)
         {
+            if (completedTask == null)
+            {
+                Debug.LogError("OnTaskCompleted fue llamado con una tarea nula.");
+                return;
+            }
             if (completedTask.isReached)
             {
                 Debug.LogWarning($"La tarea con ID {completedTask.idTask} ya estaba marcada como completada. No se procesará de nuevo.");
                 return; 
             }
-          
-            //completedTask.isReached = true;
+           
+            completedTask.isReached = true;
             Debug.Log($"Task {completedTask.idTask} completed!");
 
            if (shipTask.Contains(completedTask))
@@ -68,7 +76,12 @@ namespace _scripts.TaskSystem.NewTaskSystem
             }
             if (taskView != null)
             {
-                taskView.OnTaskCompleted(completedTask);
+                Debug.Log($"Notificando al TaskView para la tarea ID={completedTask.idTask}");
+                taskView.UpdateTaskText(completedTask);
+            }
+            else
+            {
+                Debug.LogError("TaskView es nulo en TaskController.");
             }
         }
         

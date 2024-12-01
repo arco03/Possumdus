@@ -5,26 +5,26 @@ namespace _scripts.Player.Context
 {
     public class PlayerContext : MonoBehaviour, IPlayerContext
     {
-        [SerializeField] private Character character;
+        [SerializeField] private HungerManager _hungerManager;
         
         public float GetEnergy()
         {
-            return character.currentEnergy;
+            return _hungerManager.sprintDuration;
         }
 
         public void SetEnergy(float amount)
         {
-            character.currentEnergy = amount;
+            _hungerManager.sprintDuration = amount;
         }
 
         public float GetFood()
         {
-            return character.hungerDuration;
+            return _hungerManager.sacietyDuration;
         }
 
         public void SetFood()
         {
-            character.Eat();
+            _hungerManager.Eat();
         }
     }
 }
