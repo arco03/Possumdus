@@ -1,3 +1,4 @@
+using _scripts.TaskSystem.NewTaskSystem;
 using UnityEngine;
 
 namespace _scripts.Player
@@ -9,6 +10,7 @@ namespace _scripts.Player
         [SerializeField] private string vertical;  
         [SerializeField] private string mouseX;
         [SerializeField] private string mouseY;
+        private bool isActive;
         
         [Header("Other Settings")]
         [SerializeField] private float mouseSensibility;
@@ -16,10 +18,14 @@ namespace _scripts.Player
         [SerializeField] private HungerManager _hungerManager;
         [SerializeField] private LevitateObjects _levitateObjects;
         [SerializeField] private PauseMenu pauseMenu;
+        [SerializeField] private TaskView taskView;
 
         private float _x, _y;
         private float _mX, _mY;
-
+        private void OnEnable()
+        {
+            isActive = false;
+        }
         private void Update()
         {
             _x = Input.GetAxisRaw(horizontal);
@@ -56,8 +62,20 @@ namespace _scripts.Player
             if(Input.GetKey(KeyCode.P))
             {
                 pauseMenu.OpenMenu();
-                
             }
+
+            if (Input.GetKey(KeyCode.T) && isActive == false)
+            {
+                taskView.OpenTaskPanel();
+                isActive = true;
+            }
+            else if (Input.GetKey(KeyCode.T) && isActive == true)
+            {
+                taskView.CloseTaskPanel();
+                isActive = false;
+            }
+            
+           
         }
     
         private void FixedUpdate()

@@ -9,14 +9,29 @@ namespace _scripts.TaskSystem.NewTaskSystem
         public TaskController taskController; 
         public Transform taskPanelParent; 
         public GameObject taskUIPrefab;
-    
+      //  private bool isActive;
+       
         private Dictionary<int, TextMeshProUGUI> taskTextElements = new Dictionary<int, TextMeshProUGUI>();
 
         private void Start()
         {
             InitializeUI();
+        //    isActive = false;
         }
-       private void InitializeUI()
+       /* private void Update()
+        {
+            if (Input.GetKey(KeyCode.T) && isActive == false)
+            {
+              
+
+                if (Input.GetKey(KeyCode.T) && isActive == true)
+                {
+                    CloseTaskPanel();
+
+                }
+            }
+        }*/
+        private void InitializeUI()
         {
             if (taskController == null || taskUIPrefab == null || taskPanelParent == null)
             {
@@ -92,6 +107,22 @@ namespace _scripts.TaskSystem.NewTaskSystem
                 }
             }
         
+        }
+
+        public void OpenTaskPanel()
+        {
+           
+                taskPanelParent.gameObject.SetActive(true);
+            
+           
+        }
+
+        public void CloseTaskPanel()
+        {
+          
+                taskPanelParent.gameObject.SetActive(false);
+             
+           
         }
 
   
