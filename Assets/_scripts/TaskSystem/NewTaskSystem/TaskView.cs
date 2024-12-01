@@ -9,28 +9,14 @@ namespace _scripts.TaskSystem.NewTaskSystem
         public TaskController taskController; 
         public Transform taskPanelParent; 
         public GameObject taskUIPrefab;
-      //  private bool isActive;
-       
+            
         private Dictionary<int, TextMeshProUGUI> taskTextElements = new Dictionary<int, TextMeshProUGUI>();
 
         private void Start()
         {
             InitializeUI();
-        //    isActive = false;
         }
-       /* private void Update()
-        {
-            if (Input.GetKey(KeyCode.T) && isActive == false)
-            {
-              
-
-                if (Input.GetKey(KeyCode.T) && isActive == true)
-                {
-                    CloseTaskPanel();
-
-                }
-            }
-        }*/
+      
         private void InitializeUI()
         {
             if (taskController == null || taskUIPrefab == null || taskPanelParent == null)
@@ -63,69 +49,55 @@ namespace _scripts.TaskSystem.NewTaskSystem
                     taskText.text = $"{task.description}";
                     taskTextElements.Add(task.idTask, taskText);
                     Debug.Log($"UI para tarea {task.idTask} registrada correctamente.");
-                    task.OnReachedTask += () => OnTaskCompleted(task);
-                    Debug.Log("OnTaskCompleted se ha llamado en el initialize");
+                    task.OnReachedTask += () =>
+                    {
+                        Debug.Log($"OnReachedTask disparado para tarea ID={task.idTask}");
+                        UpdateTaskText(task);
+                    };
                 }
                 else
                 {
                     Debug.LogError("El prefab taskUIPrefab no tiene un componente TextMeshProUGUI en su jerarqu�a.");
                 }
-                
+                Debug.Log($"Tarea registrada: ID={task.idTask}, Descripción={task.description}");
             }
         }
    
         public void UpdateTaskText(Tasks tasks_)
         {
+            if (tasks_ == null)
+            {
+                Debug.LogError("UpdateTaskText fue llamado con una tarea nula.");
+                return;
+            }
             if (taskTextElements.TryGetValue(tasks_.idTask, out var taskText))
             {
                 if (tasks_.isReached)
                 {
                     taskText.text = $"¡{tasks_.reachedTask}";
+                    taskText.color = Color.green;
+                    Debug.Log($"UI actualizada para tarea ID={tasks_.idTask}, texto={taskText.text}");
                 }
                 else
                 {
                     taskText.text = $"{tasks_.description}";
+                    Debug.LogWarning($"La tarea ID={tasks_.idTask} no está completada (isReached=false).");
                 }
             }
             else
             {
                 Debug.LogWarning($"No se encontró UI para la tarea {tasks_.idTask}. Verifique que la tarea esté correctamente registrada en InitializeUI.");
             }
-        }                                  
-   
-        public void OnTaskCompleted(Tasks completedTask)
-        {
-            if (taskTextElements.TryGetValue(completedTask.idTask, out var taskText))
-            {
-                if (completedTask.isReached)
-                {
-                    taskText.text = $"¡{completedTask.reachedTask}!";
-                    taskText.color = Color.green; 
-                }else
-                {
-                    Debug.LogWarning($"No se encontró UI para la tarea {completedTask.idTask}.");
-                }
-            }
-        
         }
 
         public void OpenTaskPanel()
         {
-           
-                taskPanelParent.gameObject.SetActive(true);
-            
-           
-        }
-
-        public void CloseTaskPanel()
+            taskPanelParent.gameObject.SetActive(true);
+        }         
+         public void CloseTaskPanel()
         {
-          
-                taskPanelParent.gameObject.SetActive(false);
-             
-           
-        }
-
-  
+            taskPanelParent.gameObject.SetActive(false);
+        }           
     }
 }
 

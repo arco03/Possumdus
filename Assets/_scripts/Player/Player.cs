@@ -33,7 +33,7 @@ namespace _scripts.Player
 
             _mX = Input.GetAxis(mouseX) * mouseSensibility;
             _mY = Input.GetAxis(mouseY) * mouseSensibility;
-            
+
             _character.Rotation(_mX, _mY);
             _hungerManager.Hunger();
 
@@ -48,8 +48,9 @@ namespace _scripts.Player
             if (Input.GetMouseButtonDown(1))
             {
                 _levitateObjects.ObjectPiked();
-                
-            }else if (Input.GetMouseButtonUp(1) && _levitateObjects.pikedObject)
+
+            }
+            else if (Input.GetMouseButtonUp(1) && _levitateObjects.pikedObject)
             {
                 _levitateObjects.ReleaseObject();
             }
@@ -59,24 +60,25 @@ namespace _scripts.Player
                 _levitateObjects.InteractObject();
             }
 
-            if(Input.GetKey(KeyCode.P))
+            if (Input.GetKey(KeyCode.P))
             {
                 pauseMenu.OpenMenu();
             }
 
-            if (Input.GetKey(KeyCode.T) && isActive == false)
+            if (Input.GetKeyDown(KeyCode.T))
             {
-                taskView.OpenTaskPanel();
-                isActive = true;
+                if (isActive)
+                {
+                    taskView.CloseTaskPanel();
+                }
+                else
+                {
+                    taskView.OpenTaskPanel();
+                }
+                isActive = !isActive;
             }
-            else if (Input.GetKey(KeyCode.T) && isActive == true)
-            {
-                taskView.CloseTaskPanel();
-                isActive = false;
-            }
-            
-           
         }
+            
     
         private void FixedUpdate()
         {

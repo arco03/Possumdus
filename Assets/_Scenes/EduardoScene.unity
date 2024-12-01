@@ -9216,7 +9216,6 @@ MonoBehaviour:
   taskPanelParent: {fileID: 570876807}
   taskUIPrefab: {fileID: 4535845524760429476, guid: 810cf1760506daf4381d4797e7596d17,
     type: 3}
-  isActive: 0
 --- !u!114 &1533901281
 MonoBehaviour:
   m_ObjectHideFlags: 0
