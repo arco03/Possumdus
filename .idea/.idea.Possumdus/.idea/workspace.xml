@@ -5,43 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Paredes.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Paredes.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/Props/geo_HydrophonicCultivationOfBananas.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/Props/geo_HydrophonicCultivationOfBananas.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_BaseColor.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Height.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Height.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Metallic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Metallic.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Normal.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Roughness.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials/Banana.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials/Banana.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials/Base.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials/Base.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_BaseColor.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Height.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Height.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Metallic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Metallic.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Normal.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Roughness.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/NameRoom.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/NameRoom.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/A (1).controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/A (1).controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/AA (1).controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/AA (1).controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Audio/SFX/14 Sonido del agua del tanque .wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Audio/SFX/14 Sonido del agua del tanque .wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Lettuce Pipes/Materials/Geo_cultivo_M_Pipes_Wires_WireWalls_Lettuce_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Lettuce Pipes/Materials/Geo_cultivo_M_Pipes_Wires_WireWalls_Lettuce_BaseColor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1Close.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1Close.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1Open.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1Open.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1y2.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1y2.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2Close.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2Close.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2Open.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2Open.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Audio/Music/relaxing-guitar-loop-v5-245859.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Audio/Music/relaxing-guitar-loop-v5-245859.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Audio/SFX/stab-f-01-brvhrtz-224599.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Audio/SFX/stab-f-01-brvhrtz-224599.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Font/earthorbiterhalfital SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Font/earthorbiterhalfital SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/Doors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/Doors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/NameRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/NameRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +181,8 @@
       <workItem from="1732822659230" duration="7000" />
       <workItem from="1732842730307" duration="1471000" />
       <workItem from="1732901350677" duration="11000" />
-      <workItem from="1733022521174" duration="8742000" />
+      <workItem from="1733022521174" duration="9602000" />
+      <workItem from="1733066634332" duration="7907000" />
     </task>
     <servers />
   </component>

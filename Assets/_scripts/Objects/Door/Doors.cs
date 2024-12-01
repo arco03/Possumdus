@@ -6,37 +6,17 @@ namespace _scripts.Objects.Door
     public class Doors : MonoBehaviour
     {
         [SerializeField] private Animator animator;
-        [SerializeField] private float closeDelay = 3f;
-        private bool isPlayerNear = false;
-
-        private void Start()
+        [SerializeField] private string animationName;
+        private void Awake()
         {
-            animator.SetTrigger("CloseDoor");
+            animator.GetComponent<Animator>();
         }
-
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player") || other.CompareTag("Npc"))
+            if (other.gameObject.CompareTag("Player"))
             {
-                isPlayerNear = true;
-                animator.SetTrigger("OpenDoor");
-            }
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            if (other.CompareTag("Player") || other.CompareTag("Npc"))
-            {
-                isPlayerNear = false;
-                Invoke(nameof(CloseDoor), closeDelay);
-            }
-        }
-
-        private void CloseDoor()
-        {
-            if (!isPlayerNear)
-            {
-                animator.SetTrigger("CloseDoor");
+                Debug.Log("Entro al animator puerta");
+                animator.Play(animationName);
             }
         }
     }

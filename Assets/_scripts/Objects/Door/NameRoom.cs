@@ -1,4 +1,3 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -11,23 +10,16 @@ namespace _scripts.Objects.Door
 
         private void Start()
         {
-            textName.text = roomName;
-            textName.gameObject.SetActive(false);
+            textName = GameObject.FindWithTag("RoomTextName")?.GetComponent<TMP_Text>();
+            if (textName != null) textName.text = " ";
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
             {
-                textName.gameObject.SetActive(true);
-                StartCoroutine(EnableName());
+                textName.text = roomName;
             }
-        }
-
-        private IEnumerator EnableName()
-        {
-            yield return new WaitForSeconds(3f);
-            textName.gameObject.SetActive(false);
         }
     }
 }

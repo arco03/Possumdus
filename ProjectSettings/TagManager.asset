@@ -9,6 +9,7 @@ TagManager:
   - Fuel
   - letter
   - Npc
+  - RoomTextName
   layers:
   - Default
   - TransparentFX
