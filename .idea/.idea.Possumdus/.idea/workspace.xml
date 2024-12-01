@@ -5,41 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123cbe30-4e2e-4afd-8841-3460a0784930" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1Close.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1Close.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1Open.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1Open.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1y2.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door1y2.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2Close.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2Close.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2Open.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Doors/Door2Open.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Door.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/Doors.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/Doors.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Paredes.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Paredes.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/Props/geo_HydrophonicCultivationOfBananas.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Models/Props/geo_HydrophonicCultivationOfBananas.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_BaseColor.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Banana/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile02_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials/Banana.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials/Banana.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials/Base.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/Materials/Base.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_BaseColor.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/BananaCultive/geo_HydrophonicCultivationOfBananas (1)_M_HydrophonicCultivationOfBananas_Tile01_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/NameRoom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Objects/Door/NameRoom.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Possumdus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Font/earthorbiterhalfital SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Font/earthorbiterhalfital SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Balanced.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-HighFidelity.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Settings/URP-Performant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Jacobo-Lacfar/Materials/M_Player_Tile02_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/NPCs/Jacobo-Lacfar/Materials/M_Player_Tile02_BaseColor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Daniela-Byte(SystemEngineer).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Daniela-Byte(SystemEngineer).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Eduardo-Choco(Janitor).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Eduardo-Choco(Janitor).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Estefania-Nia(Chef).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Estefania-Nia(Chef).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Jacobo-Lacfar(Minerologist).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Jacobo-Lacfar(Minerologist).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Karen-Yuliet(HRCoordinator).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Karen-Yuliet(HRCoordinator).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Natalia-Nat(FertilizerSupervisor).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Natalia-Nat(FertilizerSupervisor).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Sharen-Ash(Mechanical Engineer).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Sharen-Ash(Mechanical Engineer).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Yaira - Kaiji(HydrophonicOperator).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/NPCs/Yaira - Kaiji(HydrophonicOperator).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Lettuce Pipes/Materials/Geo_cultivo_M_Pipes_Wires_WireWalls_Lettuce_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Props/Lettuce Pipes/Materials/Geo_cultivo_M_Pipes_Wires_WireWalls_Lettuce_BaseColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +55,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/UITasksImages/ButtonInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_objectInteraction/EasterEgg.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.formats.fbx@4.2.1/Editor/FbxExporter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.9/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -177,7 +179,7 @@
       <workItem from="1732822659230" duration="7000" />
       <workItem from="1732842730307" duration="1471000" />
       <workItem from="1732901350677" duration="11000" />
-      <workItem from="1733022521174" duration="4181000" />
+      <workItem from="1733022521174" duration="8742000" />
     </task>
     <servers />
   </component>
