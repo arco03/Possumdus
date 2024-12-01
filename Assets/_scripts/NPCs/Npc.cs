@@ -7,34 +7,38 @@ using UnityEngine.AI;
 namespace _scripts.NPCs
 {
     [RequireComponent(typeof(NavMeshAgent))]
+    [RequireComponent(typeof(Animator))]
     public abstract class Npc : MonoBehaviour, IObjectsInteract
     {
-        protected internal NpcStateMachine NpcStateMachine;
+        private NpcStateMachine npcStateMachine;
         [SerializeField] protected Transform[] waypoints;
-        protected NavMeshAgent Agent;
+        private NavMeshAgent agent;
         [SerializeField] protected NPCConversation npcConversation;
+        [SerializeField] protected Animator npcAnimation;
         
         private bool isTalking = false;
         private bool isPlayerInRange = false;
         private WalkingState walkingState;
         private TalkingState talkingState;
-        
+
         private void Awake()
         {
-            Agent = GetComponent<NavMeshAgent>();
-            walkingState = new WalkingState(Agent, waypoints);
+            agent = GetComponent<NavMeshAgent>();
+            npcAnimation = GetComponent<Animator>();
+            
+            walkingState = new WalkingState(agent, waypoints);
             talkingState = new TalkingState(npcConversation);
-            NpcStateMachine = new NpcStateMachine(walkingState);
+            npcStateMachine = new NpcStateMachine(walkingState);
         }
 
         public virtual void Start()
         {
-            NpcStateMachine.StartStateMachine();
+            npcStateMachine.StartStateMachine();
         }
 
         public virtual void Update()
         {
-            NpcStateMachine.UpdateStateMachine();
+            npcStateMachine.UpdateStateMachine();
         }
 
         public virtual void OnTriggerEnter(Collider other)
@@ -42,7 +46,8 @@ namespace _scripts.NPCs
             if (other.CompareTag("Player"))
             {
                 isPlayerInRange = true;
-                Agent.isStopped = true;
+                agent.isStopped = true;
+                npcAnimation.SetBool("IsIdle", true);
             }
         }
 
@@ -51,7 +56,8 @@ namespace _scripts.NPCs
             if (other.CompareTag("Player"))
             {
                 isPlayerInRange = false;
-                Agent.isStopped = false;
+                agent.isStopped = false;
+                npcAnimation.SetBool("IsIdle", false);
             }
         }
 
@@ -62,12 +68,12 @@ namespace _scripts.NPCs
             if (!isTalking)
             {
                 isTalking = true;
-                NpcStateMachine.ChangeState(talkingState);
+                npcStateMachine.ChangeState(talkingState);
             }
             else
             {
                 isTalking = false;
-                NpcStateMachine.ChangeState(walkingState);
+                npcStateMachine.ChangeState(walkingState);
             }
         }
 

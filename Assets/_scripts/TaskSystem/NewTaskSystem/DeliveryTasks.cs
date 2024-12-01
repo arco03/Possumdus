@@ -22,14 +22,18 @@ namespace _scripts.TaskSystem.NewTaskSystem
 #endif
         public void ProgressUpdate()
         {
-            currentAmount++;
-            OnProgressUpdate?.Invoke(this);
-            Debug.Log($"Verifying task: {idTask} - Progress: {currentAmount}/{requiredAmount}");
-            if (!isReached && currentAmount >= requiredAmount)
+            if(isReached) return;
+            if (isReached == false)
             {
-                isReached = true;
-                InvokeReachedEvent();
+                currentAmount++;
+                OnProgressUpdate?.Invoke(this);
+                Debug.Log($"Verifying task: {idTask} - Progress: {currentAmount}/{requiredAmount}");
+                if (!isReached && currentAmount >= requiredAmount)
+                {
+                  InvokeReachedEvent();
+                }
             }
+            
         }
      
     }

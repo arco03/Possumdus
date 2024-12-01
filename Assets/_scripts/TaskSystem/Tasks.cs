@@ -11,27 +11,17 @@ namespace _scripts.TaskSystem
         public int idTask;
         public bool isReached = false;
         public string reachedTask;
-        public TaskType taskType;
-        public event Action onReachedTask;
-
-        public virtual void TaskVerification()
-        {
-        
-            if (!isReached)
-            {
-                InvokeReachedEvent();
-                isReached = true;
-            }
-
-        }
+        public TaskSubType taskType;
+        public event Action OnReachedTask;
 
         public void InvokeReachedEvent()
         {
-            onReachedTask?.Invoke();
+            OnReachedTask?.Invoke();
+            isReached = true;
         }
 
         [System.Serializable]
-        public enum TaskType
+        public enum TaskSubType
         {
             Interaction,
             Delivery,
