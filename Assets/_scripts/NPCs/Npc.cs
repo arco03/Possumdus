@@ -1,85 +1,26 @@
-using _scripts.Interfaces;
-using _scripts.NPCs.States;
-using DialogueEditor;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace _scripts.NPCs
 {
-    [RequireComponent(typeof(NavMeshAgent))]
-    [RequireComponent(typeof(Animator))]
-    public abstract class Npc : MonoBehaviour, IObjectsInteract
+    public abstract class Npc : MonoBehaviour
     {
-        private NpcStateMachine npcStateMachine;
-        [SerializeField] protected Transform[] waypoints;
-        private NavMeshAgent agent;
-        [SerializeField] protected NPCConversation npcConversation;
-        [SerializeField] protected Animator npcAnimation;
+        private INpcState _currentState;
+        public Transform[] waypoints;
+
+        // Update the state
+        private void Update()
+        {
+            _currentState?.UpdateState(this);
+        }
         
-        private bool isTalking = false;
-        private bool isPlayerInRange = false;
-        private WalkingState walkingState;
-        private TalkingState talkingState;
-
-        private void Awake()
+        // Method for change the state
+        public void ChangeState(INpcState newState)
         {
-            agent = GetComponent<NavMeshAgent>();
-            npcAnimation = GetComponent<Animator>();
-            
-            walkingState = new WalkingState(agent, waypoints);
-            talkingState = new TalkingState(npcConversation);
-            npcStateMachine = new NpcStateMachine(walkingState);
+            _currentState = newState;
+            _currentState.EnterState(this);
         }
 
-        public virtual void Start()
-        {
-            npcStateMachine.StartStateMachine();
-        }
-
-        public virtual void Update()
-        {
-            npcStateMachine.UpdateStateMachine();
-        }
-
-        public virtual void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Player"))
-            {
-                isPlayerInRange = true;
-                agent.isStopped = true;
-                npcAnimation.SetBool("IsIdle", true);
-            }
-        }
-
-        public virtual void OnTriggerExit(Collider other)
-        {
-            if (other.CompareTag("Player"))
-            {
-                isPlayerInRange = false;
-                agent.isStopped = false;
-                npcAnimation.SetBool("IsIdle", false);
-            }
-        }
-
-        public virtual void OnInteract()
-        {
-            if (!isPlayerInRange) return;
-            
-            if (!isTalking)
-            {
-                isTalking = true;
-                npcStateMachine.ChangeState(talkingState);
-            }
-            else
-            {
-                isTalking = false;
-                npcStateMachine.ChangeState(walkingState);
-            }
-        }
-
-        public virtual void OnRelease()
-        {
-            
-        }
+        // Interact with character
+        public abstract void Interact();
     }
 }

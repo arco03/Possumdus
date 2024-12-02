@@ -1,4 +1,3 @@
-using _scripts.Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,25 +6,21 @@ namespace _scripts.NPCs.States
     public class WalkingState : INpcState
     {
         private int _currentWaypoint = 0;
-        private readonly NavMeshAgent _agent;
-        private readonly Transform[] _waypoints;
-
-        public WalkingState(NavMeshAgent agent, Transform[] waypoints)
-        {
-            _agent = agent;
-            _waypoints = waypoints;
-        }
-        public void StartState()
+        private NavMeshAgent _agent;
+        
+        public void EnterState(Npc npc)
         {
             Debug.Log("Entró al estado de Walking"); 
-            //TODO: Animation
+            _agent = npc.GetComponent<NavMeshAgent>();
+            MoveToNextWaypoint(npc);
+            //Animation
         }
 
-        public void UpdateState()
+        public void UpdateState(Npc npc)
         {
-            if (_agent.remainingDistance <= 0.5f && !_agent.pathPending)
+            if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
             {
-                MoveToNextWaypoint();
+                npc.ChangeState(new IdleState());
             }
         }
 
@@ -34,12 +29,12 @@ namespace _scripts.NPCs.States
             Debug.Log("Salió del estado Walking");
         }
         
-        private void MoveToNextWaypoint()
+        private void MoveToNextWaypoint(Npc npc)
         {
-            if (_waypoints.Length == 0) return;
-            _agent.SetDestination(_waypoints[_currentWaypoint].position);
+            if (npc.waypoints.Length == 0) return;
+            _agent.SetDestination(npc.waypoints[_currentWaypoint].position);
             
-            _currentWaypoint = (_currentWaypoint + 1) % _waypoints.Length;
+            _currentWaypoint = (_currentWaypoint + 1) % npc.waypoints.Length;
         }
     }
 }
