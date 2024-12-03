@@ -10,6 +10,7 @@ TagManager:
   - letter
   - Npc
   - RoomTextName
+  - CargoTask
   layers:
   - Default
   - TransparentFX
