@@ -567,7 +567,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -714,6 +714,7 @@ GameObject:
   - component: {fileID: 1197478101220121410}
   - component: {fileID: 6414541836335664993}
   - component: {fileID: 8033899209190375146}
+  - component: {fileID: 6222526231374830519}
   - component: {fileID: 6936217584714378762}
   m_Layer: 0
   m_Name: PlayerFuncional
@@ -828,7 +829,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1197478101220121410
 MonoBehaviour:
@@ -847,9 +848,11 @@ MonoBehaviour:
   mouseX: Mouse X
   mouseY: Mouse Y
   mouseSensibility: 10
-  _character: {fileID: 0}
-  _hungerManager: {fileID: 0}
-  _levitateObjects: {fileID: 0}
+  _character: {fileID: 6414541836335664993}
+  _hungerManager: {fileID: 8033899209190375146}
+  _levitateObjects: {fileID: 6222526231374830519}
+  pauseMenu: {fileID: 0}
+  taskView: {fileID: 0}
 --- !u!114 &6414541836335664993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,16 +881,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07791798649628428d99c040d3c1882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hungrySpeed: 0
+  sprintDuration: 10
+  sacietyDuration: 60
+  _hungrySpeed: 4
+  _sprintSpeed: 10
+  _rechargeStaminaValue: 2
   _timeUntilHunger: 0
-  _sprintSpeed: 0
-  _sprintDuration: 0
-  staminaAmount: 0
-  _rechargeStaminaValue: 0
-  _currentSpeed: 0
-  sacietyDuration: 0
+  _staminaAmount: 0
   _isHungry: 0
   canRun: 1
+--- !u!114 &6222526231374830519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012943150587586440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10767b449bf86d44abc1eef921065f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayDistance: 15
+  holdDistance: 8
+  attractionForce: 5
+  levitationForce: 5
+  followSpeed: 10
+  isObjectLevitating: 0
+  pikedObject: {fileID: 0}
+  pikedObjectRb: {fileID: 0}
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  character: {fileID: 6414541836335664993}
 --- !u!114 &6936217584714378762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,6 +1244,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2919500646327183014}
+  - component: {fileID: 2807099241609235055}
+  - component: {fileID: 4173781471840050315}
   m_Layer: 0
   m_Name: ManoSphere
   m_TagString: Untagged
@@ -1233,8 +1261,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6402747485509898719}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000009313225, y: 0.06417694, z: -0.0038222945, w: 0.99793124}
-  m_LocalPosition: {x: -0.219, y: 0.113, z: 1.899}
+  m_LocalRotation: {x: -0.00061385793, y: -0.09692146, z: -0.0037726774, w: 0.9952847}
+  m_LocalPosition: {x: -2.08, y: -0.01, z: 0.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1244,7 +1272,43 @@ Transform:
   - {fileID: 8183362341627304382}
   - {fileID: 431889480243208975}
   m_Father: {fileID: 254780940955701295}
-  m_LocalEulerAnglesHint: {x: 0.028, y: 7.359, z: -0.437}
+  m_LocalEulerAnglesHint: {x: -0.112, y: -11.124, z: -0.423}
+--- !u!114 &2807099241609235055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6402747485509898719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcc6233d787ccf4eb3c23645daa9bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4173781471840050315}
+  toggle: 0
+  isHandUp: 0
+--- !u!95 &4173781471840050315
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6402747485509898719}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 169191d878dcaf54c858d8db2045ff1e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7143389099896655349
 GameObject:
   m_ObjectHideFlags: 0

@@ -1273,7 +1273,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 1.2999999523162842,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2070,9 +2070,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.09531861543655396,
-        "g": 0.3207547068595886,
-        "b": 0.3207547068595886,
+        "r": 0.24096651375293733,
+        "g": 0.37445810437202456,
+        "b": 0.5377358198165894,
         "a": 1.0
     },
     "isMainColor": false,
@@ -2304,7 +2304,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 2.0,
+    "m_Value": 2.450000047683716,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2886,9 +2886,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1014.0000610351563,
-            "y": -1624.0001220703125,
-            "width": 208.00006103515626,
+            "x": 1031.0001220703125,
+            "y": -1641.0001220703125,
+            "width": 207.9998779296875,
             "height": 326.0
         }
     },
@@ -3304,9 +3304,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.18039216101169587,
-        "g": 0.9647058844566345,
-        "b": 0.45098039507865908,
+        "r": 0.492479532957077,
+        "g": 0.6500977873802185,
+        "b": 0.8773584961891174,
         "a": 0.0
     },
     "isMainColor": false,
@@ -3463,7 +3463,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 1.2699999809265137,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -3982,9 +3982,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.1162780225276947,
-        "g": 0.29729077219963076,
-        "b": 0.3679245114326477,
+        "r": 0.2874688506126404,
+        "g": 0.5373797416687012,
+        "b": 0.6415094137191773,
         "a": 1.0
     },
     "isMainColor": false,
