@@ -20,4 +20,4 @@ MonoBehaviour:
   taskType: 1
   requiredAmount: 5
   currentAmount: 0
-  objectTag: 
+  objectTag: CargoTask

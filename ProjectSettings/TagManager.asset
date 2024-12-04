@@ -11,6 +11,8 @@ TagManager:
   - Npc
   - RoomTextName
   - CargoTask
+  - FoodLab
+  - EngineTask
   layers:
   - Default
   - TransparentFX
