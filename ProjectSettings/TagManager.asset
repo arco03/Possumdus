@@ -13,6 +13,9 @@ TagManager:
   - CargoTask
   - FoodLab
   - EngineTask
+  - LabReport
+  - Fruit
+  - Seeds
   layers:
   - Default
   - TransparentFX

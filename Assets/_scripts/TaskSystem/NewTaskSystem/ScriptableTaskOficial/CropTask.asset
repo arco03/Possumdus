@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35eeb9f0562d3754fb9ccb3c4d240f88, type: 3}
   m_Name: CropTask
   m_EditorClassIdentifier: 
-  names: Cargo Task
-  description: Take the boxes that are in the workshop to the warehouse.
-  idTask: 0
+  names: Crop
+  description: Take 4 fruits to the Plant Laboratory
+  idTask: 4
   isReached: 0
-  reachedTask: Cargo Task Done!
-  taskType: 1
-  requiredAmount: 5
+  reachedTask: 
+  taskType: 0
+  requiredAmount: 4
   currentAmount: 0
-  objectTag: CargoTask
+  objectTag: Fruit
