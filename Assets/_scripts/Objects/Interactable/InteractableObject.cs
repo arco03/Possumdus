@@ -13,6 +13,7 @@ namespace _scripts.Objects.Interactable
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
+            rb.useGravity = false;
         }
 
         public void OnInteract()

@@ -10,6 +10,12 @@ TagManager:
   - letter
   - Npc
   - RoomTextName
+  - CargoTask
+  - FoodLab
+  - EngineTask
+  - LabReport
+  - Fruit
+  - Seeds
   layers:
   - Default
   - TransparentFX
